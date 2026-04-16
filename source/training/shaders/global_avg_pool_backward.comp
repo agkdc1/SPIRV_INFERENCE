@@ -1,0 +1,23 @@
+#version 450
+layout(local_size_x = 128) in;
+layout(std430, binding = 0) readonly buffer A { float dy[]; };
+layout(std430, binding = 1) readonly buffer B { float dummy[]; };
+layout(std430, binding = 2) writeonly buffer C { float dx[]; };
+layout(push_constant) uniform P {
+    int N; int C; int H; int W; int total;
+} pc;
+void main() {
+    uint idx = gl_GlobalInvocationID.x;
+    if (idx >= uint(pc.total)) return;
+    // idx indexes into [N, C, H, W]
+    int hw = pc.H * pc.W;
+    int w = int(idx) % pc.W;
+    int tmp = int(idx) / pc.W;
+    int h = tmp % pc.H;
+    tmp = tmp / pc.H;
+    int c = tmp % pc.C;
+    int n = tmp / pc.C;
+    // dy is [N, C], broadcast gradient back and divide by HW
+    float grad = dy[n * pc.C + c] / float(hw);
+    dx[idx] = grad;
+}

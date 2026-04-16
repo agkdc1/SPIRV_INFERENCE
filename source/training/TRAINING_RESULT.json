@@ -1,0 +1,56 @@
+{
+  "model": "MLP 784->128->10",
+  "architecture": "Linear(784,128) -> ReLU -> Linear(128,10) -> Softmax+CE",
+  "optimizer": "Adam(lr=0.001, beta1=0.9, beta2=0.999, eps=0.00000001)",
+  "learning_rate": 0.001,
+  "batch_size": 64,
+  "epochs": 5,
+  "device_name": "NVIDIA GeForce RTX 3060",
+  "vendor_id": 4318,
+  "device_id": 9540,
+  "runtime": "Vulkan 1.1 compute via ash 0.38 (SPIR-V shaders)",
+  "cuda_used": false,
+  "epoch_results": [
+    {
+      "epoch": 1,
+      "train_loss": 0.29377663,
+      "test_accuracy": 0.95252407
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.13600318,
+      "test_accuracy": 0.9630409
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.09580956,
+      "test_accuracy": 0.97055286
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.072486125,
+      "test_accuracy": 0.97626203
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.056930732,
+      "test_accuracy": 0.9745593
+    }
+  ],
+  "final_test_accuracy": 0.9745593,
+  "final_train_loss": 0.056930732,
+  "total_training_time_secs": 6.200373073,
+  "spv_kernels": [
+    "matmul.spv",
+    "matmul_tn.spv",
+    "matmul_nt.spv",
+    "relu_forward.spv",
+    "relu_backward.spv",
+    "bias_add.spv",
+    "batched_softmax10.spv",
+    "cross_entropy_loss.spv",
+    "softmax_ce_backward.spv",
+    "reduce_sum_rows.spv",
+    "adam_step.spv"
+  ]
+}

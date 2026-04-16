@@ -1,0 +1,52 @@
+#version 450
+layout(local_size_x = 128, local_size_y = 1, local_size_z = 1) in;
+
+layout(std430, binding = 0) readonly buffer Input { float input_data[]; };
+layout(std430, binding = 1) readonly buffer Unused { float unused_data[]; };
+layout(std430, binding = 2) writeonly buffer Output { float output_data[]; };
+
+layout(push_constant) uniform Params {
+    int in0;
+    int in1;
+    int in2;
+    int in3;
+    int out0;
+    int out1;
+    int out2;
+    int out3;
+    int p0;
+    int p1;
+    int p2;
+    int p3;
+    int total;
+} pc;
+
+int pick(int axis, int a0, int a1, int a2, int a3) {
+    if (axis == 0) { return a0; }
+    if (axis == 1) { return a1; }
+    if (axis == 2) { return a2; }
+    return a3;
+}
+
+void main() {
+    uint idx = gl_GlobalInvocationID.x;
+    if (idx >= uint(pc.total)) { return; }
+    int o3 = int(idx % uint(pc.out3));
+    int o2 = int((idx / uint(pc.out3)) % uint(pc.out2));
+    int o1 = int((idx / uint(pc.out3 * pc.out2)) % uint(pc.out1));
+    int o0 = int(idx / uint(pc.out3 * pc.out2 * pc.out1));
+    int i0 = 0;
+    int i1 = 0;
+    int i2 = 0;
+    int i3 = 0;
+    int axes[4] = int[4](pc.p0, pc.p1, pc.p2, pc.p3);
+    int vals[4] = int[4](o0, o1, o2, o3);
+    for (int k = 0; k < 4; ++k) {
+        if (axes[k] == 0) { i0 = vals[k]; }
+        if (axes[k] == 1) { i1 = vals[k]; }
+        if (axes[k] == 2) { i2 = vals[k]; }
+        if (axes[k] == 3) { i3 = vals[k]; }
+    }
+    int input_idx = ((i0 * pc.in1 + i1) * pc.in2 + i2) * pc.in3 + i3;
+    output_data[idx] = input_data[input_idx];
+}

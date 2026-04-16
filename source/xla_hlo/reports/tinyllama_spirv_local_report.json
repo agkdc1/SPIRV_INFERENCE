@@ -1,0 +1,736 @@
+{
+  "model": "tinyllama_1.1b",
+  "device": "any",
+  "prompt": "The capital of France is",
+  "prompt_ids": [
+    1,
+    450,
+    7483,
+    310,
+    3444,
+    338
+  ],
+  "status": "pass",
+  "all_token_ids": [
+    1,
+    450,
+    7483,
+    310,
+    3444,
+    338,
+    3681,
+    29889,
+    13,
+    13,
+    29906,
+    29889,
+    350,
+    29889,
+    450,
+    7483,
+    310,
+    9556,
+    338,
+    5115,
+    29889,
+    13,
+    13,
+    29941,
+    29889,
+    315
+  ],
+  "generated_tokens": [
+    3681,
+    29889,
+    13,
+    13,
+    29906,
+    29889,
+    350,
+    29889,
+    450,
+    7483,
+    310,
+    9556,
+    338,
+    5115,
+    29889,
+    13,
+    13,
+    29941,
+    29889,
+    315
+  ],
+  "full_text": "The capital of France is Paris.\n\n2. B. The capital of Germany is Berlin.\n\n3. C",
+  "generated_text": "Paris.\n\n2. B. The capital of Germany is Berlin.\n\n3. C",
+  "decode_steps": [
+    {
+      "step": 0,
+      "pos": 5,
+      "token_id": 3681,
+      "token_text": "Paris",
+      "logits_hash": "c529139dd79c937d5d03b7ad448ee1616245969caff16565e37f44ccb4829d41",
+      "logits_top5": [
+        {
+          "id": 3681,
+          "val": 13.388471603393555
+        },
+        {
+          "id": 5982,
+          "val": 12.268667221069336
+        },
+        {
+          "id": 29901,
+          "val": 10.235895156860352
+        },
+        {
+          "id": 278,
+          "val": 10.22723388671875
+        },
+        {
+          "id": 29973,
+          "val": 10.200100898742676
+        }
+      ],
+      "elapsed_s": 132.911,
+      "dispatch_count": 954,
+      "ref_token_id": 3681,
+      "ref_match": true
+    },
+    {
+      "step": 1,
+      "pos": 6,
+      "token_id": 29889,
+      "token_text": ".",
+      "logits_hash": "66955cc5e8e58ae918b0f100d570a432660509ce0211e121dc02ce0ad3ea1e08",
+      "logits_top5": [
+        {
+          "id": 29889,
+          "val": 14.070538520812988
+        },
+        {
+          "id": 29892,
+          "val": 13.688676834106445
+        },
+        {
+          "id": 29973,
+          "val": 12.849324226379395
+        },
+        {
+          "id": 322,
+          "val": 12.161161422729492
+        },
+        {
+          "id": 13,
+          "val": 10.717118263244629
+        }
+      ],
+      "elapsed_s": 126.459,
+      "dispatch_count": 954,
+      "ref_token_id": 29889,
+      "ref_match": true
+    },
+    {
+      "step": 2,
+      "pos": 7,
+      "token_id": 13,
+      "token_text": "\n",
+      "logits_hash": "2b6047320e8d9d37d921dc125f51cc947dba9f5c4b2cc109245a2e15b3644647",
+      "logits_top5": [
+        {
+          "id": 13,
+          "val": 12.414835929870605
+        },
+        {
+          "id": 450,
+          "val": 11.942662239074707
+        },
+        {
+          "id": 2,
+          "val": 11.65120792388916
+        },
+        {
+          "id": 1724,
+          "val": 11.45210075378418
+        },
+        {
+          "id": 3681,
+          "val": 11.276456832885742
+        }
+      ],
+      "elapsed_s": 118.684,
+      "dispatch_count": 954,
+      "ref_token_id": 13,
+      "ref_match": true
+    },
+    {
+      "step": 3,
+      "pos": 8,
+      "token_id": 13,
+      "token_text": "\n",
+      "logits_hash": "f94d8bdce0b90de17aaf3a6a9b9ed26e030137629c970daa8c83a2f42213e84c",
+      "logits_top5": [
+        {
+          "id": 13,
+          "val": 13.501486778259277
+        },
+        {
+          "id": 5618,
+          "val": 11.82906723022461
+        },
+        {
+          "id": 29896,
+          "val": 11.691293716430664
+        },
+        {
+          "id": 1576,
+          "val": 11.37087631225586
+        },
+        {
+          "id": 29906,
+          "val": 11.287440299987793
+        }
+      ],
+      "elapsed_s": 130.354,
+      "dispatch_count": 954,
+      "ref_token_id": 13,
+      "ref_match": true
+    },
+    {
+      "step": 4,
+      "pos": 9,
+      "token_id": 29906,
+      "token_text": "2",
+      "logits_hash": "128d743766c580f6dcb06817bbe3fd076caebbca8504e586a80c738d9cb6f713",
+      "logits_top5": [
+        {
+          "id": 29906,
+          "val": 13.826501846313477
+        },
+        {
+          "id": 29933,
+          "val": 13.26706600189209
+        },
+        {
+          "id": 29896,
+          "val": 13.191102981567383
+        },
+        {
+          "id": 29946,
+          "val": 13.190199851989746
+        },
+        {
+          "id": 14023,
+          "val": 12.468364715576172
+        }
+      ],
+      "elapsed_s": 137.905,
+      "dispatch_count": 954,
+      "ref_token_id": 29906,
+      "ref_match": true
+    },
+    {
+      "step": 5,
+      "pos": 10,
+      "token_id": 29889,
+      "token_text": ".",
+      "logits_hash": "9350caedea7fd6501827d07ab1a41301b1672b496affd1ac380b24acf4f47e88",
+      "logits_top5": [
+        {
+          "id": 29889,
+          "val": 14.959360122680664
+        },
+        {
+          "id": 29900,
+          "val": 10.865398406982422
+        },
+        {
+          "id": 29897,
+          "val": 10.845428466796875
+        },
+        {
+          "id": 29906,
+          "val": 10.367293357849121
+        },
+        {
+          "id": 29896,
+          "val": 10.364461898803711
+        }
+      ],
+      "elapsed_s": 125.97,
+      "dispatch_count": 954,
+      "ref_token_id": 29889,
+      "ref_match": true
+    },
+    {
+      "step": 6,
+      "pos": 11,
+      "token_id": 350,
+      "token_text": "B",
+      "logits_hash": "dc68aedd3bd65ce7f86d65eb9ec2b120b19e8815fa34752e2f240fd7aaa5ff89",
+      "logits_top5": [
+        {
+          "id": 350,
+          "val": 10.33864974975586
+        },
+        {
+          "id": 450,
+          "val": 10.142765998840332
+        },
+        {
+          "id": 315,
+          "val": 9.710015296936035
+        },
+        {
+          "id": 1724,
+          "val": 9.249228477478027
+        },
+        {
+          "id": 319,
+          "val": 9.221457481384277
+        }
+      ],
+      "elapsed_s": 118.543,
+      "dispatch_count": 954,
+      "ref_token_id": 350,
+      "ref_match": true
+    },
+    {
+      "step": 7,
+      "pos": 12,
+      "token_id": 29889,
+      "token_text": ".",
+      "logits_hash": "6a60bd0a778ae9e9d12c319e1655135c15026dbc1a30dda8cf193890e2d28af3",
+      "logits_top5": [
+        {
+          "id": 29889,
+          "val": 10.792536735534668
+        },
+        {
+          "id": 7515,
+          "val": 9.81954574584961
+        },
+        {
+          "id": 29901,
+          "val": 9.638388633728027
+        },
+        {
+          "id": 29897,
+          "val": 9.59837532043457
+        },
+        {
+          "id": 448,
+          "val": 9.568679809570312
+        }
+      ],
+      "elapsed_s": 113.346,
+      "dispatch_count": 954,
+      "ref_token_id": 29889,
+      "ref_match": true
+    },
+    {
+      "step": 8,
+      "pos": 13,
+      "token_id": 450,
+      "token_text": "The",
+      "logits_hash": "cd13a814dc8298793413474d2869f2af717f3d106fe24a5779eb1804b7213006",
+      "logits_top5": [
+        {
+          "id": 450,
+          "val": 10.497546195983887
+        },
+        {
+          "id": 315,
+          "val": 10.478899002075195
+        },
+        {
+          "id": 29907,
+          "val": 10.116247177124023
+        },
+        {
+          "id": 3681,
+          "val": 9.844534873962402
+        },
+        {
+          "id": 4517,
+          "val": 8.538453102111816
+        }
+      ],
+      "elapsed_s": 110.395,
+      "dispatch_count": 954,
+      "ref_token_id": 450,
+      "ref_match": true
+    },
+    {
+      "step": 9,
+      "pos": 14,
+      "token_id": 7483,
+      "token_text": "capital",
+      "logits_hash": "3ca72e1f41824c1ac068999e806316c5a7518529fe6cfbf2eb02207696d265e1",
+      "logits_top5": [
+        {
+          "id": 7483,
+          "val": 11.66603946685791
+        },
+        {
+          "id": 3303,
+          "val": 9.366592407226562
+        },
+        {
+          "id": 5176,
+          "val": 7.931483268737793
+        },
+        {
+          "id": 937,
+          "val": 7.862820148468018
+        },
+        {
+          "id": 3148,
+          "val": 7.695362567901611
+        }
+      ],
+      "elapsed_s": 113.506,
+      "dispatch_count": 954,
+      "ref_token_id": 7483,
+      "ref_match": true
+    },
+    {
+      "step": 10,
+      "pos": 15,
+      "token_id": 310,
+      "token_text": "of",
+      "logits_hash": "b9b80b472b2f4a54abef105299fc1189990dffa781359571fef9e9fa17380de4",
+      "logits_top5": [
+        {
+          "id": 310,
+          "val": 18.152727127075195
+        },
+        {
+          "id": 4272,
+          "val": 14.499939918518066
+        },
+        {
+          "id": 338,
+          "val": 12.96529483795166
+        },
+        {
+          "id": 322,
+          "val": 11.727243423461914
+        },
+        {
+          "id": 4234,
+          "val": 10.98507022857666
+        }
+      ],
+      "elapsed_s": 113.257,
+      "dispatch_count": 954,
+      "ref_token_id": 310,
+      "ref_match": true
+    },
+    {
+      "step": 11,
+      "pos": 16,
+      "token_id": 9556,
+      "token_text": "Germany",
+      "logits_hash": "7c44cb8161ae4c2d7e04222597899a0fb72338bcacfd075172510a06a96cb051",
+      "logits_top5": [
+        {
+          "id": 9556,
+          "val": 13.717801094055176
+        },
+        {
+          "id": 3444,
+          "val": 13.678357124328613
+        },
+        {
+          "id": 278,
+          "val": 13.532247543334961
+        },
+        {
+          "id": 13616,
+          "val": 13.4058256149292
+        },
+        {
+          "id": 12730,
+          "val": 13.014694213867188
+        }
+      ],
+      "elapsed_s": 126.393,
+      "dispatch_count": 954,
+      "ref_token_id": 9556,
+      "ref_match": true
+    },
+    {
+      "step": 12,
+      "pos": 17,
+      "token_id": 338,
+      "token_text": "is",
+      "logits_hash": "7ca0e15bbb603b3be296e915de5e2e03db5442afca2d2af322809b26426e75ec",
+      "logits_top5": [
+        {
+          "id": 338,
+          "val": 18.95206069946289
+        },
+        {
+          "id": 29892,
+          "val": 12.645785331726074
+        },
+        {
+          "id": 322,
+          "val": 10.800857543945312
+        },
+        {
+          "id": 313,
+          "val": 10.665590286254883
+        },
+        {
+          "id": 756,
+          "val": 10.533736228942871
+        }
+      ],
+      "elapsed_s": 120.567,
+      "dispatch_count": 954,
+      "ref_token_id": 338,
+      "ref_match": true
+    },
+    {
+      "step": 13,
+      "pos": 18,
+      "token_id": 5115,
+      "token_text": "Berlin",
+      "logits_hash": "940036bc20f932130a8cfb275dcb37c4620f3d65831174fccaae99972f73b73d",
+      "logits_top5": [
+        {
+          "id": 5115,
+          "val": 18.10173225402832
+        },
+        {
+          "id": 25056,
+          "val": 13.67988109588623
+        },
+        {
+          "id": 16339,
+          "val": 11.321308135986328
+        },
+        {
+          "id": 13564,
+          "val": 11.288613319396973
+        },
+        {
+          "id": 17104,
+          "val": 10.834897994995117
+        }
+      ],
+      "elapsed_s": 124.822,
+      "dispatch_count": 954,
+      "ref_token_id": 5115,
+      "ref_match": true
+    },
+    {
+      "step": 14,
+      "pos": 19,
+      "token_id": 29889,
+      "token_text": ".",
+      "logits_hash": "fb4abda05170f6a012ac7c87e7f67175871bc06b5d04ad06ceee067a1c3d8d18",
+      "logits_top5": [
+        {
+          "id": 29889,
+          "val": 19.80377197265625
+        },
+        {
+          "id": 29892,
+          "val": 14.469786643981934
+        },
+        {
+          "id": 13,
+          "val": 14.206512451171875
+        },
+        {
+          "id": 313,
+          "val": 11.731200218200684
+        },
+        {
+          "id": 322,
+          "val": 11.682055473327637
+        }
+      ],
+      "elapsed_s": 121.357,
+      "dispatch_count": 954,
+      "ref_token_id": 29889,
+      "ref_match": true
+    },
+    {
+      "step": 15,
+      "pos": 20,
+      "token_id": 13,
+      "token_text": "\n",
+      "logits_hash": "46155a1aa776d5f1864a1a3df4b5234aa9d463836a3f8ed66b61b95a8a17cbc3",
+      "logits_top5": [
+        {
+          "id": 13,
+          "val": 19.52467155456543
+        },
+        {
+          "id": 2,
+          "val": 15.331610679626465
+        },
+        {
+          "id": 29871,
+          "val": 14.56179428100586
+        },
+        {
+          "id": 16564,
+          "val": 11.330347061157227
+        },
+        {
+          "id": 450,
+          "val": 10.862763404846191
+        }
+      ],
+      "elapsed_s": 121.723,
+      "dispatch_count": 954,
+      "ref_token_id": 13,
+      "ref_match": true
+    },
+    {
+      "step": 16,
+      "pos": 21,
+      "token_id": 13,
+      "token_text": "\n",
+      "logits_hash": "52de5e43929b34d221498efb3965b7d83dbbf3b02bc8327a8a8570aa942f187d",
+      "logits_top5": [
+        {
+          "id": 13,
+          "val": 21.58706283569336
+        },
+        {
+          "id": 29941,
+          "val": 16.912166595458984
+        },
+        {
+          "id": 259,
+          "val": 13.083659172058105
+        },
+        {
+          "id": 29871,
+          "val": 12.761792182922363
+        },
+        {
+          "id": 29906,
+          "val": 12.692411422729492
+        }
+      ],
+      "elapsed_s": 118.39,
+      "dispatch_count": 954,
+      "ref_token_id": 13,
+      "ref_match": true
+    },
+    {
+      "step": 17,
+      "pos": 22,
+      "token_id": 29941,
+      "token_text": "3",
+      "logits_hash": "dab6e5e88aa1821ee37e64d02e323f9269b6b73be0cf5611fd6b4f5c9e4dc3d1",
+      "logits_top5": [
+        {
+          "id": 29941,
+          "val": 17.920957565307617
+        },
+        {
+          "id": 1576,
+          "val": 13.397356986999512
+        },
+        {
+          "id": 797,
+          "val": 12.987874031066895
+        },
+        {
+          "id": 29874,
+          "val": 12.715686798095703
+        },
+        {
+          "id": 29933,
+          "val": 12.563323020935059
+        }
+      ],
+      "elapsed_s": 120.967,
+      "dispatch_count": 954,
+      "ref_token_id": 29941,
+      "ref_match": true
+    },
+    {
+      "step": 18,
+      "pos": 23,
+      "token_id": 29889,
+      "token_text": ".",
+      "logits_hash": "94b678c128d21192a076cf85d5dd9e36dcb67bc6eac3bc6f7b75b3c4e0b9d2ff",
+      "logits_top5": [
+        {
+          "id": 29889,
+          "val": 21.07729721069336
+        },
+        {
+          "id": 29899,
+          "val": 11.31413459777832
+        },
+        {
+          "id": 29892,
+          "val": 10.753192901611328
+        },
+        {
+          "id": 29874,
+          "val": 10.651403427124023
+        },
+        {
+          "id": 29890,
+          "val": 9.977081298828125
+        }
+      ],
+      "elapsed_s": 120.814,
+      "dispatch_count": 954,
+      "ref_token_id": 29889,
+      "ref_match": true
+    },
+    {
+      "step": 19,
+      "pos": 24,
+      "token_id": 315,
+      "token_text": "C",
+      "logits_hash": "087a07be85a685f35d06f2909d6ba13ee83dc1ebf00060f2c293ee0b8d4fcfaa",
+      "logits_top5": [
+        {
+          "id": 315,
+          "val": 16.677608489990234
+        },
+        {
+          "id": 319,
+          "val": 14.69788932800293
+        },
+        {
+          "id": 360,
+          "val": 12.680902481079102
+        },
+        {
+          "id": 350,
+          "val": 11.676688194274902
+        },
+        {
+          "id": 450,
+          "val": 10.79320240020752
+        }
+      ],
+      "elapsed_s": 117.224,
+      "dispatch_count": 954,
+      "ref_token_id": 315,
+      "ref_match": true
+    }
+  ],
+  "total_steps": 20,
+  "total_elapsed_s": 2437.84,
+  "avg_step_s": 121.892,
+  "reference_match": {
+    "matches": 20,
+    "total": 20,
+    "rate": 1.0
+  }
+}

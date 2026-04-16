@@ -1,0 +1,28 @@
+#version 450
+layout(local_size_x = 128, local_size_y = 1, local_size_z = 1) in;
+layout(set = 0, binding = 0) readonly buffer InBuf { float x[]; };
+layout(set = 0, binding = 2) writeonly buffer OutBuf { float y[]; };
+shared float scratch[128];
+void main() {
+    uint lid = gl_LocalInvocationID.x;
+    float m = x[lid];
+    scratch[lid] = m;
+    barrier();
+    for (uint stride = 64u; stride > 0u; stride >>= 1u) {
+        if (lid < stride) {
+            scratch[lid] = max(scratch[lid], scratch[lid + stride]);
+        }
+        barrier();
+    }
+    m = scratch[0];
+    float e = exp(x[lid] - m);
+    scratch[lid] = e;
+    barrier();
+    for (uint stride = 64u; stride > 0u; stride >>= 1u) {
+        if (lid < stride) {
+            scratch[lid] += scratch[lid + stride];
+        }
+        barrier();
+    }
+    y[lid] = e / scratch[0];
+}

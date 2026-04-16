@@ -1,0 +1,38 @@
+#version 450
+layout(local_size_x = 64, local_size_y = 1, local_size_z = 1) in;
+
+layout(std430, binding = 0) readonly buffer Lhs    { float lhs_data[]; };
+layout(std430, binding = 1) readonly buffer Rhs    { float rhs_data[]; };
+layout(std430, binding = 2) writeonly buffer Output { float output_data[]; };
+
+// lhs layout: [batch, m, k]  (row-major)
+// rhs layout: [batch, k, n]  (row-major)
+// out layout: [batch, m, n]  (row-major)
+layout(push_constant) uniform Params {
+    int batch;
+    int m;
+    int k;
+    int n;
+    int total;
+} pc;
+
+void main() {
+    uint idx = gl_GlobalInvocationID.x;
+    if (idx >= uint(pc.total)) { return; }
+
+    int i = int(idx);
+    int mn = pc.m * pc.n;
+    int b = i / mn;
+    int rem = i % mn;
+    int row = rem / pc.n;
+    int col = rem % pc.n;
+
+    int lhs_base = b * pc.m * pc.k + row * pc.k;
+    int rhs_base = b * pc.k * pc.n + col;
+
+    float acc = 0.0;
+    for (int kk = 0; kk < pc.k; ++kk) {
+        acc += lhs_data[lhs_base + kk] * rhs_data[rhs_base + kk * pc.n];
+    }
+    output_data[idx] = acc;
+}

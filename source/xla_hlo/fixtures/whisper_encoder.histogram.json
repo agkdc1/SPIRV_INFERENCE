@@ -1,0 +1,570 @@
+{
+  "bytes": 207741,
+  "error": null,
+  "export_blocked": false,
+  "hlo_like_tokens": {
+    "add": 87,
+    "broadcast": 143,
+    "constant": 81,
+    "convert": 72,
+    "convolution": 2,
+    "divide": 22,
+    "dot": 32,
+    "exponential": 4,
+    "get-tuple-element": 1,
+    "maximum": 4,
+    "multiply": 67,
+    "parameter": 124,
+    "reduce": 26,
+    "reshape": 152,
+    "rsqrt": 9,
+    "subtract": 22,
+    "tanh": 6,
+    "transpose": 48,
+    "tuple": 1
+  },
+  "input_specs": [
+    {
+      "dtype": "float32",
+      "name": "mel",
+      "shape": [
+        1,
+        3000,
+        80
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "conv1_w",
+      "shape": [
+        1,
+        3,
+        80,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "conv1_b",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "conv2_w",
+      "shape": [
+        1,
+        3,
+        384,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "conv2_b",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "pos_emb",
+      "shape": [
+        1500,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc0_ln1_gamma",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc0_ln1_beta",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc0_q_w",
+      "shape": [
+        384,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc0_q_b",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc0_k_w",
+      "shape": [
+        384,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc0_k_b",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc0_v_w",
+      "shape": [
+        384,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc0_v_b",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc0_out_w",
+      "shape": [
+        384,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc0_out_b",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc0_ln2_gamma",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc0_ln2_beta",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc0_fc1_w",
+      "shape": [
+        384,
+        1536
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc0_fc1_b",
+      "shape": [
+        1536
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc0_fc2_w",
+      "shape": [
+        1536,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc0_fc2_b",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc1_ln1_gamma",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc1_ln1_beta",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc1_q_w",
+      "shape": [
+        384,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc1_q_b",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc1_k_w",
+      "shape": [
+        384,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc1_k_b",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc1_v_w",
+      "shape": [
+        384,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc1_v_b",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc1_out_w",
+      "shape": [
+        384,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc1_out_b",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc1_ln2_gamma",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc1_ln2_beta",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc1_fc1_w",
+      "shape": [
+        384,
+        1536
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc1_fc1_b",
+      "shape": [
+        1536
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc1_fc2_w",
+      "shape": [
+        1536,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc1_fc2_b",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc2_ln1_gamma",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc2_ln1_beta",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc2_q_w",
+      "shape": [
+        384,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc2_q_b",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc2_k_w",
+      "shape": [
+        384,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc2_k_b",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc2_v_w",
+      "shape": [
+        384,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc2_v_b",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc2_out_w",
+      "shape": [
+        384,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc2_out_b",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc2_ln2_gamma",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc2_ln2_beta",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc2_fc1_w",
+      "shape": [
+        384,
+        1536
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc2_fc1_b",
+      "shape": [
+        1536
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc2_fc2_w",
+      "shape": [
+        1536,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc2_fc2_b",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc3_ln1_gamma",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc3_ln1_beta",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc3_q_w",
+      "shape": [
+        384,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc3_q_b",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc3_k_w",
+      "shape": [
+        384,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc3_k_b",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc3_v_w",
+      "shape": [
+        384,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc3_v_b",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc3_out_w",
+      "shape": [
+        384,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc3_out_b",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc3_ln2_gamma",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc3_ln2_beta",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc3_fc1_w",
+      "shape": [
+        384,
+        1536
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc3_fc1_b",
+      "shape": [
+        1536
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc3_fc2_w",
+      "shape": [
+        1536,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "enc3_fc2_b",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "ln_f_gamma",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "ln_f_beta",
+      "shape": [
+        384
+      ]
+    }
+  ],
+  "model": "whisper_encoder",
+  "output": "xla_hlo/fixtures/whisper_encoder.stablehlo.txt",
+  "stablehlo_ops": {},
+  "status": "pass",
+  "tensorflow_version": "2.21.0"
+}

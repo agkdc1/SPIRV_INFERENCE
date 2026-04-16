@@ -1,0 +1,8 @@
+{
+  "status": "pass",
+  "baseline_kind": "cuda_custom_kernels",
+  "device": {"name": "NVIDIA GeForce RTX 3060", "compute_capability": "8.6"},
+  "graph": ["conv1d", "batchnorm", "relu", "fc", "softmax"],
+  "output_path": "inference_poc/out/nvidia_cuda/output.raw.f32",
+  "non_claims": {"uses_cublas": false, "uses_cudnn": false, "uses_tensorrt": false, "claims_tensorflow_runtime": false, "claims_full_tensorflow_gpu_support": false}
+}

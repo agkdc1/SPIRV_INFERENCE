@@ -1,0 +1,38 @@
+{
+  "framework": "PyTorch",
+  "device": "cuda",
+  "cuda_used": true,
+  "epochs": 5,
+  "batch_size": 64,
+  "learning_rate": 0.001,
+  "final_test_accuracy": 0.9738581730769231,
+  "final_train_loss": 0.05507868834947143,
+  "total_time_secs": 52.666510343551636,
+  "epoch_results": [
+    {
+      "epoch": 1,
+      "train_loss": 0.297695687034723,
+      "test_accuracy": 0.9534254807692307
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.13458269194818104,
+      "test_accuracy": 0.9647435897435898
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.09288419988115687,
+      "test_accuracy": 0.9722556089743589
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.07110435863272978,
+      "test_accuracy": 0.9747596153846154
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.05507868834947143,
+      "test_accuracy": 0.9738581730769231
+    }
+  ]
+}

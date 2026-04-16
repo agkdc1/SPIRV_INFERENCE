@@ -1,0 +1,26 @@
+#version 450
+layout(local_size_x = 128, local_size_y = 1, local_size_z = 1) in;
+layout(set = 0, binding = 0) readonly buffer InBuf { float x[]; };
+layout(set = 0, binding = 1) readonly buffer FilterBuf { float w[]; };
+layout(set = 0, binding = 2) writeonly buffer OutBuf { float y[]; };
+void main() {
+    uint idx = gl_GlobalInvocationID.x;
+    if (idx >= 512u) {
+        return;
+    }
+    uint row = idx / 32u;
+    uint oc = idx - row * 32u;
+    float acc = 0.0;
+    for (uint kk = 0u; kk < 3u; ++kk) {
+        int src_row = int(row) + int(kk) - 1;
+        if (src_row < 0 || src_row >= 16) {
+            continue;
+        }
+        for (uint ic = 0u; ic < 64u; ++ic) {
+            float xv = x[uint(src_row) * 64u + ic];
+            float wv = w[(kk * 64u + ic) * 32u + oc];
+            acc += xv * wv;
+        }
+    }
+    y[idx] = acc;
+}

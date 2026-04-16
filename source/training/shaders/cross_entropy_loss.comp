@@ -1,0 +1,25 @@
+#version 450
+layout(local_size_x = 64) in;
+layout(std430, binding = 0) readonly buffer A { float sm[]; };
+layout(std430, binding = 1) readonly buffer B { float tgt[]; };
+layout(std430, binding = 2) writeonly buffer C { float loss_out[]; };
+layout(push_constant) uniform P { int batch_size; int num_classes; } pc;
+shared float partial[64];
+void main() {
+    uint lid = gl_LocalInvocationID.x;
+    float acc = 0.0;
+    for (int b = int(lid); b < pc.batch_size; b += 64) {
+        for (int cl = 0; cl < pc.num_classes; ++cl) {
+            int idx = b * pc.num_classes + cl;
+            float s = max(sm[idx], 1.0e-7);
+            acc += tgt[idx] * log(s);
+        }
+    }
+    partial[lid] = acc;
+    barrier();
+    if (lid == 0u) {
+        float total = 0.0;
+        for (int j = 0; j < 64; ++j) total += partial[j];
+        loss_out[0] = -total / float(pc.batch_size);
+    }
+}

@@ -1,0 +1,2733 @@
+[
+  {
+    "parameter": 0,
+    "shape": [
+      1,
+      224,
+      224,
+      3
+    ],
+    "role": "input",
+    "path": "xla_hlo/fixtures/resnet50_param_000_input.raw.f32"
+  },
+  {
+    "parameter": 1,
+    "shape": [
+      7,
+      7,
+      3,
+      64
+    ],
+    "role": "conv1_conv/kernel",
+    "path": "xla_hlo/fixtures/resnet50_param_001.raw.f32"
+  },
+  {
+    "parameter": 2,
+    "shape": [
+      64
+    ],
+    "role": "conv1_conv/bias",
+    "path": "xla_hlo/fixtures/resnet50_param_002.raw.f32"
+  },
+  {
+    "parameter": 3,
+    "shape": [
+      64
+    ],
+    "role": "conv1_bn/moving_mean",
+    "path": "xla_hlo/fixtures/resnet50_param_005.raw.f32"
+  },
+  {
+    "parameter": 4,
+    "shape": [
+      64
+    ],
+    "role": "conv1_bn/moving_variance",
+    "path": "xla_hlo/fixtures/resnet50_param_006.raw.f32"
+  },
+  {
+    "parameter": 5,
+    "shape": [
+      64
+    ],
+    "role": "conv1_bn/gamma",
+    "path": "xla_hlo/fixtures/resnet50_param_003.raw.f32"
+  },
+  {
+    "parameter": 6,
+    "shape": [
+      64
+    ],
+    "role": "conv1_bn/beta",
+    "path": "xla_hlo/fixtures/resnet50_param_004.raw.f32"
+  },
+  {
+    "parameter": 7,
+    "shape": [
+      1,
+      1,
+      64,
+      64
+    ],
+    "role": "conv2_block1_1_conv/kernel",
+    "path": "xla_hlo/fixtures/resnet50_param_007.raw.f32"
+  },
+  {
+    "parameter": 8,
+    "shape": [
+      64
+    ],
+    "role": "conv2_block1_1_conv/bias",
+    "path": "xla_hlo/fixtures/resnet50_param_008.raw.f32"
+  },
+  {
+    "parameter": 9,
+    "shape": [
+      64
+    ],
+    "role": "conv2_block1_1_bn/moving_mean",
+    "path": "xla_hlo/fixtures/resnet50_param_011.raw.f32"
+  },
+  {
+    "parameter": 10,
+    "shape": [
+      64
+    ],
+    "role": "conv2_block1_1_bn/moving_variance",
+    "path": "xla_hlo/fixtures/resnet50_param_012.raw.f32"
+  },
+  {
+    "parameter": 11,
+    "shape": [
+      64
+    ],
+    "role": "conv2_block1_1_bn/gamma",
+    "path": "xla_hlo/fixtures/resnet50_param_009.raw.f32"
+  },
+  {
+    "parameter": 12,
+    "shape": [
+      64
+    ],
+    "role": "conv2_block1_1_bn/beta",
+    "path": "xla_hlo/fixtures/resnet50_param_010.raw.f32"
+  },
+  {
+    "parameter": 13,
+    "shape": [
+      3,
+      3,
+      64,
+      64
+    ],
+    "role": "conv2_block1_2_conv/kernel",
+    "path": "xla_hlo/fixtures/resnet50_param_013.raw.f32"
+  },
+  {
+    "parameter": 14,
+    "shape": [
+      64
+    ],
+    "role": "conv2_block1_2_conv/bias",
+    "path": "xla_hlo/fixtures/resnet50_param_014.raw.f32"
+  },
+  {
+    "parameter": 15,
+    "shape": [
+      64
+    ],
+    "role": "conv2_block1_2_bn/moving_mean",
+    "path": "xla_hlo/fixtures/resnet50_param_017.raw.f32"
+  },
+  {
+    "parameter": 16,
+    "shape": [
+      64
+    ],
+    "role": "conv2_block1_2_bn/moving_variance",
+    "path": "xla_hlo/fixtures/resnet50_param_018.raw.f32"
+  },
+  {
+    "parameter": 17,
+    "shape": [
+      64
+    ],
+    "role": "conv2_block1_2_bn/gamma",
+    "path": "xla_hlo/fixtures/resnet50_param_015.raw.f32"
+  },
+  {
+    "parameter": 18,
+    "shape": [
+      64
+    ],
+    "role": "conv2_block1_2_bn/beta",
+    "path": "xla_hlo/fixtures/resnet50_param_016.raw.f32"
+  },
+  {
+    "parameter": 19,
+    "shape": [
+      1,
+      1,
+      64,
+      256
+    ],
+    "role": "conv2_block1_3_conv/kernel",
+    "path": "xla_hlo/fixtures/resnet50_param_021.raw.f32"
+  },
+  {
+    "parameter": 20,
+    "shape": [
+      256
+    ],
+    "role": "conv2_block1_3_conv/bias",
+    "path": "xla_hlo/fixtures/resnet50_param_022.raw.f32"
+  },
+  {
+    "parameter": 21,
+    "shape": [
+      1,
+      1,
+      64,
+      256
+    ],
+    "role": "conv2_block1_0_conv/kernel",
+    "path": "xla_hlo/fixtures/resnet50_param_019.raw.f32"
+  },
+  {
+    "parameter": 22,
+    "shape": [
+      256
+    ],
+    "role": "conv2_block1_0_conv/bias",
+    "path": "xla_hlo/fixtures/resnet50_param_020.raw.f32"
+  },
+  {
+    "parameter": 23,
+    "shape": [
+      256
+    ],
+    "role": "conv2_block1_0_bn/moving_mean",
+    "path": "xla_hlo/fixtures/resnet50_param_025.raw.f32"
+  },
+  {
+    "parameter": 24,
+    "shape": [
+      256
+    ],
+    "role": "conv2_block1_0_bn/moving_variance",
+    "path": "xla_hlo/fixtures/resnet50_param_026.raw.f32"
+  },
+  {
+    "parameter": 25,
+    "shape": [
+      256
+    ],
+    "role": "conv2_block1_0_bn/gamma",
+    "path": "xla_hlo/fixtures/resnet50_param_023.raw.f32"
+  },
+  {
+    "parameter": 26,
+    "shape": [
+      256
+    ],
+    "role": "conv2_block1_0_bn/beta",
+    "path": "xla_hlo/fixtures/resnet50_param_024.raw.f32"
+  },
+  {
+    "parameter": 27,
+    "shape": [
+      256
+    ],
+    "role": "conv2_block1_3_bn/moving_mean",
+    "path": "xla_hlo/fixtures/resnet50_param_029.raw.f32"
+  },
+  {
+    "parameter": 28,
+    "shape": [
+      256
+    ],
+    "role": "conv2_block1_3_bn/moving_variance",
+    "path": "xla_hlo/fixtures/resnet50_param_030.raw.f32"
+  },
+  {
+    "parameter": 29,
+    "shape": [
+      256
+    ],
+    "role": "conv2_block1_3_bn/gamma",
+    "path": "xla_hlo/fixtures/resnet50_param_027.raw.f32"
+  },
+  {
+    "parameter": 30,
+    "shape": [
+      256
+    ],
+    "role": "conv2_block1_3_bn/beta",
+    "path": "xla_hlo/fixtures/resnet50_param_028.raw.f32"
+  },
+  {
+    "parameter": 31,
+    "shape": [
+      1,
+      1,
+      256,
+      64
+    ],
+    "role": "conv2_block2_1_conv/kernel",
+    "path": "xla_hlo/fixtures/resnet50_param_031.raw.f32"
+  },
+  {
+    "parameter": 32,
+    "shape": [
+      64
+    ],
+    "role": "conv2_block2_1_conv/bias",
+    "path": "xla_hlo/fixtures/resnet50_param_032.raw.f32"
+  },
+  {
+    "parameter": 33,
+    "shape": [
+      64
+    ],
+    "role": "conv2_block2_1_bn/moving_mean",
+    "path": "xla_hlo/fixtures/resnet50_param_035.raw.f32"
+  },
+  {
+    "parameter": 34,
+    "shape": [
+      64
+    ],
+    "role": "conv2_block2_1_bn/moving_variance",
+    "path": "xla_hlo/fixtures/resnet50_param_036.raw.f32"
+  },
+  {
+    "parameter": 35,
+    "shape": [
+      64
+    ],
+    "role": "conv2_block2_1_bn/gamma",
+    "path": "xla_hlo/fixtures/resnet50_param_033.raw.f32"
+  },
+  {
+    "parameter": 36,
+    "shape": [
+      64
+    ],
+    "role": "conv2_block2_1_bn/beta",
+    "path": "xla_hlo/fixtures/resnet50_param_034.raw.f32"
+  },
+  {
+    "parameter": 37,
+    "shape": [
+      3,
+      3,
+      64,
+      64
+    ],
+    "role": "conv2_block2_2_conv/kernel",
+    "path": "xla_hlo/fixtures/resnet50_param_037.raw.f32"
+  },
+  {
+    "parameter": 38,
+    "shape": [
+      64
+    ],
+    "role": "conv2_block2_2_conv/bias",
+    "path": "xla_hlo/fixtures/resnet50_param_038.raw.f32"
+  },
+  {
+    "parameter": 39,
+    "shape": [
+      64
+    ],
+    "role": "conv2_block2_2_bn/moving_mean",
+    "path": "xla_hlo/fixtures/resnet50_param_041.raw.f32"
+  },
+  {
+    "parameter": 40,
+    "shape": [
+      64
+    ],
+    "role": "conv2_block2_2_bn/moving_variance",
+    "path": "xla_hlo/fixtures/resnet50_param_042.raw.f32"
+  },
+  {
+    "parameter": 41,
+    "shape": [
+      64
+    ],
+    "role": "conv2_block2_2_bn/gamma",
+    "path": "xla_hlo/fixtures/resnet50_param_039.raw.f32"
+  },
+  {
+    "parameter": 42,
+    "shape": [
+      64
+    ],
+    "role": "conv2_block2_2_bn/beta",
+    "path": "xla_hlo/fixtures/resnet50_param_040.raw.f32"
+  },
+  {
+    "parameter": 43,
+    "shape": [
+      1,
+      1,
+      64,
+      256
+    ],
+    "role": "conv2_block2_3_conv/kernel",
+    "path": "xla_hlo/fixtures/resnet50_param_043.raw.f32"
+  },
+  {
+    "parameter": 44,
+    "shape": [
+      256
+    ],
+    "role": "conv2_block2_3_conv/bias",
+    "path": "xla_hlo/fixtures/resnet50_param_044.raw.f32"
+  },
+  {
+    "parameter": 45,
+    "shape": [
+      256
+    ],
+    "role": "conv2_block2_3_bn/moving_mean",
+    "path": "xla_hlo/fixtures/resnet50_param_047.raw.f32"
+  },
+  {
+    "parameter": 46,
+    "shape": [
+      256
+    ],
+    "role": "conv2_block2_3_bn/moving_variance",
+    "path": "xla_hlo/fixtures/resnet50_param_048.raw.f32"
+  },
+  {
+    "parameter": 47,
+    "shape": [
+      256
+    ],
+    "role": "conv2_block2_3_bn/gamma",
+    "path": "xla_hlo/fixtures/resnet50_param_045.raw.f32"
+  },
+  {
+    "parameter": 48,
+    "shape": [
+      256
+    ],
+    "role": "conv2_block2_3_bn/beta",
+    "path": "xla_hlo/fixtures/resnet50_param_046.raw.f32"
+  },
+  {
+    "parameter": 49,
+    "shape": [
+      1,
+      1,
+      256,
+      64
+    ],
+    "role": "conv2_block3_1_conv/kernel",
+    "path": "xla_hlo/fixtures/resnet50_param_049.raw.f32"
+  },
+  {
+    "parameter": 50,
+    "shape": [
+      64
+    ],
+    "role": "conv2_block3_1_conv/bias",
+    "path": "xla_hlo/fixtures/resnet50_param_050.raw.f32"
+  },
+  {
+    "parameter": 51,
+    "shape": [
+      64
+    ],
+    "role": "conv2_block3_1_bn/moving_mean",
+    "path": "xla_hlo/fixtures/resnet50_param_053.raw.f32"
+  },
+  {
+    "parameter": 52,
+    "shape": [
+      64
+    ],
+    "role": "conv2_block3_1_bn/moving_variance",
+    "path": "xla_hlo/fixtures/resnet50_param_054.raw.f32"
+  },
+  {
+    "parameter": 53,
+    "shape": [
+      64
+    ],
+    "role": "conv2_block3_1_bn/gamma",
+    "path": "xla_hlo/fixtures/resnet50_param_051.raw.f32"
+  },
+  {
+    "parameter": 54,
+    "shape": [
+      64
+    ],
+    "role": "conv2_block3_1_bn/beta",
+    "path": "xla_hlo/fixtures/resnet50_param_052.raw.f32"
+  },
+  {
+    "parameter": 55,
+    "shape": [
+      3,
+      3,
+      64,
+      64
+    ],
+    "role": "conv2_block3_2_conv/kernel",
+    "path": "xla_hlo/fixtures/resnet50_param_055.raw.f32"
+  },
+  {
+    "parameter": 56,
+    "shape": [
+      64
+    ],
+    "role": "conv2_block3_2_conv/bias",
+    "path": "xla_hlo/fixtures/resnet50_param_056.raw.f32"
+  },
+  {
+    "parameter": 57,
+    "shape": [
+      64
+    ],
+    "role": "conv2_block3_2_bn/moving_mean",
+    "path": "xla_hlo/fixtures/resnet50_param_059.raw.f32"
+  },
+  {
+    "parameter": 58,
+    "shape": [
+      64
+    ],
+    "role": "conv2_block3_2_bn/moving_variance",
+    "path": "xla_hlo/fixtures/resnet50_param_060.raw.f32"
+  },
+  {
+    "parameter": 59,
+    "shape": [
+      64
+    ],
+    "role": "conv2_block3_2_bn/gamma",
+    "path": "xla_hlo/fixtures/resnet50_param_057.raw.f32"
+  },
+  {
+    "parameter": 60,
+    "shape": [
+      64
+    ],
+    "role": "conv2_block3_2_bn/beta",
+    "path": "xla_hlo/fixtures/resnet50_param_058.raw.f32"
+  },
+  {
+    "parameter": 61,
+    "shape": [
+      1,
+      1,
+      64,
+      256
+    ],
+    "role": "conv2_block3_3_conv/kernel",
+    "path": "xla_hlo/fixtures/resnet50_param_061.raw.f32"
+  },
+  {
+    "parameter": 62,
+    "shape": [
+      256
+    ],
+    "role": "conv2_block3_3_conv/bias",
+    "path": "xla_hlo/fixtures/resnet50_param_062.raw.f32"
+  },
+  {
+    "parameter": 63,
+    "shape": [
+      256
+    ],
+    "role": "conv2_block3_3_bn/moving_mean",
+    "path": "xla_hlo/fixtures/resnet50_param_065.raw.f32"
+  },
+  {
+    "parameter": 64,
+    "shape": [
+      256
+    ],
+    "role": "conv2_block3_3_bn/moving_variance",
+    "path": "xla_hlo/fixtures/resnet50_param_066.raw.f32"
+  },
+  {
+    "parameter": 65,
+    "shape": [
+      256
+    ],
+    "role": "conv2_block3_3_bn/gamma",
+    "path": "xla_hlo/fixtures/resnet50_param_063.raw.f32"
+  },
+  {
+    "parameter": 66,
+    "shape": [
+      256
+    ],
+    "role": "conv2_block3_3_bn/beta",
+    "path": "xla_hlo/fixtures/resnet50_param_064.raw.f32"
+  },
+  {
+    "parameter": 67,
+    "shape": [
+      1,
+      1,
+      256,
+      128
+    ],
+    "role": "conv3_block1_1_conv/kernel",
+    "path": "xla_hlo/fixtures/resnet50_param_067.raw.f32"
+  },
+  {
+    "parameter": 68,
+    "shape": [
+      128
+    ],
+    "role": "conv3_block1_1_conv/bias",
+    "path": "xla_hlo/fixtures/resnet50_param_068.raw.f32"
+  },
+  {
+    "parameter": 69,
+    "shape": [
+      128
+    ],
+    "role": "conv3_block1_1_bn/moving_mean",
+    "path": "xla_hlo/fixtures/resnet50_param_071.raw.f32"
+  },
+  {
+    "parameter": 70,
+    "shape": [
+      128
+    ],
+    "role": "conv3_block1_1_bn/moving_variance",
+    "path": "xla_hlo/fixtures/resnet50_param_072.raw.f32"
+  },
+  {
+    "parameter": 71,
+    "shape": [
+      128
+    ],
+    "role": "conv3_block1_1_bn/gamma",
+    "path": "xla_hlo/fixtures/resnet50_param_069.raw.f32"
+  },
+  {
+    "parameter": 72,
+    "shape": [
+      128
+    ],
+    "role": "conv3_block1_1_bn/beta",
+    "path": "xla_hlo/fixtures/resnet50_param_070.raw.f32"
+  },
+  {
+    "parameter": 73,
+    "shape": [
+      3,
+      3,
+      128,
+      128
+    ],
+    "role": "conv3_block1_2_conv/kernel",
+    "path": "xla_hlo/fixtures/resnet50_param_073.raw.f32"
+  },
+  {
+    "parameter": 74,
+    "shape": [
+      128
+    ],
+    "role": "conv3_block1_2_conv/bias",
+    "path": "xla_hlo/fixtures/resnet50_param_074.raw.f32"
+  },
+  {
+    "parameter": 75,
+    "shape": [
+      128
+    ],
+    "role": "conv3_block1_2_bn/moving_mean",
+    "path": "xla_hlo/fixtures/resnet50_param_077.raw.f32"
+  },
+  {
+    "parameter": 76,
+    "shape": [
+      128
+    ],
+    "role": "conv3_block1_2_bn/moving_variance",
+    "path": "xla_hlo/fixtures/resnet50_param_078.raw.f32"
+  },
+  {
+    "parameter": 77,
+    "shape": [
+      128
+    ],
+    "role": "conv3_block1_2_bn/gamma",
+    "path": "xla_hlo/fixtures/resnet50_param_075.raw.f32"
+  },
+  {
+    "parameter": 78,
+    "shape": [
+      128
+    ],
+    "role": "conv3_block1_2_bn/beta",
+    "path": "xla_hlo/fixtures/resnet50_param_076.raw.f32"
+  },
+  {
+    "parameter": 79,
+    "shape": [
+      1,
+      1,
+      128,
+      512
+    ],
+    "role": "conv3_block1_3_conv/kernel",
+    "path": "xla_hlo/fixtures/resnet50_param_081.raw.f32"
+  },
+  {
+    "parameter": 80,
+    "shape": [
+      512
+    ],
+    "role": "conv3_block1_3_conv/bias",
+    "path": "xla_hlo/fixtures/resnet50_param_082.raw.f32"
+  },
+  {
+    "parameter": 81,
+    "shape": [
+      1,
+      1,
+      256,
+      512
+    ],
+    "role": "conv3_block1_0_conv/kernel",
+    "path": "xla_hlo/fixtures/resnet50_param_079.raw.f32"
+  },
+  {
+    "parameter": 82,
+    "shape": [
+      512
+    ],
+    "role": "conv3_block1_0_conv/bias",
+    "path": "xla_hlo/fixtures/resnet50_param_080.raw.f32"
+  },
+  {
+    "parameter": 83,
+    "shape": [
+      512
+    ],
+    "role": "conv3_block1_0_bn/moving_mean",
+    "path": "xla_hlo/fixtures/resnet50_param_085.raw.f32"
+  },
+  {
+    "parameter": 84,
+    "shape": [
+      512
+    ],
+    "role": "conv3_block1_0_bn/moving_variance",
+    "path": "xla_hlo/fixtures/resnet50_param_086.raw.f32"
+  },
+  {
+    "parameter": 85,
+    "shape": [
+      512
+    ],
+    "role": "conv3_block1_0_bn/gamma",
+    "path": "xla_hlo/fixtures/resnet50_param_083.raw.f32"
+  },
+  {
+    "parameter": 86,
+    "shape": [
+      512
+    ],
+    "role": "conv3_block1_0_bn/beta",
+    "path": "xla_hlo/fixtures/resnet50_param_084.raw.f32"
+  },
+  {
+    "parameter": 87,
+    "shape": [
+      512
+    ],
+    "role": "conv3_block1_3_bn/moving_mean",
+    "path": "xla_hlo/fixtures/resnet50_param_089.raw.f32"
+  },
+  {
+    "parameter": 88,
+    "shape": [
+      512
+    ],
+    "role": "conv3_block1_3_bn/moving_variance",
+    "path": "xla_hlo/fixtures/resnet50_param_090.raw.f32"
+  },
+  {
+    "parameter": 89,
+    "shape": [
+      512
+    ],
+    "role": "conv3_block1_3_bn/gamma",
+    "path": "xla_hlo/fixtures/resnet50_param_087.raw.f32"
+  },
+  {
+    "parameter": 90,
+    "shape": [
+      512
+    ],
+    "role": "conv3_block1_3_bn/beta",
+    "path": "xla_hlo/fixtures/resnet50_param_088.raw.f32"
+  },
+  {
+    "parameter": 91,
+    "shape": [
+      1,
+      1,
+      512,
+      128
+    ],
+    "role": "conv3_block2_1_conv/kernel",
+    "path": "xla_hlo/fixtures/resnet50_param_091.raw.f32"
+  },
+  {
+    "parameter": 92,
+    "shape": [
+      128
+    ],
+    "role": "conv3_block2_1_conv/bias",
+    "path": "xla_hlo/fixtures/resnet50_param_092.raw.f32"
+  },
+  {
+    "parameter": 93,
+    "shape": [
+      128
+    ],
+    "role": "conv3_block2_1_bn/moving_mean",
+    "path": "xla_hlo/fixtures/resnet50_param_095.raw.f32"
+  },
+  {
+    "parameter": 94,
+    "shape": [
+      128
+    ],
+    "role": "conv3_block2_1_bn/moving_variance",
+    "path": "xla_hlo/fixtures/resnet50_param_096.raw.f32"
+  },
+  {
+    "parameter": 95,
+    "shape": [
+      128
+    ],
+    "role": "conv3_block2_1_bn/gamma",
+    "path": "xla_hlo/fixtures/resnet50_param_093.raw.f32"
+  },
+  {
+    "parameter": 96,
+    "shape": [
+      128
+    ],
+    "role": "conv3_block2_1_bn/beta",
+    "path": "xla_hlo/fixtures/resnet50_param_094.raw.f32"
+  },
+  {
+    "parameter": 97,
+    "shape": [
+      3,
+      3,
+      128,
+      128
+    ],
+    "role": "conv3_block2_2_conv/kernel",
+    "path": "xla_hlo/fixtures/resnet50_param_097.raw.f32"
+  },
+  {
+    "parameter": 98,
+    "shape": [
+      128
+    ],
+    "role": "conv3_block2_2_conv/bias",
+    "path": "xla_hlo/fixtures/resnet50_param_098.raw.f32"
+  },
+  {
+    "parameter": 99,
+    "shape": [
+      128
+    ],
+    "role": "conv3_block2_2_bn/moving_mean",
+    "path": "xla_hlo/fixtures/resnet50_param_101.raw.f32"
+  },
+  {
+    "parameter": 100,
+    "shape": [
+      128
+    ],
+    "role": "conv3_block2_2_bn/moving_variance",
+    "path": "xla_hlo/fixtures/resnet50_param_102.raw.f32"
+  },
+  {
+    "parameter": 101,
+    "shape": [
+      128
+    ],
+    "role": "conv3_block2_2_bn/gamma",
+    "path": "xla_hlo/fixtures/resnet50_param_099.raw.f32"
+  },
+  {
+    "parameter": 102,
+    "shape": [
+      128
+    ],
+    "role": "conv3_block2_2_bn/beta",
+    "path": "xla_hlo/fixtures/resnet50_param_100.raw.f32"
+  },
+  {
+    "parameter": 103,
+    "shape": [
+      1,
+      1,
+      128,
+      512
+    ],
+    "role": "conv3_block2_3_conv/kernel",
+    "path": "xla_hlo/fixtures/resnet50_param_103.raw.f32"
+  },
+  {
+    "parameter": 104,
+    "shape": [
+      512
+    ],
+    "role": "conv3_block2_3_conv/bias",
+    "path": "xla_hlo/fixtures/resnet50_param_104.raw.f32"
+  },
+  {
+    "parameter": 105,
+    "shape": [
+      512
+    ],
+    "role": "conv3_block2_3_bn/moving_mean",
+    "path": "xla_hlo/fixtures/resnet50_param_107.raw.f32"
+  },
+  {
+    "parameter": 106,
+    "shape": [
+      512
+    ],
+    "role": "conv3_block2_3_bn/moving_variance",
+    "path": "xla_hlo/fixtures/resnet50_param_108.raw.f32"
+  },
+  {
+    "parameter": 107,
+    "shape": [
+      512
+    ],
+    "role": "conv3_block2_3_bn/gamma",
+    "path": "xla_hlo/fixtures/resnet50_param_105.raw.f32"
+  },
+  {
+    "parameter": 108,
+    "shape": [
+      512
+    ],
+    "role": "conv3_block2_3_bn/beta",
+    "path": "xla_hlo/fixtures/resnet50_param_106.raw.f32"
+  },
+  {
+    "parameter": 109,
+    "shape": [
+      1,
+      1,
+      512,
+      128
+    ],
+    "role": "conv3_block3_1_conv/kernel",
+    "path": "xla_hlo/fixtures/resnet50_param_109.raw.f32"
+  },
+  {
+    "parameter": 110,
+    "shape": [
+      128
+    ],
+    "role": "conv3_block3_1_conv/bias",
+    "path": "xla_hlo/fixtures/resnet50_param_110.raw.f32"
+  },
+  {
+    "parameter": 111,
+    "shape": [
+      128
+    ],
+    "role": "conv3_block3_1_bn/moving_mean",
+    "path": "xla_hlo/fixtures/resnet50_param_113.raw.f32"
+  },
+  {
+    "parameter": 112,
+    "shape": [
+      128
+    ],
+    "role": "conv3_block3_1_bn/moving_variance",
+    "path": "xla_hlo/fixtures/resnet50_param_114.raw.f32"
+  },
+  {
+    "parameter": 113,
+    "shape": [
+      128
+    ],
+    "role": "conv3_block3_1_bn/gamma",
+    "path": "xla_hlo/fixtures/resnet50_param_111.raw.f32"
+  },
+  {
+    "parameter": 114,
+    "shape": [
+      128
+    ],
+    "role": "conv3_block3_1_bn/beta",
+    "path": "xla_hlo/fixtures/resnet50_param_112.raw.f32"
+  },
+  {
+    "parameter": 115,
+    "shape": [
+      3,
+      3,
+      128,
+      128
+    ],
+    "role": "conv3_block3_2_conv/kernel",
+    "path": "xla_hlo/fixtures/resnet50_param_115.raw.f32"
+  },
+  {
+    "parameter": 116,
+    "shape": [
+      128
+    ],
+    "role": "conv3_block3_2_conv/bias",
+    "path": "xla_hlo/fixtures/resnet50_param_116.raw.f32"
+  },
+  {
+    "parameter": 117,
+    "shape": [
+      128
+    ],
+    "role": "conv3_block3_2_bn/moving_mean",
+    "path": "xla_hlo/fixtures/resnet50_param_119.raw.f32"
+  },
+  {
+    "parameter": 118,
+    "shape": [
+      128
+    ],
+    "role": "conv3_block3_2_bn/moving_variance",
+    "path": "xla_hlo/fixtures/resnet50_param_120.raw.f32"
+  },
+  {
+    "parameter": 119,
+    "shape": [
+      128
+    ],
+    "role": "conv3_block3_2_bn/gamma",
+    "path": "xla_hlo/fixtures/resnet50_param_117.raw.f32"
+  },
+  {
+    "parameter": 120,
+    "shape": [
+      128
+    ],
+    "role": "conv3_block3_2_bn/beta",
+    "path": "xla_hlo/fixtures/resnet50_param_118.raw.f32"
+  },
+  {
+    "parameter": 121,
+    "shape": [
+      1,
+      1,
+      128,
+      512
+    ],
+    "role": "conv3_block3_3_conv/kernel",
+    "path": "xla_hlo/fixtures/resnet50_param_121.raw.f32"
+  },
+  {
+    "parameter": 122,
+    "shape": [
+      512
+    ],
+    "role": "conv3_block3_3_conv/bias",
+    "path": "xla_hlo/fixtures/resnet50_param_122.raw.f32"
+  },
+  {
+    "parameter": 123,
+    "shape": [
+      512
+    ],
+    "role": "conv3_block3_3_bn/moving_mean",
+    "path": "xla_hlo/fixtures/resnet50_param_125.raw.f32"
+  },
+  {
+    "parameter": 124,
+    "shape": [
+      512
+    ],
+    "role": "conv3_block3_3_bn/moving_variance",
+    "path": "xla_hlo/fixtures/resnet50_param_126.raw.f32"
+  },
+  {
+    "parameter": 125,
+    "shape": [
+      512
+    ],
+    "role": "conv3_block3_3_bn/gamma",
+    "path": "xla_hlo/fixtures/resnet50_param_123.raw.f32"
+  },
+  {
+    "parameter": 126,
+    "shape": [
+      512
+    ],
+    "role": "conv3_block3_3_bn/beta",
+    "path": "xla_hlo/fixtures/resnet50_param_124.raw.f32"
+  },
+  {
+    "parameter": 127,
+    "shape": [
+      1,
+      1,
+      512,
+      128
+    ],
+    "role": "conv3_block4_1_conv/kernel",
+    "path": "xla_hlo/fixtures/resnet50_param_127.raw.f32"
+  },
+  {
+    "parameter": 128,
+    "shape": [
+      128
+    ],
+    "role": "conv3_block4_1_conv/bias",
+    "path": "xla_hlo/fixtures/resnet50_param_128.raw.f32"
+  },
+  {
+    "parameter": 129,
+    "shape": [
+      128
+    ],
+    "role": "conv3_block4_1_bn/moving_mean",
+    "path": "xla_hlo/fixtures/resnet50_param_131.raw.f32"
+  },
+  {
+    "parameter": 130,
+    "shape": [
+      128
+    ],
+    "role": "conv3_block4_1_bn/moving_variance",
+    "path": "xla_hlo/fixtures/resnet50_param_132.raw.f32"
+  },
+  {
+    "parameter": 131,
+    "shape": [
+      128
+    ],
+    "role": "conv3_block4_1_bn/gamma",
+    "path": "xla_hlo/fixtures/resnet50_param_129.raw.f32"
+  },
+  {
+    "parameter": 132,
+    "shape": [
+      128
+    ],
+    "role": "conv3_block4_1_bn/beta",
+    "path": "xla_hlo/fixtures/resnet50_param_130.raw.f32"
+  },
+  {
+    "parameter": 133,
+    "shape": [
+      3,
+      3,
+      128,
+      128
+    ],
+    "role": "conv3_block4_2_conv/kernel",
+    "path": "xla_hlo/fixtures/resnet50_param_133.raw.f32"
+  },
+  {
+    "parameter": 134,
+    "shape": [
+      128
+    ],
+    "role": "conv3_block4_2_conv/bias",
+    "path": "xla_hlo/fixtures/resnet50_param_134.raw.f32"
+  },
+  {
+    "parameter": 135,
+    "shape": [
+      128
+    ],
+    "role": "conv3_block4_2_bn/moving_mean",
+    "path": "xla_hlo/fixtures/resnet50_param_137.raw.f32"
+  },
+  {
+    "parameter": 136,
+    "shape": [
+      128
+    ],
+    "role": "conv3_block4_2_bn/moving_variance",
+    "path": "xla_hlo/fixtures/resnet50_param_138.raw.f32"
+  },
+  {
+    "parameter": 137,
+    "shape": [
+      128
+    ],
+    "role": "conv3_block4_2_bn/gamma",
+    "path": "xla_hlo/fixtures/resnet50_param_135.raw.f32"
+  },
+  {
+    "parameter": 138,
+    "shape": [
+      128
+    ],
+    "role": "conv3_block4_2_bn/beta",
+    "path": "xla_hlo/fixtures/resnet50_param_136.raw.f32"
+  },
+  {
+    "parameter": 139,
+    "shape": [
+      1,
+      1,
+      128,
+      512
+    ],
+    "role": "conv3_block4_3_conv/kernel",
+    "path": "xla_hlo/fixtures/resnet50_param_139.raw.f32"
+  },
+  {
+    "parameter": 140,
+    "shape": [
+      512
+    ],
+    "role": "conv3_block4_3_conv/bias",
+    "path": "xla_hlo/fixtures/resnet50_param_140.raw.f32"
+  },
+  {
+    "parameter": 141,
+    "shape": [
+      512
+    ],
+    "role": "conv3_block4_3_bn/moving_mean",
+    "path": "xla_hlo/fixtures/resnet50_param_143.raw.f32"
+  },
+  {
+    "parameter": 142,
+    "shape": [
+      512
+    ],
+    "role": "conv3_block4_3_bn/moving_variance",
+    "path": "xla_hlo/fixtures/resnet50_param_144.raw.f32"
+  },
+  {
+    "parameter": 143,
+    "shape": [
+      512
+    ],
+    "role": "conv3_block4_3_bn/gamma",
+    "path": "xla_hlo/fixtures/resnet50_param_141.raw.f32"
+  },
+  {
+    "parameter": 144,
+    "shape": [
+      512
+    ],
+    "role": "conv3_block4_3_bn/beta",
+    "path": "xla_hlo/fixtures/resnet50_param_142.raw.f32"
+  },
+  {
+    "parameter": 145,
+    "shape": [
+      1,
+      1,
+      512,
+      256
+    ],
+    "role": "conv4_block1_1_conv/kernel",
+    "path": "xla_hlo/fixtures/resnet50_param_145.raw.f32"
+  },
+  {
+    "parameter": 146,
+    "shape": [
+      256
+    ],
+    "role": "conv4_block1_1_conv/bias",
+    "path": "xla_hlo/fixtures/resnet50_param_146.raw.f32"
+  },
+  {
+    "parameter": 147,
+    "shape": [
+      256
+    ],
+    "role": "conv4_block1_1_bn/moving_mean",
+    "path": "xla_hlo/fixtures/resnet50_param_149.raw.f32"
+  },
+  {
+    "parameter": 148,
+    "shape": [
+      256
+    ],
+    "role": "conv4_block1_1_bn/moving_variance",
+    "path": "xla_hlo/fixtures/resnet50_param_150.raw.f32"
+  },
+  {
+    "parameter": 149,
+    "shape": [
+      256
+    ],
+    "role": "conv4_block1_1_bn/gamma",
+    "path": "xla_hlo/fixtures/resnet50_param_147.raw.f32"
+  },
+  {
+    "parameter": 150,
+    "shape": [
+      256
+    ],
+    "role": "conv4_block1_1_bn/beta",
+    "path": "xla_hlo/fixtures/resnet50_param_148.raw.f32"
+  },
+  {
+    "parameter": 151,
+    "shape": [
+      3,
+      3,
+      256,
+      256
+    ],
+    "role": "conv4_block1_2_conv/kernel",
+    "path": "xla_hlo/fixtures/resnet50_param_151.raw.f32"
+  },
+  {
+    "parameter": 152,
+    "shape": [
+      256
+    ],
+    "role": "conv4_block1_2_conv/bias",
+    "path": "xla_hlo/fixtures/resnet50_param_152.raw.f32"
+  },
+  {
+    "parameter": 153,
+    "shape": [
+      256
+    ],
+    "role": "conv4_block1_2_bn/moving_mean",
+    "path": "xla_hlo/fixtures/resnet50_param_155.raw.f32"
+  },
+  {
+    "parameter": 154,
+    "shape": [
+      256
+    ],
+    "role": "conv4_block1_2_bn/moving_variance",
+    "path": "xla_hlo/fixtures/resnet50_param_156.raw.f32"
+  },
+  {
+    "parameter": 155,
+    "shape": [
+      256
+    ],
+    "role": "conv4_block1_2_bn/gamma",
+    "path": "xla_hlo/fixtures/resnet50_param_153.raw.f32"
+  },
+  {
+    "parameter": 156,
+    "shape": [
+      256
+    ],
+    "role": "conv4_block1_2_bn/beta",
+    "path": "xla_hlo/fixtures/resnet50_param_154.raw.f32"
+  },
+  {
+    "parameter": 157,
+    "shape": [
+      1,
+      1,
+      256,
+      1024
+    ],
+    "role": "conv4_block1_3_conv/kernel",
+    "path": "xla_hlo/fixtures/resnet50_param_159.raw.f32"
+  },
+  {
+    "parameter": 158,
+    "shape": [
+      1024
+    ],
+    "role": "conv4_block1_3_conv/bias",
+    "path": "xla_hlo/fixtures/resnet50_param_160.raw.f32"
+  },
+  {
+    "parameter": 159,
+    "shape": [
+      1,
+      1,
+      512,
+      1024
+    ],
+    "role": "conv4_block1_0_conv/kernel",
+    "path": "xla_hlo/fixtures/resnet50_param_157.raw.f32"
+  },
+  {
+    "parameter": 160,
+    "shape": [
+      1024
+    ],
+    "role": "conv4_block1_0_conv/bias",
+    "path": "xla_hlo/fixtures/resnet50_param_158.raw.f32"
+  },
+  {
+    "parameter": 161,
+    "shape": [
+      1024
+    ],
+    "role": "conv4_block1_0_bn/moving_mean",
+    "path": "xla_hlo/fixtures/resnet50_param_163.raw.f32"
+  },
+  {
+    "parameter": 162,
+    "shape": [
+      1024
+    ],
+    "role": "conv4_block1_0_bn/moving_variance",
+    "path": "xla_hlo/fixtures/resnet50_param_164.raw.f32"
+  },
+  {
+    "parameter": 163,
+    "shape": [
+      1024
+    ],
+    "role": "conv4_block1_0_bn/gamma",
+    "path": "xla_hlo/fixtures/resnet50_param_161.raw.f32"
+  },
+  {
+    "parameter": 164,
+    "shape": [
+      1024
+    ],
+    "role": "conv4_block1_0_bn/beta",
+    "path": "xla_hlo/fixtures/resnet50_param_162.raw.f32"
+  },
+  {
+    "parameter": 165,
+    "shape": [
+      1024
+    ],
+    "role": "conv4_block1_3_bn/moving_mean",
+    "path": "xla_hlo/fixtures/resnet50_param_167.raw.f32"
+  },
+  {
+    "parameter": 166,
+    "shape": [
+      1024
+    ],
+    "role": "conv4_block1_3_bn/moving_variance",
+    "path": "xla_hlo/fixtures/resnet50_param_168.raw.f32"
+  },
+  {
+    "parameter": 167,
+    "shape": [
+      1024
+    ],
+    "role": "conv4_block1_3_bn/gamma",
+    "path": "xla_hlo/fixtures/resnet50_param_165.raw.f32"
+  },
+  {
+    "parameter": 168,
+    "shape": [
+      1024
+    ],
+    "role": "conv4_block1_3_bn/beta",
+    "path": "xla_hlo/fixtures/resnet50_param_166.raw.f32"
+  },
+  {
+    "parameter": 169,
+    "shape": [
+      1,
+      1,
+      1024,
+      256
+    ],
+    "role": "conv4_block2_1_conv/kernel",
+    "path": "xla_hlo/fixtures/resnet50_param_169.raw.f32"
+  },
+  {
+    "parameter": 170,
+    "shape": [
+      256
+    ],
+    "role": "conv4_block2_1_conv/bias",
+    "path": "xla_hlo/fixtures/resnet50_param_170.raw.f32"
+  },
+  {
+    "parameter": 171,
+    "shape": [
+      256
+    ],
+    "role": "conv4_block2_1_bn/moving_mean",
+    "path": "xla_hlo/fixtures/resnet50_param_173.raw.f32"
+  },
+  {
+    "parameter": 172,
+    "shape": [
+      256
+    ],
+    "role": "conv4_block2_1_bn/moving_variance",
+    "path": "xla_hlo/fixtures/resnet50_param_174.raw.f32"
+  },
+  {
+    "parameter": 173,
+    "shape": [
+      256
+    ],
+    "role": "conv4_block2_1_bn/gamma",
+    "path": "xla_hlo/fixtures/resnet50_param_171.raw.f32"
+  },
+  {
+    "parameter": 174,
+    "shape": [
+      256
+    ],
+    "role": "conv4_block2_1_bn/beta",
+    "path": "xla_hlo/fixtures/resnet50_param_172.raw.f32"
+  },
+  {
+    "parameter": 175,
+    "shape": [
+      3,
+      3,
+      256,
+      256
+    ],
+    "role": "conv4_block2_2_conv/kernel",
+    "path": "xla_hlo/fixtures/resnet50_param_175.raw.f32"
+  },
+  {
+    "parameter": 176,
+    "shape": [
+      256
+    ],
+    "role": "conv4_block2_2_conv/bias",
+    "path": "xla_hlo/fixtures/resnet50_param_176.raw.f32"
+  },
+  {
+    "parameter": 177,
+    "shape": [
+      256
+    ],
+    "role": "conv4_block2_2_bn/moving_mean",
+    "path": "xla_hlo/fixtures/resnet50_param_179.raw.f32"
+  },
+  {
+    "parameter": 178,
+    "shape": [
+      256
+    ],
+    "role": "conv4_block2_2_bn/moving_variance",
+    "path": "xla_hlo/fixtures/resnet50_param_180.raw.f32"
+  },
+  {
+    "parameter": 179,
+    "shape": [
+      256
+    ],
+    "role": "conv4_block2_2_bn/gamma",
+    "path": "xla_hlo/fixtures/resnet50_param_177.raw.f32"
+  },
+  {
+    "parameter": 180,
+    "shape": [
+      256
+    ],
+    "role": "conv4_block2_2_bn/beta",
+    "path": "xla_hlo/fixtures/resnet50_param_178.raw.f32"
+  },
+  {
+    "parameter": 181,
+    "shape": [
+      1,
+      1,
+      256,
+      1024
+    ],
+    "role": "conv4_block2_3_conv/kernel",
+    "path": "xla_hlo/fixtures/resnet50_param_181.raw.f32"
+  },
+  {
+    "parameter": 182,
+    "shape": [
+      1024
+    ],
+    "role": "conv4_block2_3_conv/bias",
+    "path": "xla_hlo/fixtures/resnet50_param_182.raw.f32"
+  },
+  {
+    "parameter": 183,
+    "shape": [
+      1024
+    ],
+    "role": "conv4_block2_3_bn/moving_mean",
+    "path": "xla_hlo/fixtures/resnet50_param_185.raw.f32"
+  },
+  {
+    "parameter": 184,
+    "shape": [
+      1024
+    ],
+    "role": "conv4_block2_3_bn/moving_variance",
+    "path": "xla_hlo/fixtures/resnet50_param_186.raw.f32"
+  },
+  {
+    "parameter": 185,
+    "shape": [
+      1024
+    ],
+    "role": "conv4_block2_3_bn/gamma",
+    "path": "xla_hlo/fixtures/resnet50_param_183.raw.f32"
+  },
+  {
+    "parameter": 186,
+    "shape": [
+      1024
+    ],
+    "role": "conv4_block2_3_bn/beta",
+    "path": "xla_hlo/fixtures/resnet50_param_184.raw.f32"
+  },
+  {
+    "parameter": 187,
+    "shape": [
+      1,
+      1,
+      1024,
+      256
+    ],
+    "role": "conv4_block3_1_conv/kernel",
+    "path": "xla_hlo/fixtures/resnet50_param_187.raw.f32"
+  },
+  {
+    "parameter": 188,
+    "shape": [
+      256
+    ],
+    "role": "conv4_block3_1_conv/bias",
+    "path": "xla_hlo/fixtures/resnet50_param_188.raw.f32"
+  },
+  {
+    "parameter": 189,
+    "shape": [
+      256
+    ],
+    "role": "conv4_block3_1_bn/moving_mean",
+    "path": "xla_hlo/fixtures/resnet50_param_191.raw.f32"
+  },
+  {
+    "parameter": 190,
+    "shape": [
+      256
+    ],
+    "role": "conv4_block3_1_bn/moving_variance",
+    "path": "xla_hlo/fixtures/resnet50_param_192.raw.f32"
+  },
+  {
+    "parameter": 191,
+    "shape": [
+      256
+    ],
+    "role": "conv4_block3_1_bn/gamma",
+    "path": "xla_hlo/fixtures/resnet50_param_189.raw.f32"
+  },
+  {
+    "parameter": 192,
+    "shape": [
+      256
+    ],
+    "role": "conv4_block3_1_bn/beta",
+    "path": "xla_hlo/fixtures/resnet50_param_190.raw.f32"
+  },
+  {
+    "parameter": 193,
+    "shape": [
+      3,
+      3,
+      256,
+      256
+    ],
+    "role": "conv4_block3_2_conv/kernel",
+    "path": "xla_hlo/fixtures/resnet50_param_193.raw.f32"
+  },
+  {
+    "parameter": 194,
+    "shape": [
+      256
+    ],
+    "role": "conv4_block3_2_conv/bias",
+    "path": "xla_hlo/fixtures/resnet50_param_194.raw.f32"
+  },
+  {
+    "parameter": 195,
+    "shape": [
+      256
+    ],
+    "role": "conv4_block3_2_bn/moving_mean",
+    "path": "xla_hlo/fixtures/resnet50_param_197.raw.f32"
+  },
+  {
+    "parameter": 196,
+    "shape": [
+      256
+    ],
+    "role": "conv4_block3_2_bn/moving_variance",
+    "path": "xla_hlo/fixtures/resnet50_param_198.raw.f32"
+  },
+  {
+    "parameter": 197,
+    "shape": [
+      256
+    ],
+    "role": "conv4_block3_2_bn/gamma",
+    "path": "xla_hlo/fixtures/resnet50_param_195.raw.f32"
+  },
+  {
+    "parameter": 198,
+    "shape": [
+      256
+    ],
+    "role": "conv4_block3_2_bn/beta",
+    "path": "xla_hlo/fixtures/resnet50_param_196.raw.f32"
+  },
+  {
+    "parameter": 199,
+    "shape": [
+      1,
+      1,
+      256,
+      1024
+    ],
+    "role": "conv4_block3_3_conv/kernel",
+    "path": "xla_hlo/fixtures/resnet50_param_199.raw.f32"
+  },
+  {
+    "parameter": 200,
+    "shape": [
+      1024
+    ],
+    "role": "conv4_block3_3_conv/bias",
+    "path": "xla_hlo/fixtures/resnet50_param_200.raw.f32"
+  },
+  {
+    "parameter": 201,
+    "shape": [
+      1024
+    ],
+    "role": "conv4_block3_3_bn/moving_mean",
+    "path": "xla_hlo/fixtures/resnet50_param_203.raw.f32"
+  },
+  {
+    "parameter": 202,
+    "shape": [
+      1024
+    ],
+    "role": "conv4_block3_3_bn/moving_variance",
+    "path": "xla_hlo/fixtures/resnet50_param_204.raw.f32"
+  },
+  {
+    "parameter": 203,
+    "shape": [
+      1024
+    ],
+    "role": "conv4_block3_3_bn/gamma",
+    "path": "xla_hlo/fixtures/resnet50_param_201.raw.f32"
+  },
+  {
+    "parameter": 204,
+    "shape": [
+      1024
+    ],
+    "role": "conv4_block3_3_bn/beta",
+    "path": "xla_hlo/fixtures/resnet50_param_202.raw.f32"
+  },
+  {
+    "parameter": 205,
+    "shape": [
+      1,
+      1,
+      1024,
+      256
+    ],
+    "role": "conv4_block4_1_conv/kernel",
+    "path": "xla_hlo/fixtures/resnet50_param_205.raw.f32"
+  },
+  {
+    "parameter": 206,
+    "shape": [
+      256
+    ],
+    "role": "conv4_block4_1_conv/bias",
+    "path": "xla_hlo/fixtures/resnet50_param_206.raw.f32"
+  },
+  {
+    "parameter": 207,
+    "shape": [
+      256
+    ],
+    "role": "conv4_block4_1_bn/moving_mean",
+    "path": "xla_hlo/fixtures/resnet50_param_209.raw.f32"
+  },
+  {
+    "parameter": 208,
+    "shape": [
+      256
+    ],
+    "role": "conv4_block4_1_bn/moving_variance",
+    "path": "xla_hlo/fixtures/resnet50_param_210.raw.f32"
+  },
+  {
+    "parameter": 209,
+    "shape": [
+      256
+    ],
+    "role": "conv4_block4_1_bn/gamma",
+    "path": "xla_hlo/fixtures/resnet50_param_207.raw.f32"
+  },
+  {
+    "parameter": 210,
+    "shape": [
+      256
+    ],
+    "role": "conv4_block4_1_bn/beta",
+    "path": "xla_hlo/fixtures/resnet50_param_208.raw.f32"
+  },
+  {
+    "parameter": 211,
+    "shape": [
+      3,
+      3,
+      256,
+      256
+    ],
+    "role": "conv4_block4_2_conv/kernel",
+    "path": "xla_hlo/fixtures/resnet50_param_211.raw.f32"
+  },
+  {
+    "parameter": 212,
+    "shape": [
+      256
+    ],
+    "role": "conv4_block4_2_conv/bias",
+    "path": "xla_hlo/fixtures/resnet50_param_212.raw.f32"
+  },
+  {
+    "parameter": 213,
+    "shape": [
+      256
+    ],
+    "role": "conv4_block4_2_bn/moving_mean",
+    "path": "xla_hlo/fixtures/resnet50_param_215.raw.f32"
+  },
+  {
+    "parameter": 214,
+    "shape": [
+      256
+    ],
+    "role": "conv4_block4_2_bn/moving_variance",
+    "path": "xla_hlo/fixtures/resnet50_param_216.raw.f32"
+  },
+  {
+    "parameter": 215,
+    "shape": [
+      256
+    ],
+    "role": "conv4_block4_2_bn/gamma",
+    "path": "xla_hlo/fixtures/resnet50_param_213.raw.f32"
+  },
+  {
+    "parameter": 216,
+    "shape": [
+      256
+    ],
+    "role": "conv4_block4_2_bn/beta",
+    "path": "xla_hlo/fixtures/resnet50_param_214.raw.f32"
+  },
+  {
+    "parameter": 217,
+    "shape": [
+      1,
+      1,
+      256,
+      1024
+    ],
+    "role": "conv4_block4_3_conv/kernel",
+    "path": "xla_hlo/fixtures/resnet50_param_217.raw.f32"
+  },
+  {
+    "parameter": 218,
+    "shape": [
+      1024
+    ],
+    "role": "conv4_block4_3_conv/bias",
+    "path": "xla_hlo/fixtures/resnet50_param_218.raw.f32"
+  },
+  {
+    "parameter": 219,
+    "shape": [
+      1024
+    ],
+    "role": "conv4_block4_3_bn/moving_mean",
+    "path": "xla_hlo/fixtures/resnet50_param_221.raw.f32"
+  },
+  {
+    "parameter": 220,
+    "shape": [
+      1024
+    ],
+    "role": "conv4_block4_3_bn/moving_variance",
+    "path": "xla_hlo/fixtures/resnet50_param_222.raw.f32"
+  },
+  {
+    "parameter": 221,
+    "shape": [
+      1024
+    ],
+    "role": "conv4_block4_3_bn/gamma",
+    "path": "xla_hlo/fixtures/resnet50_param_219.raw.f32"
+  },
+  {
+    "parameter": 222,
+    "shape": [
+      1024
+    ],
+    "role": "conv4_block4_3_bn/beta",
+    "path": "xla_hlo/fixtures/resnet50_param_220.raw.f32"
+  },
+  {
+    "parameter": 223,
+    "shape": [
+      1,
+      1,
+      1024,
+      256
+    ],
+    "role": "conv4_block5_1_conv/kernel",
+    "path": "xla_hlo/fixtures/resnet50_param_223.raw.f32"
+  },
+  {
+    "parameter": 224,
+    "shape": [
+      256
+    ],
+    "role": "conv4_block5_1_conv/bias",
+    "path": "xla_hlo/fixtures/resnet50_param_224.raw.f32"
+  },
+  {
+    "parameter": 225,
+    "shape": [
+      256
+    ],
+    "role": "conv4_block5_1_bn/moving_mean",
+    "path": "xla_hlo/fixtures/resnet50_param_227.raw.f32"
+  },
+  {
+    "parameter": 226,
+    "shape": [
+      256
+    ],
+    "role": "conv4_block5_1_bn/moving_variance",
+    "path": "xla_hlo/fixtures/resnet50_param_228.raw.f32"
+  },
+  {
+    "parameter": 227,
+    "shape": [
+      256
+    ],
+    "role": "conv4_block5_1_bn/gamma",
+    "path": "xla_hlo/fixtures/resnet50_param_225.raw.f32"
+  },
+  {
+    "parameter": 228,
+    "shape": [
+      256
+    ],
+    "role": "conv4_block5_1_bn/beta",
+    "path": "xla_hlo/fixtures/resnet50_param_226.raw.f32"
+  },
+  {
+    "parameter": 229,
+    "shape": [
+      3,
+      3,
+      256,
+      256
+    ],
+    "role": "conv4_block5_2_conv/kernel",
+    "path": "xla_hlo/fixtures/resnet50_param_229.raw.f32"
+  },
+  {
+    "parameter": 230,
+    "shape": [
+      256
+    ],
+    "role": "conv4_block5_2_conv/bias",
+    "path": "xla_hlo/fixtures/resnet50_param_230.raw.f32"
+  },
+  {
+    "parameter": 231,
+    "shape": [
+      256
+    ],
+    "role": "conv4_block5_2_bn/moving_mean",
+    "path": "xla_hlo/fixtures/resnet50_param_233.raw.f32"
+  },
+  {
+    "parameter": 232,
+    "shape": [
+      256
+    ],
+    "role": "conv4_block5_2_bn/moving_variance",
+    "path": "xla_hlo/fixtures/resnet50_param_234.raw.f32"
+  },
+  {
+    "parameter": 233,
+    "shape": [
+      256
+    ],
+    "role": "conv4_block5_2_bn/gamma",
+    "path": "xla_hlo/fixtures/resnet50_param_231.raw.f32"
+  },
+  {
+    "parameter": 234,
+    "shape": [
+      256
+    ],
+    "role": "conv4_block5_2_bn/beta",
+    "path": "xla_hlo/fixtures/resnet50_param_232.raw.f32"
+  },
+  {
+    "parameter": 235,
+    "shape": [
+      1,
+      1,
+      256,
+      1024
+    ],
+    "role": "conv4_block5_3_conv/kernel",
+    "path": "xla_hlo/fixtures/resnet50_param_235.raw.f32"
+  },
+  {
+    "parameter": 236,
+    "shape": [
+      1024
+    ],
+    "role": "conv4_block5_3_conv/bias",
+    "path": "xla_hlo/fixtures/resnet50_param_236.raw.f32"
+  },
+  {
+    "parameter": 237,
+    "shape": [
+      1024
+    ],
+    "role": "conv4_block5_3_bn/moving_mean",
+    "path": "xla_hlo/fixtures/resnet50_param_239.raw.f32"
+  },
+  {
+    "parameter": 238,
+    "shape": [
+      1024
+    ],
+    "role": "conv4_block5_3_bn/moving_variance",
+    "path": "xla_hlo/fixtures/resnet50_param_240.raw.f32"
+  },
+  {
+    "parameter": 239,
+    "shape": [
+      1024
+    ],
+    "role": "conv4_block5_3_bn/gamma",
+    "path": "xla_hlo/fixtures/resnet50_param_237.raw.f32"
+  },
+  {
+    "parameter": 240,
+    "shape": [
+      1024
+    ],
+    "role": "conv4_block5_3_bn/beta",
+    "path": "xla_hlo/fixtures/resnet50_param_238.raw.f32"
+  },
+  {
+    "parameter": 241,
+    "shape": [
+      1,
+      1,
+      1024,
+      256
+    ],
+    "role": "conv4_block6_1_conv/kernel",
+    "path": "xla_hlo/fixtures/resnet50_param_241.raw.f32"
+  },
+  {
+    "parameter": 242,
+    "shape": [
+      256
+    ],
+    "role": "conv4_block6_1_conv/bias",
+    "path": "xla_hlo/fixtures/resnet50_param_242.raw.f32"
+  },
+  {
+    "parameter": 243,
+    "shape": [
+      256
+    ],
+    "role": "conv4_block6_1_bn/moving_mean",
+    "path": "xla_hlo/fixtures/resnet50_param_245.raw.f32"
+  },
+  {
+    "parameter": 244,
+    "shape": [
+      256
+    ],
+    "role": "conv4_block6_1_bn/moving_variance",
+    "path": "xla_hlo/fixtures/resnet50_param_246.raw.f32"
+  },
+  {
+    "parameter": 245,
+    "shape": [
+      256
+    ],
+    "role": "conv4_block6_1_bn/gamma",
+    "path": "xla_hlo/fixtures/resnet50_param_243.raw.f32"
+  },
+  {
+    "parameter": 246,
+    "shape": [
+      256
+    ],
+    "role": "conv4_block6_1_bn/beta",
+    "path": "xla_hlo/fixtures/resnet50_param_244.raw.f32"
+  },
+  {
+    "parameter": 247,
+    "shape": [
+      3,
+      3,
+      256,
+      256
+    ],
+    "role": "conv4_block6_2_conv/kernel",
+    "path": "xla_hlo/fixtures/resnet50_param_247.raw.f32"
+  },
+  {
+    "parameter": 248,
+    "shape": [
+      256
+    ],
+    "role": "conv4_block6_2_conv/bias",
+    "path": "xla_hlo/fixtures/resnet50_param_248.raw.f32"
+  },
+  {
+    "parameter": 249,
+    "shape": [
+      256
+    ],
+    "role": "conv4_block6_2_bn/moving_mean",
+    "path": "xla_hlo/fixtures/resnet50_param_251.raw.f32"
+  },
+  {
+    "parameter": 250,
+    "shape": [
+      256
+    ],
+    "role": "conv4_block6_2_bn/moving_variance",
+    "path": "xla_hlo/fixtures/resnet50_param_252.raw.f32"
+  },
+  {
+    "parameter": 251,
+    "shape": [
+      256
+    ],
+    "role": "conv4_block6_2_bn/gamma",
+    "path": "xla_hlo/fixtures/resnet50_param_249.raw.f32"
+  },
+  {
+    "parameter": 252,
+    "shape": [
+      256
+    ],
+    "role": "conv4_block6_2_bn/beta",
+    "path": "xla_hlo/fixtures/resnet50_param_250.raw.f32"
+  },
+  {
+    "parameter": 253,
+    "shape": [
+      1,
+      1,
+      256,
+      1024
+    ],
+    "role": "conv4_block6_3_conv/kernel",
+    "path": "xla_hlo/fixtures/resnet50_param_253.raw.f32"
+  },
+  {
+    "parameter": 254,
+    "shape": [
+      1024
+    ],
+    "role": "conv4_block6_3_conv/bias",
+    "path": "xla_hlo/fixtures/resnet50_param_254.raw.f32"
+  },
+  {
+    "parameter": 255,
+    "shape": [
+      1024
+    ],
+    "role": "conv4_block6_3_bn/moving_mean",
+    "path": "xla_hlo/fixtures/resnet50_param_257.raw.f32"
+  },
+  {
+    "parameter": 256,
+    "shape": [
+      1024
+    ],
+    "role": "conv4_block6_3_bn/moving_variance",
+    "path": "xla_hlo/fixtures/resnet50_param_258.raw.f32"
+  },
+  {
+    "parameter": 257,
+    "shape": [
+      1024
+    ],
+    "role": "conv4_block6_3_bn/gamma",
+    "path": "xla_hlo/fixtures/resnet50_param_255.raw.f32"
+  },
+  {
+    "parameter": 258,
+    "shape": [
+      1024
+    ],
+    "role": "conv4_block6_3_bn/beta",
+    "path": "xla_hlo/fixtures/resnet50_param_256.raw.f32"
+  },
+  {
+    "parameter": 259,
+    "shape": [
+      1,
+      1,
+      1024,
+      512
+    ],
+    "role": "conv5_block1_1_conv/kernel",
+    "path": "xla_hlo/fixtures/resnet50_param_259.raw.f32"
+  },
+  {
+    "parameter": 260,
+    "shape": [
+      512
+    ],
+    "role": "conv5_block1_1_conv/bias",
+    "path": "xla_hlo/fixtures/resnet50_param_260.raw.f32"
+  },
+  {
+    "parameter": 261,
+    "shape": [
+      512
+    ],
+    "role": "conv5_block1_1_bn/moving_mean",
+    "path": "xla_hlo/fixtures/resnet50_param_263.raw.f32"
+  },
+  {
+    "parameter": 262,
+    "shape": [
+      512
+    ],
+    "role": "conv5_block1_1_bn/moving_variance",
+    "path": "xla_hlo/fixtures/resnet50_param_264.raw.f32"
+  },
+  {
+    "parameter": 263,
+    "shape": [
+      512
+    ],
+    "role": "conv5_block1_1_bn/gamma",
+    "path": "xla_hlo/fixtures/resnet50_param_261.raw.f32"
+  },
+  {
+    "parameter": 264,
+    "shape": [
+      512
+    ],
+    "role": "conv5_block1_1_bn/beta",
+    "path": "xla_hlo/fixtures/resnet50_param_262.raw.f32"
+  },
+  {
+    "parameter": 265,
+    "shape": [
+      3,
+      3,
+      512,
+      512
+    ],
+    "role": "conv5_block1_2_conv/kernel",
+    "path": "xla_hlo/fixtures/resnet50_param_265.raw.f32"
+  },
+  {
+    "parameter": 266,
+    "shape": [
+      512
+    ],
+    "role": "conv5_block1_2_conv/bias",
+    "path": "xla_hlo/fixtures/resnet50_param_266.raw.f32"
+  },
+  {
+    "parameter": 267,
+    "shape": [
+      512
+    ],
+    "role": "conv5_block1_2_bn/moving_mean",
+    "path": "xla_hlo/fixtures/resnet50_param_269.raw.f32"
+  },
+  {
+    "parameter": 268,
+    "shape": [
+      512
+    ],
+    "role": "conv5_block1_2_bn/moving_variance",
+    "path": "xla_hlo/fixtures/resnet50_param_270.raw.f32"
+  },
+  {
+    "parameter": 269,
+    "shape": [
+      512
+    ],
+    "role": "conv5_block1_2_bn/gamma",
+    "path": "xla_hlo/fixtures/resnet50_param_267.raw.f32"
+  },
+  {
+    "parameter": 270,
+    "shape": [
+      512
+    ],
+    "role": "conv5_block1_2_bn/beta",
+    "path": "xla_hlo/fixtures/resnet50_param_268.raw.f32"
+  },
+  {
+    "parameter": 271,
+    "shape": [
+      1,
+      1,
+      512,
+      2048
+    ],
+    "role": "conv5_block1_3_conv/kernel",
+    "path": "xla_hlo/fixtures/resnet50_param_273.raw.f32"
+  },
+  {
+    "parameter": 272,
+    "shape": [
+      2048
+    ],
+    "role": "conv5_block1_3_conv/bias",
+    "path": "xla_hlo/fixtures/resnet50_param_274.raw.f32"
+  },
+  {
+    "parameter": 273,
+    "shape": [
+      1,
+      1,
+      1024,
+      2048
+    ],
+    "role": "conv5_block1_0_conv/kernel",
+    "path": "xla_hlo/fixtures/resnet50_param_271.raw.f32"
+  },
+  {
+    "parameter": 274,
+    "shape": [
+      2048
+    ],
+    "role": "conv5_block1_0_conv/bias",
+    "path": "xla_hlo/fixtures/resnet50_param_272.raw.f32"
+  },
+  {
+    "parameter": 275,
+    "shape": [
+      2048
+    ],
+    "role": "conv5_block1_0_bn/moving_mean",
+    "path": "xla_hlo/fixtures/resnet50_param_277.raw.f32"
+  },
+  {
+    "parameter": 276,
+    "shape": [
+      2048
+    ],
+    "role": "conv5_block1_0_bn/moving_variance",
+    "path": "xla_hlo/fixtures/resnet50_param_278.raw.f32"
+  },
+  {
+    "parameter": 277,
+    "shape": [
+      2048
+    ],
+    "role": "conv5_block1_0_bn/gamma",
+    "path": "xla_hlo/fixtures/resnet50_param_275.raw.f32"
+  },
+  {
+    "parameter": 278,
+    "shape": [
+      2048
+    ],
+    "role": "conv5_block1_0_bn/beta",
+    "path": "xla_hlo/fixtures/resnet50_param_276.raw.f32"
+  },
+  {
+    "parameter": 279,
+    "shape": [
+      2048
+    ],
+    "role": "conv5_block1_3_bn/moving_mean",
+    "path": "xla_hlo/fixtures/resnet50_param_281.raw.f32"
+  },
+  {
+    "parameter": 280,
+    "shape": [
+      2048
+    ],
+    "role": "conv5_block1_3_bn/moving_variance",
+    "path": "xla_hlo/fixtures/resnet50_param_282.raw.f32"
+  },
+  {
+    "parameter": 281,
+    "shape": [
+      2048
+    ],
+    "role": "conv5_block1_3_bn/gamma",
+    "path": "xla_hlo/fixtures/resnet50_param_279.raw.f32"
+  },
+  {
+    "parameter": 282,
+    "shape": [
+      2048
+    ],
+    "role": "conv5_block1_3_bn/beta",
+    "path": "xla_hlo/fixtures/resnet50_param_280.raw.f32"
+  },
+  {
+    "parameter": 283,
+    "shape": [
+      1,
+      1,
+      2048,
+      512
+    ],
+    "role": "conv5_block2_1_conv/kernel",
+    "path": "xla_hlo/fixtures/resnet50_param_283.raw.f32"
+  },
+  {
+    "parameter": 284,
+    "shape": [
+      512
+    ],
+    "role": "conv5_block2_1_conv/bias",
+    "path": "xla_hlo/fixtures/resnet50_param_284.raw.f32"
+  },
+  {
+    "parameter": 285,
+    "shape": [
+      512
+    ],
+    "role": "conv5_block2_1_bn/moving_mean",
+    "path": "xla_hlo/fixtures/resnet50_param_287.raw.f32"
+  },
+  {
+    "parameter": 286,
+    "shape": [
+      512
+    ],
+    "role": "conv5_block2_1_bn/moving_variance",
+    "path": "xla_hlo/fixtures/resnet50_param_288.raw.f32"
+  },
+  {
+    "parameter": 287,
+    "shape": [
+      512
+    ],
+    "role": "conv5_block2_1_bn/gamma",
+    "path": "xla_hlo/fixtures/resnet50_param_285.raw.f32"
+  },
+  {
+    "parameter": 288,
+    "shape": [
+      512
+    ],
+    "role": "conv5_block2_1_bn/beta",
+    "path": "xla_hlo/fixtures/resnet50_param_286.raw.f32"
+  },
+  {
+    "parameter": 289,
+    "shape": [
+      3,
+      3,
+      512,
+      512
+    ],
+    "role": "conv5_block2_2_conv/kernel",
+    "path": "xla_hlo/fixtures/resnet50_param_289.raw.f32"
+  },
+  {
+    "parameter": 290,
+    "shape": [
+      512
+    ],
+    "role": "conv5_block2_2_conv/bias",
+    "path": "xla_hlo/fixtures/resnet50_param_290.raw.f32"
+  },
+  {
+    "parameter": 291,
+    "shape": [
+      512
+    ],
+    "role": "conv5_block2_2_bn/moving_mean",
+    "path": "xla_hlo/fixtures/resnet50_param_293.raw.f32"
+  },
+  {
+    "parameter": 292,
+    "shape": [
+      512
+    ],
+    "role": "conv5_block2_2_bn/moving_variance",
+    "path": "xla_hlo/fixtures/resnet50_param_294.raw.f32"
+  },
+  {
+    "parameter": 293,
+    "shape": [
+      512
+    ],
+    "role": "conv5_block2_2_bn/gamma",
+    "path": "xla_hlo/fixtures/resnet50_param_291.raw.f32"
+  },
+  {
+    "parameter": 294,
+    "shape": [
+      512
+    ],
+    "role": "conv5_block2_2_bn/beta",
+    "path": "xla_hlo/fixtures/resnet50_param_292.raw.f32"
+  },
+  {
+    "parameter": 295,
+    "shape": [
+      1,
+      1,
+      512,
+      2048
+    ],
+    "role": "conv5_block2_3_conv/kernel",
+    "path": "xla_hlo/fixtures/resnet50_param_295.raw.f32"
+  },
+  {
+    "parameter": 296,
+    "shape": [
+      2048
+    ],
+    "role": "conv5_block2_3_conv/bias",
+    "path": "xla_hlo/fixtures/resnet50_param_296.raw.f32"
+  },
+  {
+    "parameter": 297,
+    "shape": [
+      2048
+    ],
+    "role": "conv5_block2_3_bn/moving_mean",
+    "path": "xla_hlo/fixtures/resnet50_param_299.raw.f32"
+  },
+  {
+    "parameter": 298,
+    "shape": [
+      2048
+    ],
+    "role": "conv5_block2_3_bn/moving_variance",
+    "path": "xla_hlo/fixtures/resnet50_param_300.raw.f32"
+  },
+  {
+    "parameter": 299,
+    "shape": [
+      2048
+    ],
+    "role": "conv5_block2_3_bn/gamma",
+    "path": "xla_hlo/fixtures/resnet50_param_297.raw.f32"
+  },
+  {
+    "parameter": 300,
+    "shape": [
+      2048
+    ],
+    "role": "conv5_block2_3_bn/beta",
+    "path": "xla_hlo/fixtures/resnet50_param_298.raw.f32"
+  },
+  {
+    "parameter": 301,
+    "shape": [
+      1,
+      1,
+      2048,
+      512
+    ],
+    "role": "conv5_block3_1_conv/kernel",
+    "path": "xla_hlo/fixtures/resnet50_param_301.raw.f32"
+  },
+  {
+    "parameter": 302,
+    "shape": [
+      512
+    ],
+    "role": "conv5_block3_1_conv/bias",
+    "path": "xla_hlo/fixtures/resnet50_param_302.raw.f32"
+  },
+  {
+    "parameter": 303,
+    "shape": [
+      512
+    ],
+    "role": "conv5_block3_1_bn/moving_mean",
+    "path": "xla_hlo/fixtures/resnet50_param_305.raw.f32"
+  },
+  {
+    "parameter": 304,
+    "shape": [
+      512
+    ],
+    "role": "conv5_block3_1_bn/moving_variance",
+    "path": "xla_hlo/fixtures/resnet50_param_306.raw.f32"
+  },
+  {
+    "parameter": 305,
+    "shape": [
+      512
+    ],
+    "role": "conv5_block3_1_bn/gamma",
+    "path": "xla_hlo/fixtures/resnet50_param_303.raw.f32"
+  },
+  {
+    "parameter": 306,
+    "shape": [
+      512
+    ],
+    "role": "conv5_block3_1_bn/beta",
+    "path": "xla_hlo/fixtures/resnet50_param_304.raw.f32"
+  },
+  {
+    "parameter": 307,
+    "shape": [
+      3,
+      3,
+      512,
+      512
+    ],
+    "role": "conv5_block3_2_conv/kernel",
+    "path": "xla_hlo/fixtures/resnet50_param_307.raw.f32"
+  },
+  {
+    "parameter": 308,
+    "shape": [
+      512
+    ],
+    "role": "conv5_block3_2_conv/bias",
+    "path": "xla_hlo/fixtures/resnet50_param_308.raw.f32"
+  },
+  {
+    "parameter": 309,
+    "shape": [
+      512
+    ],
+    "role": "conv5_block3_2_bn/moving_mean",
+    "path": "xla_hlo/fixtures/resnet50_param_311.raw.f32"
+  },
+  {
+    "parameter": 310,
+    "shape": [
+      512
+    ],
+    "role": "conv5_block3_2_bn/moving_variance",
+    "path": "xla_hlo/fixtures/resnet50_param_312.raw.f32"
+  },
+  {
+    "parameter": 311,
+    "shape": [
+      512
+    ],
+    "role": "conv5_block3_2_bn/gamma",
+    "path": "xla_hlo/fixtures/resnet50_param_309.raw.f32"
+  },
+  {
+    "parameter": 312,
+    "shape": [
+      512
+    ],
+    "role": "conv5_block3_2_bn/beta",
+    "path": "xla_hlo/fixtures/resnet50_param_310.raw.f32"
+  },
+  {
+    "parameter": 313,
+    "shape": [
+      1,
+      1,
+      512,
+      2048
+    ],
+    "role": "conv5_block3_3_conv/kernel",
+    "path": "xla_hlo/fixtures/resnet50_param_313.raw.f32"
+  },
+  {
+    "parameter": 314,
+    "shape": [
+      2048
+    ],
+    "role": "conv5_block3_3_conv/bias",
+    "path": "xla_hlo/fixtures/resnet50_param_314.raw.f32"
+  },
+  {
+    "parameter": 315,
+    "shape": [
+      2048
+    ],
+    "role": "conv5_block3_3_bn/moving_mean",
+    "path": "xla_hlo/fixtures/resnet50_param_317.raw.f32"
+  },
+  {
+    "parameter": 316,
+    "shape": [
+      2048
+    ],
+    "role": "conv5_block3_3_bn/moving_variance",
+    "path": "xla_hlo/fixtures/resnet50_param_318.raw.f32"
+  },
+  {
+    "parameter": 317,
+    "shape": [
+      2048
+    ],
+    "role": "conv5_block3_3_bn/gamma",
+    "path": "xla_hlo/fixtures/resnet50_param_315.raw.f32"
+  },
+  {
+    "parameter": 318,
+    "shape": [
+      2048
+    ],
+    "role": "conv5_block3_3_bn/beta",
+    "path": "xla_hlo/fixtures/resnet50_param_316.raw.f32"
+  },
+  {
+    "parameter": 319,
+    "shape": [
+      2048,
+      1000
+    ],
+    "role": "predictions/kernel",
+    "path": "xla_hlo/fixtures/resnet50_param_319.raw.f32"
+  },
+  {
+    "parameter": 320,
+    "shape": [
+      1000
+    ],
+    "role": "predictions/bias",
+    "path": "xla_hlo/fixtures/resnet50_param_320.raw.f32"
+  }
+]

@@ -1,0 +1,18 @@
+#version 450
+layout(local_size_x = 128, local_size_y = 1, local_size_z = 1) in;
+
+layout(std430, binding = 0) readonly buffer Input { float input_data[]; };
+layout(std430, binding = 1) readonly buffer Unused { float unused_data[]; };
+layout(std430, binding = 2) writeonly buffer Output { float output_data[]; };
+
+layout(push_constant) uniform Params {
+    int total;
+    float alpha;
+} pc;
+
+void main() {
+    uint idx = gl_GlobalInvocationID.x;
+    if (idx >= uint(pc.total)) { return; }
+    float x = input_data[idx];
+    output_data[idx] = max(pc.alpha * x, x);
+}

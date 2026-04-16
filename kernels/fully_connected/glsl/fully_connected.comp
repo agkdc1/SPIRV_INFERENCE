@@ -1,0 +1,28 @@
+#version 450
+layout(local_size_x = 64, local_size_y = 1, local_size_z = 1) in;
+
+layout(std430, binding = 0) readonly buffer Input { float input_data[]; };
+layout(std430, binding = 1) readonly buffer Weight { float weight_data[]; };
+layout(std430, binding = 2) writeonly buffer Output { float output_data[]; };
+
+layout(push_constant) uniform Params {
+    int batches;
+    int input_size;
+    int output_size;
+    int total;
+} pc;
+
+void main() {
+    uint idx = gl_GlobalInvocationID.x;
+    if (idx >= uint(pc.total)) { return; }
+
+    int out_c = int(idx % uint(pc.output_size));
+    int batch = int(idx / uint(pc.output_size));
+    float acc = weight_data[pc.output_size * pc.input_size + out_c];
+    for (int i = 0; i < pc.input_size; ++i) {
+        int input_idx = batch * pc.input_size + i;
+        int weight_idx = out_c * pc.input_size + i;
+        acc += input_data[input_idx] * weight_data[weight_idx];
+    }
+    output_data[idx] = acc;
+}

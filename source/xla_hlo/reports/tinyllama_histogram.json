@@ -1,0 +1,1630 @@
+{
+  "bytes": 810907,
+  "error": null,
+  "export_blocked": false,
+  "hlo_like_tokens": {
+    "add": 222,
+    "broadcast": 488,
+    "concatenate": 44,
+    "constant": 201,
+    "convert": 180,
+    "divide": 67,
+    "dot": 199,
+    "exponential": 22,
+    "get-tuple-element": 1,
+    "logistic": 22,
+    "maximum": 22,
+    "multiply": 289,
+    "negate": 44,
+    "parameter": 382,
+    "reduce": 89,
+    "reshape": 801,
+    "rsqrt": 45,
+    "slice": 88,
+    "subtract": 22,
+    "transpose": 287,
+    "tuple": 1
+  },
+  "input_specs": [
+    {
+      "dtype": "float32",
+      "name": "token_emb",
+      "shape": [
+        1,
+        64,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "rope_cos",
+      "shape": [
+        1,
+        1,
+        64,
+        64
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "rope_sin",
+      "shape": [
+        1,
+        1,
+        64,
+        64
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "causal_mask",
+      "shape": [
+        1,
+        1,
+        64,
+        64
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer00_input_ln_w",
+      "shape": [
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer00_q_w",
+      "shape": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer00_k_w",
+      "shape": [
+        2048,
+        256
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer00_v_w",
+      "shape": [
+        2048,
+        256
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer00_o_w",
+      "shape": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer00_post_ln_w",
+      "shape": [
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer00_gate_w",
+      "shape": [
+        2048,
+        5632
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer00_up_w",
+      "shape": [
+        2048,
+        5632
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer00_down_w",
+      "shape": [
+        5632,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer01_input_ln_w",
+      "shape": [
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer01_q_w",
+      "shape": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer01_k_w",
+      "shape": [
+        2048,
+        256
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer01_v_w",
+      "shape": [
+        2048,
+        256
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer01_o_w",
+      "shape": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer01_post_ln_w",
+      "shape": [
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer01_gate_w",
+      "shape": [
+        2048,
+        5632
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer01_up_w",
+      "shape": [
+        2048,
+        5632
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer01_down_w",
+      "shape": [
+        5632,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer02_input_ln_w",
+      "shape": [
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer02_q_w",
+      "shape": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer02_k_w",
+      "shape": [
+        2048,
+        256
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer02_v_w",
+      "shape": [
+        2048,
+        256
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer02_o_w",
+      "shape": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer02_post_ln_w",
+      "shape": [
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer02_gate_w",
+      "shape": [
+        2048,
+        5632
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer02_up_w",
+      "shape": [
+        2048,
+        5632
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer02_down_w",
+      "shape": [
+        5632,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer03_input_ln_w",
+      "shape": [
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer03_q_w",
+      "shape": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer03_k_w",
+      "shape": [
+        2048,
+        256
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer03_v_w",
+      "shape": [
+        2048,
+        256
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer03_o_w",
+      "shape": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer03_post_ln_w",
+      "shape": [
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer03_gate_w",
+      "shape": [
+        2048,
+        5632
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer03_up_w",
+      "shape": [
+        2048,
+        5632
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer03_down_w",
+      "shape": [
+        5632,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer04_input_ln_w",
+      "shape": [
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer04_q_w",
+      "shape": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer04_k_w",
+      "shape": [
+        2048,
+        256
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer04_v_w",
+      "shape": [
+        2048,
+        256
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer04_o_w",
+      "shape": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer04_post_ln_w",
+      "shape": [
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer04_gate_w",
+      "shape": [
+        2048,
+        5632
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer04_up_w",
+      "shape": [
+        2048,
+        5632
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer04_down_w",
+      "shape": [
+        5632,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer05_input_ln_w",
+      "shape": [
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer05_q_w",
+      "shape": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer05_k_w",
+      "shape": [
+        2048,
+        256
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer05_v_w",
+      "shape": [
+        2048,
+        256
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer05_o_w",
+      "shape": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer05_post_ln_w",
+      "shape": [
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer05_gate_w",
+      "shape": [
+        2048,
+        5632
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer05_up_w",
+      "shape": [
+        2048,
+        5632
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer05_down_w",
+      "shape": [
+        5632,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer06_input_ln_w",
+      "shape": [
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer06_q_w",
+      "shape": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer06_k_w",
+      "shape": [
+        2048,
+        256
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer06_v_w",
+      "shape": [
+        2048,
+        256
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer06_o_w",
+      "shape": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer06_post_ln_w",
+      "shape": [
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer06_gate_w",
+      "shape": [
+        2048,
+        5632
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer06_up_w",
+      "shape": [
+        2048,
+        5632
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer06_down_w",
+      "shape": [
+        5632,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer07_input_ln_w",
+      "shape": [
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer07_q_w",
+      "shape": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer07_k_w",
+      "shape": [
+        2048,
+        256
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer07_v_w",
+      "shape": [
+        2048,
+        256
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer07_o_w",
+      "shape": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer07_post_ln_w",
+      "shape": [
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer07_gate_w",
+      "shape": [
+        2048,
+        5632
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer07_up_w",
+      "shape": [
+        2048,
+        5632
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer07_down_w",
+      "shape": [
+        5632,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer08_input_ln_w",
+      "shape": [
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer08_q_w",
+      "shape": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer08_k_w",
+      "shape": [
+        2048,
+        256
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer08_v_w",
+      "shape": [
+        2048,
+        256
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer08_o_w",
+      "shape": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer08_post_ln_w",
+      "shape": [
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer08_gate_w",
+      "shape": [
+        2048,
+        5632
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer08_up_w",
+      "shape": [
+        2048,
+        5632
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer08_down_w",
+      "shape": [
+        5632,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer09_input_ln_w",
+      "shape": [
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer09_q_w",
+      "shape": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer09_k_w",
+      "shape": [
+        2048,
+        256
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer09_v_w",
+      "shape": [
+        2048,
+        256
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer09_o_w",
+      "shape": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer09_post_ln_w",
+      "shape": [
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer09_gate_w",
+      "shape": [
+        2048,
+        5632
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer09_up_w",
+      "shape": [
+        2048,
+        5632
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer09_down_w",
+      "shape": [
+        5632,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer10_input_ln_w",
+      "shape": [
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer10_q_w",
+      "shape": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer10_k_w",
+      "shape": [
+        2048,
+        256
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer10_v_w",
+      "shape": [
+        2048,
+        256
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer10_o_w",
+      "shape": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer10_post_ln_w",
+      "shape": [
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer10_gate_w",
+      "shape": [
+        2048,
+        5632
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer10_up_w",
+      "shape": [
+        2048,
+        5632
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer10_down_w",
+      "shape": [
+        5632,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer11_input_ln_w",
+      "shape": [
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer11_q_w",
+      "shape": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer11_k_w",
+      "shape": [
+        2048,
+        256
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer11_v_w",
+      "shape": [
+        2048,
+        256
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer11_o_w",
+      "shape": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer11_post_ln_w",
+      "shape": [
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer11_gate_w",
+      "shape": [
+        2048,
+        5632
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer11_up_w",
+      "shape": [
+        2048,
+        5632
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer11_down_w",
+      "shape": [
+        5632,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer12_input_ln_w",
+      "shape": [
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer12_q_w",
+      "shape": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer12_k_w",
+      "shape": [
+        2048,
+        256
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer12_v_w",
+      "shape": [
+        2048,
+        256
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer12_o_w",
+      "shape": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer12_post_ln_w",
+      "shape": [
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer12_gate_w",
+      "shape": [
+        2048,
+        5632
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer12_up_w",
+      "shape": [
+        2048,
+        5632
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer12_down_w",
+      "shape": [
+        5632,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer13_input_ln_w",
+      "shape": [
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer13_q_w",
+      "shape": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer13_k_w",
+      "shape": [
+        2048,
+        256
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer13_v_w",
+      "shape": [
+        2048,
+        256
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer13_o_w",
+      "shape": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer13_post_ln_w",
+      "shape": [
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer13_gate_w",
+      "shape": [
+        2048,
+        5632
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer13_up_w",
+      "shape": [
+        2048,
+        5632
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer13_down_w",
+      "shape": [
+        5632,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer14_input_ln_w",
+      "shape": [
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer14_q_w",
+      "shape": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer14_k_w",
+      "shape": [
+        2048,
+        256
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer14_v_w",
+      "shape": [
+        2048,
+        256
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer14_o_w",
+      "shape": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer14_post_ln_w",
+      "shape": [
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer14_gate_w",
+      "shape": [
+        2048,
+        5632
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer14_up_w",
+      "shape": [
+        2048,
+        5632
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer14_down_w",
+      "shape": [
+        5632,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer15_input_ln_w",
+      "shape": [
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer15_q_w",
+      "shape": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer15_k_w",
+      "shape": [
+        2048,
+        256
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer15_v_w",
+      "shape": [
+        2048,
+        256
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer15_o_w",
+      "shape": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer15_post_ln_w",
+      "shape": [
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer15_gate_w",
+      "shape": [
+        2048,
+        5632
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer15_up_w",
+      "shape": [
+        2048,
+        5632
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer15_down_w",
+      "shape": [
+        5632,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer16_input_ln_w",
+      "shape": [
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer16_q_w",
+      "shape": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer16_k_w",
+      "shape": [
+        2048,
+        256
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer16_v_w",
+      "shape": [
+        2048,
+        256
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer16_o_w",
+      "shape": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer16_post_ln_w",
+      "shape": [
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer16_gate_w",
+      "shape": [
+        2048,
+        5632
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer16_up_w",
+      "shape": [
+        2048,
+        5632
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer16_down_w",
+      "shape": [
+        5632,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer17_input_ln_w",
+      "shape": [
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer17_q_w",
+      "shape": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer17_k_w",
+      "shape": [
+        2048,
+        256
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer17_v_w",
+      "shape": [
+        2048,
+        256
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer17_o_w",
+      "shape": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer17_post_ln_w",
+      "shape": [
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer17_gate_w",
+      "shape": [
+        2048,
+        5632
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer17_up_w",
+      "shape": [
+        2048,
+        5632
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer17_down_w",
+      "shape": [
+        5632,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer18_input_ln_w",
+      "shape": [
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer18_q_w",
+      "shape": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer18_k_w",
+      "shape": [
+        2048,
+        256
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer18_v_w",
+      "shape": [
+        2048,
+        256
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer18_o_w",
+      "shape": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer18_post_ln_w",
+      "shape": [
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer18_gate_w",
+      "shape": [
+        2048,
+        5632
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer18_up_w",
+      "shape": [
+        2048,
+        5632
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer18_down_w",
+      "shape": [
+        5632,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer19_input_ln_w",
+      "shape": [
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer19_q_w",
+      "shape": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer19_k_w",
+      "shape": [
+        2048,
+        256
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer19_v_w",
+      "shape": [
+        2048,
+        256
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer19_o_w",
+      "shape": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer19_post_ln_w",
+      "shape": [
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer19_gate_w",
+      "shape": [
+        2048,
+        5632
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer19_up_w",
+      "shape": [
+        2048,
+        5632
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer19_down_w",
+      "shape": [
+        5632,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer20_input_ln_w",
+      "shape": [
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer20_q_w",
+      "shape": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer20_k_w",
+      "shape": [
+        2048,
+        256
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer20_v_w",
+      "shape": [
+        2048,
+        256
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer20_o_w",
+      "shape": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer20_post_ln_w",
+      "shape": [
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer20_gate_w",
+      "shape": [
+        2048,
+        5632
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer20_up_w",
+      "shape": [
+        2048,
+        5632
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer20_down_w",
+      "shape": [
+        5632,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer21_input_ln_w",
+      "shape": [
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer21_q_w",
+      "shape": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer21_k_w",
+      "shape": [
+        2048,
+        256
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer21_v_w",
+      "shape": [
+        2048,
+        256
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer21_o_w",
+      "shape": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer21_post_ln_w",
+      "shape": [
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer21_gate_w",
+      "shape": [
+        2048,
+        5632
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer21_up_w",
+      "shape": [
+        2048,
+        5632
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "layer21_down_w",
+      "shape": [
+        5632,
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "final_ln_w",
+      "shape": [
+        2048
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "lm_head_w",
+      "shape": [
+        2048,
+        32000
+      ]
+    }
+  ],
+  "model": "tinyllama_1.1b",
+  "output": "xla_hlo/fixtures/tinyllama.stablehlo.txt",
+  "stablehlo_ops": {},
+  "status": "pass",
+  "tensorflow_version": "2.21.0",
+  "total_params": 204
+}

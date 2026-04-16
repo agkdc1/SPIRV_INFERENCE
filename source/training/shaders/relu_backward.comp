@@ -1,0 +1,11 @@
+#version 450
+layout(local_size_x = 128) in;
+layout(std430, binding = 0) readonly buffer A { float grad_out[]; };
+layout(std430, binding = 1) readonly buffer B { float act_in[]; };
+layout(std430, binding = 2) writeonly buffer C { float grad_in[]; };
+layout(push_constant) uniform P { int total; } pc;
+void main() {
+    uint i = gl_GlobalInvocationID.x;
+    if (i >= uint(pc.total)) return;
+    grad_in[i] = grad_out[i] * float(act_in[i] > 0.0);
+}

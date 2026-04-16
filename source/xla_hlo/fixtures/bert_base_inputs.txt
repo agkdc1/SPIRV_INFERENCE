@@ -1,0 +1,1 @@
+xla_hlo/fixtures/bert_base_param_000_x.raw.f32,xla_hlo/fixtures/bert_base_param_001_qkv.raw.f32,xla_hlo/fixtures/bert_base_param_002_out.raw.f32

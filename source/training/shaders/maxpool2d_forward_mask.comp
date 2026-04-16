@@ -1,0 +1,39 @@
+#version 450
+layout(local_size_x = 128) in;
+layout(std430, binding = 0) readonly buffer A { float input_data[]; };
+layout(std430, binding = 1) buffer B { float mask[]; };
+layout(std430, binding = 2) writeonly buffer C { float output_data[]; };
+layout(push_constant) uniform P {
+    int N; int Channels; int IH; int IW;
+    int OH; int OW;
+    int KH; int KW;
+    int stride; int pad; int total;
+} pc;
+void main() {
+    uint idx = gl_GlobalInvocationID.x;
+    if (idx >= uint(pc.total)) return;
+    int ow = int(idx) % pc.OW;
+    int tmp = int(idx) / pc.OW;
+    int oh = tmp % pc.OH;
+    tmp = tmp / pc.OH;
+    int c = tmp % pc.Channels;
+    int n = tmp / pc.Channels;
+    float best = -1.0e30;
+    int best_idx = 0;
+    for (int kh = 0; kh < pc.KH; ++kh) {
+        for (int kw = 0; kw < pc.KW; ++kw) {
+            int ih = oh * pc.stride - pc.pad + kh;
+            int iw = ow * pc.stride - pc.pad + kw;
+            if (ih >= 0 && ih < pc.IH && iw >= 0 && iw < pc.IW) {
+                int in_idx = ((n * pc.Channels + c) * pc.IH + ih) * pc.IW + iw;
+                float val = input_data[in_idx];
+                if (val > best) {
+                    best = val;
+                    best_idx = in_idx;
+                }
+            }
+        }
+    }
+    output_data[idx] = best;
+    mask[idx] = intBitsToFloat(best_idx);
+}

@@ -1,0 +1,45 @@
+#version 450
+layout(local_size_x = 128, local_size_y = 1, local_size_z = 1) in;
+
+layout(std430, binding = 0) readonly buffer Input  { float in_data[]; };
+layout(std430, binding = 1) readonly buffer PadVal { float pad_data[]; };
+layout(std430, binding = 2) writeonly buffer Output { float out_data[]; };
+
+layout(push_constant) uniform Params {
+    int od0; int od1; int od2; int od3;
+    int id0; int id1; int id2; int id3;
+    int pl0; int pl1; int pl2; int pl3;
+    int total;
+} pc;
+
+void main() {
+    uint idx = gl_GlobalInvocationID.x;
+    if (idx >= uint(pc.total)) { return; }
+
+    int i = int(idx);
+    int os1 = pc.od2 * pc.od3;
+    int os0 = pc.od1 * os1;
+
+    int c0 = i / os0;
+    int c1 = (i / os1) % pc.od1;
+    int c2 = (i / pc.od3) % pc.od2;
+    int c3 = i % pc.od3;
+
+    int s0 = c0 - pc.pl0;
+    int s1 = c1 - pc.pl1;
+    int s2 = c2 - pc.pl2;
+    int s3 = c3 - pc.pl3;
+
+    if (s0 >= 0 && s0 < pc.id0 &&
+        s1 >= 0 && s1 < pc.id1 &&
+        s2 >= 0 && s2 < pc.id2 &&
+        s3 >= 0 && s3 < pc.id3) {
+        int src_idx = s0 * (pc.id1 * pc.id2 * pc.id3)
+                    + s1 * (pc.id2 * pc.id3)
+                    + s2 * pc.id3
+                    + s3;
+        out_data[idx] = in_data[src_idx];
+    } else {
+        out_data[idx] = pad_data[0];
+    }
+}

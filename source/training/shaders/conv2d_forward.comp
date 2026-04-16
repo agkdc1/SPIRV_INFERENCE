@@ -1,0 +1,36 @@
+#version 450
+layout(local_size_x = 64) in;
+layout(std430, binding = 0) readonly buffer A { float input_data[]; };
+layout(std430, binding = 1) readonly buffer B { float weight[]; };
+layout(std430, binding = 2) writeonly buffer C { float output_data[]; };
+layout(push_constant) uniform P {
+    int N; int IC; int IH; int IW;
+    int OC; int OH; int OW;
+    int KH; int KW;
+    int stride; int pad; int total;
+} pc;
+void main() {
+    uint idx = gl_GlobalInvocationID.x;
+    if (idx >= uint(pc.total)) return;
+    int ow = int(idx) % pc.OW;
+    int tmp = int(idx) / pc.OW;
+    int oh = tmp % pc.OH;
+    tmp = tmp / pc.OH;
+    int oc = tmp % pc.OC;
+    int n = tmp / pc.OC;
+    float acc = 0.0;
+    for (int ic = 0; ic < pc.IC; ++ic) {
+        for (int kh = 0; kh < pc.KH; ++kh) {
+            for (int kw = 0; kw < pc.KW; ++kw) {
+                int ih = oh * pc.stride - pc.pad + kh;
+                int iw = ow * pc.stride - pc.pad + kw;
+                if (ih >= 0 && ih < pc.IH && iw >= 0 && iw < pc.IW) {
+                    int in_idx = ((n * pc.IC + ic) * pc.IH + ih) * pc.IW + iw;
+                    int w_idx = ((oc * pc.IC + ic) * pc.KH + kh) * pc.KW + kw;
+                    acc += input_data[in_idx] * weight[w_idx];
+                }
+            }
+        }
+    }
+    output_data[idx] = acc;
+}

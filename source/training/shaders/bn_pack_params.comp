@@ -1,0 +1,14 @@
+#version 450
+layout(local_size_x = 64) in;
+layout(std430, binding = 0) readonly buffer A { float gamma_beta[]; };
+layout(std430, binding = 1) readonly buffer B { float stats[]; };
+layout(std430, binding = 2) writeonly buffer C { float bnparams[]; };
+layout(push_constant) uniform P { int C; } pc;
+void main() {
+    uint c = gl_GlobalInvocationID.x;
+    if (c >= uint(pc.C)) return;
+    bnparams[int(c)]            = stats[int(c)];
+    bnparams[pc.C + int(c)]     = stats[pc.C + int(c)];
+    bnparams[2 * pc.C + int(c)] = gamma_beta[int(c)];
+    bnparams[3 * pc.C + int(c)] = gamma_beta[pc.C + int(c)];
+}

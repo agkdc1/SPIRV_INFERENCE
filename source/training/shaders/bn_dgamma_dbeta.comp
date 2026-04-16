@@ -1,0 +1,38 @@
+#version 450
+layout(local_size_x = 256) in;
+layout(std430, binding = 0) readonly buffer A { float dY[]; };
+layout(std430, binding = 1) readonly buffer B { float xhat[]; };
+layout(std430, binding = 2) buffer C { float dparams[]; };
+layout(push_constant) uniform P { int N; int C; int H; int W; } pc;
+shared float partial_dg[256];
+shared float partial_db[256];
+void main() {
+    uint c = gl_WorkGroupID.x;
+    if (c >= uint(pc.C)) return;
+    uint lid = gl_LocalInvocationID.x;
+    int HW = pc.H * pc.W;
+    int m = pc.N * HW;
+    float dg = 0.0;
+    float db = 0.0;
+    for (int i = int(lid); i < m; i += 256) {
+        int n = i / HW;
+        int hw = i % HW;
+        int idx = (n * pc.C + int(c)) * HW + hw;
+        dg += dY[idx] * xhat[idx];
+        db += dY[idx];
+    }
+    partial_dg[lid] = dg;
+    partial_db[lid] = db;
+    barrier();
+    for (uint s = 128u; s > 0u; s >>= 1u) {
+        if (lid < s) {
+            partial_dg[lid] += partial_dg[lid + s];
+            partial_db[lid] += partial_db[lid + s];
+        }
+        barrier();
+    }
+    if (lid == 0u) {
+        dparams[int(c)] = partial_dg[0];
+        dparams[pc.C + int(c)] = partial_db[0];
+    }
+}

@@ -1,0 +1,17 @@
+#version 450
+layout(local_size_x = 10) in;
+layout(std430, binding = 0) readonly buffer A { float a[]; };
+layout(std430, binding = 1) readonly buffer B { float b[]; };
+layout(std430, binding = 2) writeonly buffer C { float c[]; };
+layout(push_constant) uniform P { int batch_size; } pc;
+void main() {
+    uint batch = gl_WorkGroupID.x;
+    uint cls = gl_LocalInvocationID.x;
+    if (batch >= uint(pc.batch_size) || cls >= 10u) return;
+    uint base = batch * 10u;
+    float m = a[base];
+    for (uint j = 1u; j < 10u; ++j) m = max(m, a[base + j]);
+    float s = 0.0;
+    for (uint j = 0u; j < 10u; ++j) s += exp(a[base + j] - m);
+    c[base + cls] = exp(a[base + cls] - m) / s;
+}

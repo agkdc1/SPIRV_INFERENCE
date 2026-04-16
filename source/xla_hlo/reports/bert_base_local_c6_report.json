@@ -1,0 +1,3976 @@
+{
+  "execution": {
+    "device": {
+      "device_id": 9540,
+      "name": "NVIDIA GeForce RTX 3060",
+      "probe_elapsed_ms": 0.066326,
+      "probe_output": [
+        3.0
+      ],
+      "vendor_id": 4318
+    },
+    "dispatch_count": 53,
+    "dispatches": [
+      {
+        "device_id": 9540,
+        "device_name": "NVIDIA GeForce RTX 3060",
+        "elapsed_ms": 0.296654,
+        "elements": 12288,
+        "opcode": "dot",
+        "result": "%MatMul.2",
+        "spv_name": "hlo_dot_batched.spv",
+        "vendor_id": 4318
+      },
+      {
+        "device_id": 9540,
+        "device_name": "NVIDIA GeForce RTX 3060",
+        "elapsed_ms": 0.102875,
+        "elements": 3072,
+        "opcode": "dot",
+        "result": "%MatMul_1.2",
+        "spv_name": "hlo_dot_batched.spv",
+        "vendor_id": 4318
+      },
+      {
+        "device_id": 9540,
+        "device_name": "NVIDIA GeForce RTX 3060",
+        "elapsed_ms": 0.08159499999999999,
+        "elements": 3072,
+        "opcode": "multiply",
+        "result": "%mul.8",
+        "spv_name": "mul.spv",
+        "vendor_id": 4318
+      },
+      {
+        "device_id": 9540,
+        "device_name": "NVIDIA GeForce RTX 3060",
+        "elapsed_ms": 0.07970200000000001,
+        "elements": 192,
+        "opcode": "reduce",
+        "result": "%Softmax.29",
+        "spv_name": "hlo_reduce_rank4.spv",
+        "vendor_id": 4318
+      },
+      {
+        "device_id": 9540,
+        "device_name": "NVIDIA GeForce RTX 3060",
+        "elapsed_ms": 0.06665599999999999,
+        "elements": 3072,
+        "opcode": "subtract",
+        "result": "%Softmax.34",
+        "spv_name": "sub.spv",
+        "vendor_id": 4318
+      },
+      {
+        "device_id": 9540,
+        "device_name": "NVIDIA GeForce RTX 3060",
+        "elapsed_ms": 0.06276999999999999,
+        "elements": 3072,
+        "opcode": "exponential",
+        "result": "%Softmax.35",
+        "spv_name": "exp.spv",
+        "vendor_id": 4318
+      },
+      {
+        "device_id": 9540,
+        "device_name": "NVIDIA GeForce RTX 3060",
+        "elapsed_ms": 0.068871,
+        "elements": 192,
+        "opcode": "reduce",
+        "result": "%Softmax.36",
+        "spv_name": "hlo_reduce_rank4.spv",
+        "vendor_id": 4318
+      },
+      {
+        "device_id": 9540,
+        "device_name": "NVIDIA GeForce RTX 3060",
+        "elapsed_ms": 0.064773,
+        "elements": 3072,
+        "opcode": "divide",
+        "result": "%Softmax.41",
+        "spv_name": "div.spv",
+        "vendor_id": 4318
+      },
+      {
+        "device_id": 9540,
+        "device_name": "NVIDIA GeForce RTX 3060",
+        "elapsed_ms": 0.08580399999999999,
+        "elements": 12288,
+        "opcode": "dot",
+        "result": "%MatMul_2.2",
+        "spv_name": "hlo_dot_batched.spv",
+        "vendor_id": 4318
+      },
+      {
+        "device_id": 9540,
+        "device_name": "NVIDIA GeForce RTX 3060",
+        "elapsed_ms": 0.263922,
+        "elements": 12288,
+        "opcode": "dot",
+        "result": "%MatMul_3.2",
+        "spv_name": "hlo_dot_batched.spv",
+        "vendor_id": 4318
+      },
+      {
+        "device_id": 9540,
+        "device_name": "NVIDIA GeForce RTX 3060",
+        "elapsed_ms": 0.071085,
+        "elements": 12288,
+        "opcode": "add",
+        "result": "%add.1",
+        "spv_name": "add.spv",
+        "vendor_id": 4318
+      },
+      {
+        "device_id": 9540,
+        "device_name": "NVIDIA GeForce RTX 3060",
+        "elapsed_ms": 0.071586,
+        "elements": 12288,
+        "opcode": "multiply",
+        "result": "%mul.11",
+        "spv_name": "mul.spv",
+        "vendor_id": 4318
+      },
+      {
+        "device_id": 9540,
+        "device_name": "NVIDIA GeForce RTX 3060",
+        "elapsed_ms": 0.067669,
+        "elements": 12288,
+        "opcode": "negate",
+        "result": "%Neg.1",
+        "spv_name": "neg.spv",
+        "vendor_id": 4318
+      },
+      {
+        "device_id": 9540,
+        "device_name": "NVIDIA GeForce RTX 3060",
+        "elapsed_ms": 0.071005,
+        "elements": 12288,
+        "opcode": "multiply",
+        "result": "%mul_1.5",
+        "spv_name": "mul.spv",
+        "vendor_id": 4318
+      },
+      {
+        "device_id": 9540,
+        "device_name": "NVIDIA GeForce RTX 3060",
+        "elapsed_ms": 0.074521,
+        "elements": 12288,
+        "opcode": "abs",
+        "result": "%Erfc.84",
+        "spv_name": "abs.spv",
+        "vendor_id": 4318
+      },
+      {
+        "device_id": 9540,
+        "device_name": "NVIDIA GeForce RTX 3060",
+        "elapsed_ms": 0.070424,
+        "elements": 12288,
+        "opcode": "multiply",
+        "result": "%Erfc.92",
+        "spv_name": "mul.spv",
+        "vendor_id": 4318
+      },
+      {
+        "device_id": 9540,
+        "device_name": "NVIDIA GeForce RTX 3060",
+        "elapsed_ms": 0.06611600000000001,
+        "elements": 12288,
+        "opcode": "negate",
+        "result": "%Erfc.93",
+        "spv_name": "neg.spv",
+        "vendor_id": 4318
+      },
+      {
+        "device_id": 0,
+        "device_name": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "elapsed_ms": 1.031401,
+        "elements": 12288,
+        "opcode": "exponential",
+        "result": "%Erfc.94",
+        "spv_name": "exp.spv",
+        "vendor_id": 65541
+      },
+      {
+        "device_id": 0,
+        "device_name": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "elapsed_ms": 0.944676,
+        "elements": 12288,
+        "opcode": "divide",
+        "result": "%Erfc.97",
+        "spv_name": "div.spv",
+        "vendor_id": 65541
+      },
+      {
+        "device_id": 0,
+        "device_name": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "elapsed_ms": 0.45942299999999997,
+        "elements": 12288,
+        "opcode": "multiply",
+        "result": "%Erfc.100",
+        "spv_name": "mul.spv",
+        "vendor_id": 65541
+      },
+      {
+        "device_id": 0,
+        "device_name": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "elapsed_ms": 0.447841,
+        "elements": 12288,
+        "opcode": "add",
+        "result": "%Erfc.103",
+        "spv_name": "add.spv",
+        "vendor_id": 65541
+      },
+      {
+        "device_id": 0,
+        "device_name": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "elapsed_ms": 0.513787,
+        "elements": 12288,
+        "opcode": "multiply",
+        "result": "%Erfc.104",
+        "spv_name": "mul.spv",
+        "vendor_id": 65541
+      },
+      {
+        "device_id": 0,
+        "device_name": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "elapsed_ms": 0.458702,
+        "elements": 12288,
+        "opcode": "add",
+        "result": "%Erfc.107",
+        "spv_name": "add.spv",
+        "vendor_id": 65541
+      },
+      {
+        "device_id": 0,
+        "device_name": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "elapsed_ms": 0.437431,
+        "elements": 12288,
+        "opcode": "multiply",
+        "result": "%Erfc.108",
+        "spv_name": "mul.spv",
+        "vendor_id": 65541
+      },
+      {
+        "device_id": 0,
+        "device_name": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "elapsed_ms": 0.474952,
+        "elements": 12288,
+        "opcode": "add",
+        "result": "%Erfc.111",
+        "spv_name": "add.spv",
+        "vendor_id": 65541
+      },
+      {
+        "device_id": 0,
+        "device_name": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "elapsed_ms": 11.761835999999999,
+        "elements": 12288,
+        "opcode": "abs",
+        "result": "%Erfc.88",
+        "spv_name": "abs.spv",
+        "vendor_id": 65541
+      },
+      {
+        "device_id": 0,
+        "device_name": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "elapsed_ms": 12.222352,
+        "elements": 12288,
+        "opcode": "minimum",
+        "result": "%Erfc.91",
+        "spv_name": "min.spv",
+        "vendor_id": 65541
+      },
+      {
+        "device_id": 0,
+        "device_name": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "elapsed_ms": 0.717163,
+        "elements": 12288,
+        "opcode": "multiply",
+        "result": "%Erfc.114",
+        "spv_name": "mul.spv",
+        "vendor_id": 65541
+      },
+      {
+        "device_id": 0,
+        "device_name": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "elapsed_ms": 0.446939,
+        "elements": 12288,
+        "opcode": "add",
+        "result": "%Erfc.117",
+        "spv_name": "add.spv",
+        "vendor_id": 65541
+      },
+      {
+        "device_id": 0,
+        "device_name": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "elapsed_ms": 0.526311,
+        "elements": 12288,
+        "opcode": "multiply",
+        "result": "%Erfc.118",
+        "spv_name": "mul.spv",
+        "vendor_id": 65541
+      },
+      {
+        "device_id": 0,
+        "device_name": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "elapsed_ms": 0.451778,
+        "elements": 12288,
+        "opcode": "add",
+        "result": "%Erfc.121",
+        "spv_name": "add.spv",
+        "vendor_id": 65541
+      },
+      {
+        "device_id": 0,
+        "device_name": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "elapsed_ms": 0.43529799999999996,
+        "elements": 12288,
+        "opcode": "multiply",
+        "result": "%Erfc.122",
+        "spv_name": "mul.spv",
+        "vendor_id": 65541
+      },
+      {
+        "device_id": 0,
+        "device_name": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "elapsed_ms": 0.44137899999999997,
+        "elements": 12288,
+        "opcode": "add",
+        "result": "%Erfc.125",
+        "spv_name": "add.spv",
+        "vendor_id": 65541
+      },
+      {
+        "device_id": 0,
+        "device_name": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "elapsed_ms": 0.470655,
+        "elements": 12288,
+        "opcode": "multiply",
+        "result": "%Erfc.126",
+        "spv_name": "mul.spv",
+        "vendor_id": 65541
+      },
+      {
+        "device_id": 0,
+        "device_name": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "elapsed_ms": 0.425078,
+        "elements": 12288,
+        "opcode": "add",
+        "result": "%Erfc.129",
+        "spv_name": "add.spv",
+        "vendor_id": 65541
+      },
+      {
+        "device_id": 0,
+        "device_name": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "elapsed_ms": 0.433654,
+        "elements": 12288,
+        "opcode": "multiply",
+        "result": "%Erfc.130",
+        "spv_name": "mul.spv",
+        "vendor_id": 65541
+      },
+      {
+        "device_id": 0,
+        "device_name": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "elapsed_ms": 0.445316,
+        "elements": 12288,
+        "opcode": "divide",
+        "result": "%Erfc.131",
+        "spv_name": "div.spv",
+        "vendor_id": 65541
+      },
+      {
+        "device_id": 0,
+        "device_name": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "elapsed_ms": 0.4682,
+        "elements": 12288,
+        "opcode": "multiply",
+        "result": "%Erfc.132",
+        "spv_name": "mul.spv",
+        "vendor_id": 65541
+      },
+      {
+        "device_id": 0,
+        "device_name": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "elapsed_ms": 0.508146,
+        "elements": 12288,
+        "opcode": "subtract",
+        "result": "%Erfc.138",
+        "spv_name": "sub.spv",
+        "vendor_id": 65541
+      },
+      {
+        "device_id": 0,
+        "device_name": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "elapsed_ms": 0.47329899999999997,
+        "elements": 12288,
+        "opcode": "multiply",
+        "result": "%Erfc.140",
+        "spv_name": "mul.spv",
+        "vendor_id": 65541
+      },
+      {
+        "device_id": 0,
+        "device_name": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "elapsed_ms": 0.514417,
+        "elements": 12288,
+        "opcode": "multiply",
+        "result": "%Erfc.143",
+        "spv_name": "mul.spv",
+        "vendor_id": 65541
+      },
+      {
+        "device_id": 0,
+        "device_name": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "elapsed_ms": 0.4686,
+        "elements": 12288,
+        "opcode": "add",
+        "result": "%Erfc.146",
+        "spv_name": "add.spv",
+        "vendor_id": 65541
+      },
+      {
+        "device_id": 0,
+        "device_name": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "elapsed_ms": 0.45308099999999996,
+        "elements": 12288,
+        "opcode": "multiply",
+        "result": "%Erfc.147",
+        "spv_name": "mul.spv",
+        "vendor_id": 65541
+      },
+      {
+        "device_id": 0,
+        "device_name": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "elapsed_ms": 0.440026,
+        "elements": 12288,
+        "opcode": "add",
+        "result": "%Erfc.150",
+        "spv_name": "add.spv",
+        "vendor_id": 65541
+      },
+      {
+        "device_id": 0,
+        "device_name": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "elapsed_ms": 0.423174,
+        "elements": 12288,
+        "opcode": "multiply",
+        "result": "%Erfc.151",
+        "spv_name": "mul.spv",
+        "vendor_id": 65541
+      },
+      {
+        "device_id": 0,
+        "device_name": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "elapsed_ms": 0.459534,
+        "elements": 12288,
+        "opcode": "add",
+        "result": "%Erfc.154",
+        "spv_name": "add.spv",
+        "vendor_id": 65541
+      },
+      {
+        "device_id": 0,
+        "device_name": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "elapsed_ms": 0.43131,
+        "elements": 12288,
+        "opcode": "multiply",
+        "result": "%Erfc.155",
+        "spv_name": "mul.spv",
+        "vendor_id": 65541
+      },
+      {
+        "device_id": 0,
+        "device_name": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "elapsed_ms": 0.452229,
+        "elements": 12288,
+        "opcode": "add",
+        "result": "%Erfc.158",
+        "spv_name": "add.spv",
+        "vendor_id": 65541
+      },
+      {
+        "device_id": 0,
+        "device_name": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "elapsed_ms": 0.529627,
+        "elements": 12288,
+        "opcode": "multiply",
+        "result": "%Erfc.159",
+        "spv_name": "mul.spv",
+        "vendor_id": 65541
+      },
+      {
+        "device_id": 0,
+        "device_name": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "elapsed_ms": 0.407625,
+        "elements": 12288,
+        "opcode": "add",
+        "result": "%Erfc.162",
+        "spv_name": "add.spv",
+        "vendor_id": 65541
+      },
+      {
+        "device_id": 0,
+        "device_name": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "elapsed_ms": 0.434817,
+        "elements": 12288,
+        "opcode": "multiply",
+        "result": "%Erfc.163",
+        "spv_name": "mul.spv",
+        "vendor_id": 65541
+      },
+      {
+        "device_id": 0,
+        "device_name": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "elapsed_ms": 0.537912,
+        "elements": 12288,
+        "opcode": "add",
+        "result": "%Erfc.166",
+        "spv_name": "add.spv",
+        "vendor_id": 65541
+      },
+      {
+        "device_id": 0,
+        "device_name": "llvmpipe (LLVM 20.1.2, 256 bits)",
+        "elapsed_ms": 0.509498,
+        "elements": 12288,
+        "opcode": "multiply",
+        "result": "%mul_2.1",
+        "spv_name": "mul.spv",
+        "vendor_id": 65541
+      }
+    ],
+    "final_result": "%XLA_Retvals.5",
+    "mode": "shaped_hlo_graph",
+    "output": {
+      "elements": 12288,
+      "path": "xla_hlo/out/bert_base_spirv_local_c6.raw.f32",
+      "sha256": "a42c9027392cbd8894d53f12da83b5b1edded3a3013762161d4e1bb95a1a65fa",
+      "shape": [
+        1,
+        16,
+        768
+      ]
+    },
+    "parity": {
+      "epsilon": 0.0010000000474974513,
+      "expected_sha256": "e074e4dbeb29723f8119118f30d527b0ff4eeb51012e771a0baa9a804a9f1c2f",
+      "max_abs_error": 1.1175870895385742e-8,
+      "max_rel_error": 0.00001357780729449587,
+      "mismatch_count": 0,
+      "status": "pass"
+    },
+    "status": "pass",
+    "steps": [
+      {
+        "elements": 1,
+        "execution": "materialized scalar constant",
+        "opcode": "constant",
+        "result": "%mul.9",
+        "spv_name": null
+      },
+      {
+        "elements": 12288,
+        "execution": "cpu_shaped_broadcast",
+        "opcode": "broadcast",
+        "result": "%mul.10",
+        "spv_name": null
+      },
+      {
+        "elements": 12288,
+        "execution": "loaded parameter(0) from xla_hlo/fixtures/bert_base_param_000_x.raw.f32",
+        "opcode": "parameter",
+        "result": "%arg0.1",
+        "spv_name": null
+      },
+      {
+        "elements": 12288,
+        "execution": "metadata_reshape",
+        "opcode": "reshape",
+        "result": "%reshape.3",
+        "spv_name": null
+      },
+      {
+        "elements": 589824,
+        "execution": "loaded parameter(1) from xla_hlo/fixtures/bert_base_param_001_qkv.raw.f32",
+        "opcode": "parameter",
+        "result": "%arg1.1",
+        "spv_name": null
+      },
+      {
+        "elements": 589824,
+        "execution": "metadata_reshape",
+        "opcode": "reshape",
+        "result": "%reshape.4",
+        "spv_name": null
+      },
+      {
+        "elements": 12288,
+        "execution": "vulkan_dot_general",
+        "opcode": "dot",
+        "result": "%MatMul.2",
+        "spv_name": "hlo_dot_batched.spv"
+      },
+      {
+        "elements": 12288,
+        "execution": "cpu_transpose",
+        "opcode": "transpose",
+        "result": "%MatMul.3",
+        "spv_name": null
+      },
+      {
+        "elements": 12288,
+        "execution": "metadata_reshape",
+        "opcode": "reshape",
+        "result": "%Reshape.1",
+        "spv_name": null
+      },
+      {
+        "elements": 12288,
+        "execution": "cpu_transpose",
+        "opcode": "transpose",
+        "result": "%transpose.1",
+        "spv_name": null
+      },
+      {
+        "elements": 3072,
+        "execution": "vulkan_dot_general",
+        "opcode": "dot",
+        "result": "%MatMul_1.2",
+        "spv_name": "hlo_dot_batched.spv"
+      },
+      {
+        "elements": 3072,
+        "execution": "cpu_transpose",
+        "opcode": "transpose",
+        "result": "%MatMul_1.3",
+        "spv_name": null
+      },
+      {
+        "elements": 1,
+        "execution": "materialized scalar constant",
+        "opcode": "constant",
+        "result": "%mul.6",
+        "spv_name": null
+      },
+      {
+        "elements": 3072,
+        "execution": "cpu_shaped_broadcast",
+        "opcode": "broadcast",
+        "result": "%mul.7",
+        "spv_name": null
+      },
+      {
+        "elements": 3072,
+        "execution": "vulkan_elementwise",
+        "opcode": "multiply",
+        "result": "%mul.8",
+        "spv_name": "mul.spv"
+      },
+      {
+        "elements": 1,
+        "execution": "materialized scalar constant",
+        "opcode": "constant",
+        "result": "%Softmax.28",
+        "spv_name": null
+      },
+      {
+        "elements": 192,
+        "execution": "vulkan_reduce",
+        "opcode": "reduce",
+        "result": "%Softmax.29",
+        "spv_name": "hlo_reduce_rank4.spv"
+      },
+      {
+        "elements": 192,
+        "execution": "metadata_reshape",
+        "opcode": "reshape",
+        "result": "%Softmax.30",
+        "spv_name": null
+      },
+      {
+        "elements": 192,
+        "execution": "cpu_shaped_broadcast",
+        "opcode": "broadcast",
+        "result": "%Softmax.31",
+        "spv_name": null
+      },
+      {
+        "elements": 192,
+        "execution": "metadata_reshape",
+        "opcode": "reshape",
+        "result": "%Softmax.32",
+        "spv_name": null
+      },
+      {
+        "elements": 3072,
+        "execution": "cpu_shaped_broadcast",
+        "opcode": "broadcast",
+        "result": "%Softmax.33",
+        "spv_name": null
+      },
+      {
+        "elements": 3072,
+        "execution": "vulkan_elementwise",
+        "opcode": "subtract",
+        "result": "%Softmax.34",
+        "spv_name": "sub.spv"
+      },
+      {
+        "elements": 3072,
+        "execution": "vulkan_elementwise",
+        "opcode": "exponential",
+        "result": "%Softmax.35",
+        "spv_name": "exp.spv"
+      },
+      {
+        "elements": 1,
+        "execution": "materialized scalar constant",
+        "opcode": "constant",
+        "result": "%Softmax.27",
+        "spv_name": null
+      },
+      {
+        "elements": 192,
+        "execution": "vulkan_reduce",
+        "opcode": "reduce",
+        "result": "%Softmax.36",
+        "spv_name": "hlo_reduce_rank4.spv"
+      },
+      {
+        "elements": 192,
+        "execution": "metadata_reshape",
+        "opcode": "reshape",
+        "result": "%Softmax.37",
+        "spv_name": null
+      },
+      {
+        "elements": 192,
+        "execution": "cpu_shaped_broadcast",
+        "opcode": "broadcast",
+        "result": "%Softmax.38",
+        "spv_name": null
+      },
+      {
+        "elements": 192,
+        "execution": "metadata_reshape",
+        "opcode": "reshape",
+        "result": "%Softmax.39",
+        "spv_name": null
+      },
+      {
+        "elements": 3072,
+        "execution": "cpu_shaped_broadcast",
+        "opcode": "broadcast",
+        "result": "%Softmax.40",
+        "spv_name": null
+      },
+      {
+        "elements": 3072,
+        "execution": "vulkan_elementwise",
+        "opcode": "divide",
+        "result": "%Softmax.41",
+        "spv_name": "div.spv"
+      },
+      {
+        "elements": 12288,
+        "execution": "vulkan_dot_general",
+        "opcode": "dot",
+        "result": "%MatMul_2.2",
+        "spv_name": "hlo_dot_batched.spv"
+      },
+      {
+        "elements": 12288,
+        "execution": "cpu_transpose",
+        "opcode": "transpose",
+        "result": "%MatMul_2.3",
+        "spv_name": null
+      },
+      {
+        "elements": 12288,
+        "execution": "cpu_transpose",
+        "opcode": "transpose",
+        "result": "%transpose_1.1",
+        "spv_name": null
+      },
+      {
+        "elements": 12288,
+        "execution": "metadata_reshape",
+        "opcode": "reshape",
+        "result": "%Reshape_1.1",
+        "spv_name": null
+      },
+      {
+        "elements": 589824,
+        "execution": "loaded parameter(2) from xla_hlo/fixtures/bert_base_param_002_out.raw.f32",
+        "opcode": "parameter",
+        "result": "%arg2.1",
+        "spv_name": null
+      },
+      {
+        "elements": 589824,
+        "execution": "metadata_reshape",
+        "opcode": "reshape",
+        "result": "%reshape.5",
+        "spv_name": null
+      },
+      {
+        "elements": 12288,
+        "execution": "vulkan_dot_general",
+        "opcode": "dot",
+        "result": "%MatMul_3.2",
+        "spv_name": "hlo_dot_batched.spv"
+      },
+      {
+        "elements": 12288,
+        "execution": "cpu_transpose",
+        "opcode": "transpose",
+        "result": "%MatMul_3.3",
+        "spv_name": null
+      },
+      {
+        "elements": 12288,
+        "execution": "vulkan_elementwise",
+        "opcode": "add",
+        "result": "%add.1",
+        "spv_name": "add.spv"
+      },
+      {
+        "elements": 12288,
+        "execution": "vulkan_elementwise",
+        "opcode": "multiply",
+        "result": "%mul.11",
+        "spv_name": "mul.spv"
+      },
+      {
+        "elements": 12288,
+        "execution": "vulkan_elementwise",
+        "opcode": "negate",
+        "result": "%Neg.1",
+        "spv_name": "neg.spv"
+      },
+      {
+        "elements": 1,
+        "execution": "materialized scalar constant",
+        "opcode": "constant",
+        "result": "%mul_1.3",
+        "spv_name": null
+      },
+      {
+        "elements": 12288,
+        "execution": "cpu_shaped_broadcast",
+        "opcode": "broadcast",
+        "result": "%mul_1.4",
+        "spv_name": null
+      },
+      {
+        "elements": 12288,
+        "execution": "vulkan_elementwise",
+        "opcode": "multiply",
+        "result": "%mul_1.5",
+        "spv_name": "mul.spv"
+      },
+      {
+        "elements": 12288,
+        "execution": "vulkan_elementwise",
+        "opcode": "abs",
+        "result": "%Erfc.84",
+        "spv_name": "abs.spv"
+      },
+      {
+        "elements": 1,
+        "execution": "materialized scalar constant",
+        "opcode": "constant",
+        "result": "%Erfc.85",
+        "spv_name": null
+      },
+      {
+        "elements": 12288,
+        "execution": "cpu_shaped_broadcast",
+        "opcode": "broadcast",
+        "result": "%Erfc.86",
+        "spv_name": null
+      },
+      {
+        "elements": 12288,
+        "execution": "cpu_compare_predicate_as_f32",
+        "opcode": "compare",
+        "result": "%Erfc.87",
+        "spv_name": null
+      },
+      {
+        "elements": 1,
+        "execution": "materialized scalar constant",
+        "opcode": "constant",
+        "result": "%Erfc.133",
+        "spv_name": null
+      },
+      {
+        "elements": 12288,
+        "execution": "cpu_shaped_broadcast",
+        "opcode": "broadcast",
+        "result": "%Erfc.134",
+        "spv_name": null
+      },
+      {
+        "elements": 12288,
+        "execution": "cpu_compare_predicate_as_f32",
+        "opcode": "compare",
+        "result": "%Erfc.135",
+        "spv_name": null
+      },
+      {
+        "elements": 1,
+        "execution": "materialized scalar constant",
+        "opcode": "constant",
+        "result": "%Erfc.136",
+        "spv_name": null
+      },
+      {
+        "elements": 12288,
+        "execution": "cpu_shaped_broadcast",
+        "opcode": "broadcast",
+        "result": "%Erfc.137",
+        "spv_name": null
+      },
+      {
+        "elements": 12288,
+        "execution": "vulkan_elementwise",
+        "opcode": "multiply",
+        "result": "%Erfc.92",
+        "spv_name": "mul.spv"
+      },
+      {
+        "elements": 12288,
+        "execution": "vulkan_elementwise",
+        "opcode": "negate",
+        "result": "%Erfc.93",
+        "spv_name": "neg.spv"
+      },
+      {
+        "elements": 12288,
+        "execution": "vulkan_elementwise",
+        "opcode": "exponential",
+        "result": "%Erfc.94",
+        "spv_name": "exp.spv"
+      },
+      {
+        "elements": 1,
+        "execution": "materialized scalar constant",
+        "opcode": "constant",
+        "result": "%Erfc.98",
+        "spv_name": null
+      },
+      {
+        "elements": 12288,
+        "execution": "cpu_shaped_broadcast",
+        "opcode": "broadcast",
+        "result": "%Erfc.99",
+        "spv_name": null
+      },
+      {
+        "elements": 1,
+        "execution": "materialized scalar constant",
+        "opcode": "constant",
+        "result": "%Erfc.95",
+        "spv_name": null
+      },
+      {
+        "elements": 12288,
+        "execution": "cpu_shaped_broadcast",
+        "opcode": "broadcast",
+        "result": "%Erfc.96",
+        "spv_name": null
+      },
+      {
+        "elements": 12288,
+        "execution": "vulkan_elementwise",
+        "opcode": "divide",
+        "result": "%Erfc.97",
+        "spv_name": "div.spv"
+      },
+      {
+        "elements": 12288,
+        "execution": "vulkan_elementwise",
+        "opcode": "multiply",
+        "result": "%Erfc.100",
+        "spv_name": "mul.spv"
+      },
+      {
+        "elements": 1,
+        "execution": "materialized scalar constant",
+        "opcode": "constant",
+        "result": "%Erfc.101",
+        "spv_name": null
+      },
+      {
+        "elements": 12288,
+        "execution": "cpu_shaped_broadcast",
+        "opcode": "broadcast",
+        "result": "%Erfc.102",
+        "spv_name": null
+      },
+      {
+        "elements": 12288,
+        "execution": "vulkan_elementwise",
+        "opcode": "add",
+        "result": "%Erfc.103",
+        "spv_name": "add.spv"
+      },
+      {
+        "elements": 12288,
+        "execution": "vulkan_elementwise",
+        "opcode": "multiply",
+        "result": "%Erfc.104",
+        "spv_name": "mul.spv"
+      },
+      {
+        "elements": 1,
+        "execution": "materialized scalar constant",
+        "opcode": "constant",
+        "result": "%Erfc.105",
+        "spv_name": null
+      },
+      {
+        "elements": 12288,
+        "execution": "cpu_shaped_broadcast",
+        "opcode": "broadcast",
+        "result": "%Erfc.106",
+        "spv_name": null
+      },
+      {
+        "elements": 12288,
+        "execution": "vulkan_elementwise",
+        "opcode": "add",
+        "result": "%Erfc.107",
+        "spv_name": "add.spv"
+      },
+      {
+        "elements": 12288,
+        "execution": "vulkan_elementwise",
+        "opcode": "multiply",
+        "result": "%Erfc.108",
+        "spv_name": "mul.spv"
+      },
+      {
+        "elements": 1,
+        "execution": "materialized scalar constant",
+        "opcode": "constant",
+        "result": "%Erfc.109",
+        "spv_name": null
+      },
+      {
+        "elements": 12288,
+        "execution": "cpu_shaped_broadcast",
+        "opcode": "broadcast",
+        "result": "%Erfc.110",
+        "spv_name": null
+      },
+      {
+        "elements": 12288,
+        "execution": "vulkan_elementwise",
+        "opcode": "add",
+        "result": "%Erfc.111",
+        "spv_name": "add.spv"
+      },
+      {
+        "elements": 12288,
+        "execution": "vulkan_elementwise",
+        "opcode": "abs",
+        "result": "%Erfc.88",
+        "spv_name": "abs.spv"
+      },
+      {
+        "elements": 1,
+        "execution": "materialized scalar constant",
+        "opcode": "constant",
+        "result": "%Erfc.89",
+        "spv_name": null
+      },
+      {
+        "elements": 12288,
+        "execution": "cpu_shaped_broadcast",
+        "opcode": "broadcast",
+        "result": "%Erfc.90",
+        "spv_name": null
+      },
+      {
+        "elements": 12288,
+        "execution": "vulkan_elementwise",
+        "opcode": "minimum",
+        "result": "%Erfc.91",
+        "spv_name": "min.spv"
+      },
+      {
+        "elements": 1,
+        "execution": "materialized scalar constant",
+        "opcode": "constant",
+        "result": "%Erfc.112",
+        "spv_name": null
+      },
+      {
+        "elements": 12288,
+        "execution": "cpu_shaped_broadcast",
+        "opcode": "broadcast",
+        "result": "%Erfc.113",
+        "spv_name": null
+      },
+      {
+        "elements": 12288,
+        "execution": "vulkan_elementwise",
+        "opcode": "multiply",
+        "result": "%Erfc.114",
+        "spv_name": "mul.spv"
+      },
+      {
+        "elements": 1,
+        "execution": "materialized scalar constant",
+        "opcode": "constant",
+        "result": "%Erfc.115",
+        "spv_name": null
+      },
+      {
+        "elements": 12288,
+        "execution": "cpu_shaped_broadcast",
+        "opcode": "broadcast",
+        "result": "%Erfc.116",
+        "spv_name": null
+      },
+      {
+        "elements": 12288,
+        "execution": "vulkan_elementwise",
+        "opcode": "add",
+        "result": "%Erfc.117",
+        "spv_name": "add.spv"
+      },
+      {
+        "elements": 12288,
+        "execution": "vulkan_elementwise",
+        "opcode": "multiply",
+        "result": "%Erfc.118",
+        "spv_name": "mul.spv"
+      },
+      {
+        "elements": 1,
+        "execution": "materialized scalar constant",
+        "opcode": "constant",
+        "result": "%Erfc.119",
+        "spv_name": null
+      },
+      {
+        "elements": 12288,
+        "execution": "cpu_shaped_broadcast",
+        "opcode": "broadcast",
+        "result": "%Erfc.120",
+        "spv_name": null
+      },
+      {
+        "elements": 12288,
+        "execution": "vulkan_elementwise",
+        "opcode": "add",
+        "result": "%Erfc.121",
+        "spv_name": "add.spv"
+      },
+      {
+        "elements": 12288,
+        "execution": "vulkan_elementwise",
+        "opcode": "multiply",
+        "result": "%Erfc.122",
+        "spv_name": "mul.spv"
+      },
+      {
+        "elements": 1,
+        "execution": "materialized scalar constant",
+        "opcode": "constant",
+        "result": "%Erfc.123",
+        "spv_name": null
+      },
+      {
+        "elements": 12288,
+        "execution": "cpu_shaped_broadcast",
+        "opcode": "broadcast",
+        "result": "%Erfc.124",
+        "spv_name": null
+      },
+      {
+        "elements": 12288,
+        "execution": "vulkan_elementwise",
+        "opcode": "add",
+        "result": "%Erfc.125",
+        "spv_name": "add.spv"
+      },
+      {
+        "elements": 12288,
+        "execution": "vulkan_elementwise",
+        "opcode": "multiply",
+        "result": "%Erfc.126",
+        "spv_name": "mul.spv"
+      },
+      {
+        "elements": 1,
+        "execution": "materialized scalar constant",
+        "opcode": "constant",
+        "result": "%Erfc.127",
+        "spv_name": null
+      },
+      {
+        "elements": 12288,
+        "execution": "cpu_shaped_broadcast",
+        "opcode": "broadcast",
+        "result": "%Erfc.128",
+        "spv_name": null
+      },
+      {
+        "elements": 12288,
+        "execution": "vulkan_elementwise",
+        "opcode": "add",
+        "result": "%Erfc.129",
+        "spv_name": "add.spv"
+      },
+      {
+        "elements": 12288,
+        "execution": "vulkan_elementwise",
+        "opcode": "multiply",
+        "result": "%Erfc.130",
+        "spv_name": "mul.spv"
+      },
+      {
+        "elements": 12288,
+        "execution": "vulkan_elementwise",
+        "opcode": "divide",
+        "result": "%Erfc.131",
+        "spv_name": "div.spv"
+      },
+      {
+        "elements": 12288,
+        "execution": "vulkan_elementwise",
+        "opcode": "multiply",
+        "result": "%Erfc.132",
+        "spv_name": "mul.spv"
+      },
+      {
+        "elements": 12288,
+        "execution": "vulkan_elementwise",
+        "opcode": "subtract",
+        "result": "%Erfc.138",
+        "spv_name": "sub.spv"
+      },
+      {
+        "elements": 12288,
+        "execution": "cpu_select",
+        "opcode": "select",
+        "result": "%Erfc.139",
+        "spv_name": null
+      },
+      {
+        "elements": 1,
+        "execution": "materialized scalar constant",
+        "opcode": "constant",
+        "result": "%Erfc.141",
+        "spv_name": null
+      },
+      {
+        "elements": 12288,
+        "execution": "cpu_shaped_broadcast",
+        "opcode": "broadcast",
+        "result": "%Erfc.142",
+        "spv_name": null
+      },
+      {
+        "elements": 12288,
+        "execution": "vulkan_elementwise",
+        "opcode": "multiply",
+        "result": "%Erfc.140",
+        "spv_name": "mul.spv"
+      },
+      {
+        "elements": 12288,
+        "execution": "vulkan_elementwise",
+        "opcode": "multiply",
+        "result": "%Erfc.143",
+        "spv_name": "mul.spv"
+      },
+      {
+        "elements": 1,
+        "execution": "materialized scalar constant",
+        "opcode": "constant",
+        "result": "%Erfc.144",
+        "spv_name": null
+      },
+      {
+        "elements": 12288,
+        "execution": "cpu_shaped_broadcast",
+        "opcode": "broadcast",
+        "result": "%Erfc.145",
+        "spv_name": null
+      },
+      {
+        "elements": 12288,
+        "execution": "vulkan_elementwise",
+        "opcode": "add",
+        "result": "%Erfc.146",
+        "spv_name": "add.spv"
+      },
+      {
+        "elements": 12288,
+        "execution": "vulkan_elementwise",
+        "opcode": "multiply",
+        "result": "%Erfc.147",
+        "spv_name": "mul.spv"
+      },
+      {
+        "elements": 1,
+        "execution": "materialized scalar constant",
+        "opcode": "constant",
+        "result": "%Erfc.148",
+        "spv_name": null
+      },
+      {
+        "elements": 12288,
+        "execution": "cpu_shaped_broadcast",
+        "opcode": "broadcast",
+        "result": "%Erfc.149",
+        "spv_name": null
+      },
+      {
+        "elements": 12288,
+        "execution": "vulkan_elementwise",
+        "opcode": "add",
+        "result": "%Erfc.150",
+        "spv_name": "add.spv"
+      },
+      {
+        "elements": 12288,
+        "execution": "vulkan_elementwise",
+        "opcode": "multiply",
+        "result": "%Erfc.151",
+        "spv_name": "mul.spv"
+      },
+      {
+        "elements": 1,
+        "execution": "materialized scalar constant",
+        "opcode": "constant",
+        "result": "%Erfc.152",
+        "spv_name": null
+      },
+      {
+        "elements": 12288,
+        "execution": "cpu_shaped_broadcast",
+        "opcode": "broadcast",
+        "result": "%Erfc.153",
+        "spv_name": null
+      },
+      {
+        "elements": 12288,
+        "execution": "vulkan_elementwise",
+        "opcode": "add",
+        "result": "%Erfc.154",
+        "spv_name": "add.spv"
+      },
+      {
+        "elements": 12288,
+        "execution": "vulkan_elementwise",
+        "opcode": "multiply",
+        "result": "%Erfc.155",
+        "spv_name": "mul.spv"
+      },
+      {
+        "elements": 1,
+        "execution": "materialized scalar constant",
+        "opcode": "constant",
+        "result": "%Erfc.156",
+        "spv_name": null
+      },
+      {
+        "elements": 12288,
+        "execution": "cpu_shaped_broadcast",
+        "opcode": "broadcast",
+        "result": "%Erfc.157",
+        "spv_name": null
+      },
+      {
+        "elements": 12288,
+        "execution": "vulkan_elementwise",
+        "opcode": "add",
+        "result": "%Erfc.158",
+        "spv_name": "add.spv"
+      },
+      {
+        "elements": 12288,
+        "execution": "vulkan_elementwise",
+        "opcode": "multiply",
+        "result": "%Erfc.159",
+        "spv_name": "mul.spv"
+      },
+      {
+        "elements": 1,
+        "execution": "materialized scalar constant",
+        "opcode": "constant",
+        "result": "%Erfc.160",
+        "spv_name": null
+      },
+      {
+        "elements": 12288,
+        "execution": "cpu_shaped_broadcast",
+        "opcode": "broadcast",
+        "result": "%Erfc.161",
+        "spv_name": null
+      },
+      {
+        "elements": 12288,
+        "execution": "vulkan_elementwise",
+        "opcode": "add",
+        "result": "%Erfc.162",
+        "spv_name": "add.spv"
+      },
+      {
+        "elements": 12288,
+        "execution": "vulkan_elementwise",
+        "opcode": "multiply",
+        "result": "%Erfc.163",
+        "spv_name": "mul.spv"
+      },
+      {
+        "elements": 1,
+        "execution": "materialized scalar constant",
+        "opcode": "constant",
+        "result": "%Erfc.164",
+        "spv_name": null
+      },
+      {
+        "elements": 12288,
+        "execution": "cpu_shaped_broadcast",
+        "opcode": "broadcast",
+        "result": "%Erfc.165",
+        "spv_name": null
+      },
+      {
+        "elements": 12288,
+        "execution": "vulkan_elementwise",
+        "opcode": "add",
+        "result": "%Erfc.166",
+        "spv_name": "add.spv"
+      },
+      {
+        "elements": 12288,
+        "execution": "cpu_select",
+        "opcode": "select",
+        "result": "%Erfc.167",
+        "spv_name": null
+      },
+      {
+        "elements": 12288,
+        "execution": "vulkan_elementwise",
+        "opcode": "multiply",
+        "result": "%mul_2.1",
+        "spv_name": "mul.spv"
+      },
+      {
+        "elements": 12288,
+        "execution": "metadata_reshape",
+        "opcode": "reshape",
+        "result": "%XLA_Retvals.3",
+        "spv_name": null
+      },
+      {
+        "elements": 12288,
+        "execution": "tuple_alias",
+        "opcode": "tuple",
+        "result": "%XLA_Retvals.4",
+        "spv_name": null
+      },
+      {
+        "elements": 12288,
+        "execution": "tuple_alias",
+        "opcode": "get-tuple-element",
+        "result": "%XLA_Retvals.5",
+        "spv_name": null
+      }
+    ]
+  },
+  "input": "xla_hlo/fixtures/bert_base.stablehlo.txt",
+  "module": {
+    "name": "a_inference_bert_base_fn_42__.3",
+    "ops": [
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/mul",
+          "metadata.op_type": "Mul"
+        },
+        "element_type": "f32",
+        "opcode": "constant",
+        "operands": [],
+        "raw": "%mul.9 = f32[] constant(0.5), metadata={op_type=\"Mul\" op_name=\"Gelu/mul\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%mul.9",
+        "result_type": "f32[]",
+        "shape": []
+      },
+      {
+        "attributes": {
+          "dimensions": "",
+          "metadata.op_name": "Gelu/mul",
+          "metadata.op_type": "Mul"
+        },
+        "element_type": "f32",
+        "opcode": "broadcast",
+        "operands": [
+          "%mul.9"
+        ],
+        "raw": "%mul.10 = f32[1,16,768]{2,1,0} broadcast(f32[] %mul.9), dimensions={}, metadata={op_type=\"Mul\" op_name=\"Gelu/mul\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%mul.10",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "XLA_Args"
+        },
+        "element_type": "f32",
+        "opcode": "parameter",
+        "operands": [],
+        "raw": "%arg0.1 = f32[1,16,768]{2,1,0} parameter(0), parameter_replication={false}, metadata={op_name=\"XLA_Args\"}",
+        "result": "%arg0.1",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {},
+        "element_type": "f32",
+        "opcode": "reshape",
+        "operands": [
+          "%arg0.1"
+        ],
+        "raw": "%reshape.3 = f32[1,16,768]{2,1,0} reshape(f32[1,16,768]{2,1,0} %arg0.1)",
+        "result": "%reshape.3",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "XLA_Args"
+        },
+        "element_type": "f32",
+        "opcode": "parameter",
+        "operands": [],
+        "raw": "%arg1.1 = f32[768,768]{1,0} parameter(1), parameter_replication={false}, metadata={op_name=\"XLA_Args\"}",
+        "result": "%arg1.1",
+        "result_type": "f32[768,768]{1,0}",
+        "shape": [
+          768,
+          768
+        ]
+      },
+      {
+        "attributes": {},
+        "element_type": "f32",
+        "opcode": "reshape",
+        "operands": [
+          "%arg1.1"
+        ],
+        "raw": "%reshape.4 = f32[768,768]{1,0} reshape(f32[768,768]{1,0} %arg1.1)",
+        "result": "%reshape.4",
+        "result_type": "f32[768,768]{1,0}",
+        "shape": [
+          768,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "lhs_contracting_dims": "2",
+          "metadata.op_name": "MatMul",
+          "metadata.op_type": "BatchMatMulV2",
+          "rhs_contracting_dims": "0"
+        },
+        "element_type": "f32",
+        "opcode": "dot",
+        "operands": [
+          "%reshape.3",
+          "%reshape.4"
+        ],
+        "raw": "%MatMul.2 = f32[1,16,768]{2,1,0} dot(f32[1,16,768]{2,1,0} %reshape.3, f32[768,768]{1,0} %reshape.4), lhs_contracting_dims={2}, rhs_contracting_dims={0}, frontend_attributes={grad_x=\"false\",grad_y=\"false\"}, metadata={op_type=\"BatchMatMulV2\" op_name=\"MatMul\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%MatMul.2",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "dimensions": "0,1,2",
+          "metadata.op_name": "MatMul",
+          "metadata.op_type": "BatchMatMulV2"
+        },
+        "element_type": "f32",
+        "opcode": "transpose",
+        "operands": [
+          "%MatMul.2"
+        ],
+        "raw": "%MatMul.3 = f32[1,16,768]{2,1,0} transpose(f32[1,16,768]{2,1,0} %MatMul.2), dimensions={0,1,2}, metadata={op_type=\"BatchMatMulV2\" op_name=\"MatMul\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%MatMul.3",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Reshape",
+          "metadata.op_type": "Reshape"
+        },
+        "element_type": "f32",
+        "opcode": "reshape",
+        "operands": [
+          "%MatMul.3"
+        ],
+        "raw": "%Reshape.1 = f32[1,16,12,64]{3,2,1,0} reshape(f32[1,16,768]{2,1,0} %MatMul.3), metadata={op_type=\"Reshape\" op_name=\"Reshape\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Reshape.1",
+        "result_type": "f32[1,16,12,64]{3,2,1,0}",
+        "shape": [
+          1,
+          16,
+          12,
+          64
+        ]
+      },
+      {
+        "attributes": {
+          "dimensions": "0,2,1,3",
+          "metadata.op_name": "transpose",
+          "metadata.op_type": "Transpose"
+        },
+        "element_type": "f32",
+        "opcode": "transpose",
+        "operands": [
+          "%Reshape.1"
+        ],
+        "raw": "%transpose.1 = f32[1,12,16,64]{3,1,2,0} transpose(f32[1,16,12,64]{3,2,1,0} %Reshape.1), dimensions={0,2,1,3}, metadata={op_type=\"Transpose\" op_name=\"transpose\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%transpose.1",
+        "result_type": "f32[1,12,16,64]{3,1,2,0}",
+        "shape": [
+          1,
+          12,
+          16,
+          64
+        ]
+      },
+      {
+        "attributes": {
+          "lhs_batch_dims": "0,1",
+          "lhs_contracting_dims": "3",
+          "metadata.op_name": "MatMul_1",
+          "metadata.op_type": "BatchMatMulV2",
+          "rhs_batch_dims": "0,1",
+          "rhs_contracting_dims": "3"
+        },
+        "element_type": "f32",
+        "opcode": "dot",
+        "operands": [
+          "%transpose.1",
+          "%transpose.1"
+        ],
+        "raw": "%MatMul_1.2 = f32[1,12,16,16]{3,2,1,0} dot(f32[1,12,16,64]{3,1,2,0} %transpose.1, f32[1,12,16,64]{3,1,2,0} %transpose.1), lhs_batch_dims={0,1}, lhs_contracting_dims={3}, rhs_batch_dims={0,1}, rhs_contracting_dims={3}, frontend_attributes={grad_x=\"false\",grad_y=\"false\"}, metadata={op_type=\"BatchMatMulV2\" op_name=\"MatMul_1\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%MatMul_1.2",
+        "result_type": "f32[1,12,16,16]{3,2,1,0}",
+        "shape": [
+          1,
+          12,
+          16,
+          16
+        ]
+      },
+      {
+        "attributes": {
+          "dimensions": "0,1,2,3",
+          "metadata.op_name": "MatMul_1",
+          "metadata.op_type": "BatchMatMulV2"
+        },
+        "element_type": "f32",
+        "opcode": "transpose",
+        "operands": [
+          "%MatMul_1.2"
+        ],
+        "raw": "%MatMul_1.3 = f32[1,12,16,16]{3,2,1,0} transpose(f32[1,12,16,16]{3,2,1,0} %MatMul_1.2), dimensions={0,1,2,3}, metadata={op_type=\"BatchMatMulV2\" op_name=\"MatMul_1\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%MatMul_1.3",
+        "result_type": "f32[1,12,16,16]{3,2,1,0}",
+        "shape": [
+          1,
+          12,
+          16,
+          16
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "mul",
+          "metadata.op_type": "Mul"
+        },
+        "element_type": "f32",
+        "opcode": "constant",
+        "operands": [],
+        "raw": "%mul.6 = f32[] constant(0.125), metadata={op_type=\"Mul\" op_name=\"mul\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%mul.6",
+        "result_type": "f32[]",
+        "shape": []
+      },
+      {
+        "attributes": {
+          "dimensions": "",
+          "metadata.op_name": "mul",
+          "metadata.op_type": "Mul"
+        },
+        "element_type": "f32",
+        "opcode": "broadcast",
+        "operands": [
+          "%mul.6"
+        ],
+        "raw": "%mul.7 = f32[1,12,16,16]{3,2,1,0} broadcast(f32[] %mul.6), dimensions={}, metadata={op_type=\"Mul\" op_name=\"mul\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%mul.7",
+        "result_type": "f32[1,12,16,16]{3,2,1,0}",
+        "shape": [
+          1,
+          12,
+          16,
+          16
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "mul",
+          "metadata.op_type": "Mul"
+        },
+        "element_type": "f32",
+        "opcode": "multiply",
+        "operands": [
+          "%MatMul_1.3",
+          "%mul.7"
+        ],
+        "raw": "%mul.8 = f32[1,12,16,16]{3,2,1,0} multiply(f32[1,12,16,16]{3,2,1,0} %MatMul_1.3, f32[1,12,16,16]{3,2,1,0} %mul.7), metadata={op_type=\"Mul\" op_name=\"mul\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%mul.8",
+        "result_type": "f32[1,12,16,16]{3,2,1,0}",
+        "shape": [
+          1,
+          12,
+          16,
+          16
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Softmax",
+          "metadata.op_type": "Softmax"
+        },
+        "element_type": "f32",
+        "opcode": "constant",
+        "operands": [],
+        "raw": "%Softmax.28 = f32[] constant(-inf), metadata={op_type=\"Softmax\" op_name=\"Softmax\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Softmax.28",
+        "result_type": "f32[]",
+        "shape": []
+      },
+      {
+        "attributes": {
+          "dimensions": "3",
+          "metadata.op_name": "Softmax",
+          "metadata.op_type": "Softmax",
+          "to_apply": "%region_0.1"
+        },
+        "element_type": "f32",
+        "opcode": "reduce",
+        "operands": [
+          "%mul.8",
+          "%Softmax.28"
+        ],
+        "raw": "%Softmax.29 = f32[1,12,16]{2,1,0} reduce(f32[1,12,16,16]{3,2,1,0} %mul.8, f32[] %Softmax.28), dimensions={3}, to_apply=%region_0.1, metadata={op_type=\"Softmax\" op_name=\"Softmax\"}",
+        "result": "%Softmax.29",
+        "result_type": "f32[1,12,16]{2,1,0}",
+        "shape": [
+          1,
+          12,
+          16
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Softmax",
+          "metadata.op_type": "Softmax"
+        },
+        "element_type": "f32",
+        "opcode": "reshape",
+        "operands": [
+          "%Softmax.29"
+        ],
+        "raw": "%Softmax.30 = f32[1,12,16,1]{3,2,1,0} reshape(f32[1,12,16]{2,1,0} %Softmax.29), metadata={op_type=\"Softmax\" op_name=\"Softmax\"}",
+        "result": "%Softmax.30",
+        "result_type": "f32[1,12,16,1]{3,2,1,0}",
+        "shape": [
+          1,
+          12,
+          16,
+          1
+        ]
+      },
+      {
+        "attributes": {
+          "dimensions": "0,1,2,3",
+          "metadata.op_name": "Softmax",
+          "metadata.op_type": "Softmax"
+        },
+        "element_type": "f32",
+        "opcode": "broadcast",
+        "operands": [
+          "%Softmax.30"
+        ],
+        "raw": "%Softmax.31 = f32[1,12,16,1]{3,2,1,0} broadcast(f32[1,12,16,1]{3,2,1,0} %Softmax.30), dimensions={0,1,2,3}, metadata={op_type=\"Softmax\" op_name=\"Softmax\"}",
+        "result": "%Softmax.31",
+        "result_type": "f32[1,12,16,1]{3,2,1,0}",
+        "shape": [
+          1,
+          12,
+          16,
+          1
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Softmax",
+          "metadata.op_type": "Softmax"
+        },
+        "element_type": "f32",
+        "opcode": "reshape",
+        "operands": [
+          "%Softmax.31"
+        ],
+        "raw": "%Softmax.32 = f32[1,12,16]{2,1,0} reshape(f32[1,12,16,1]{3,2,1,0} %Softmax.31), metadata={op_type=\"Softmax\" op_name=\"Softmax\"}",
+        "result": "%Softmax.32",
+        "result_type": "f32[1,12,16]{2,1,0}",
+        "shape": [
+          1,
+          12,
+          16
+        ]
+      },
+      {
+        "attributes": {
+          "dimensions": "0,1,2",
+          "metadata.op_name": "Softmax",
+          "metadata.op_type": "Softmax"
+        },
+        "element_type": "f32",
+        "opcode": "broadcast",
+        "operands": [
+          "%Softmax.32"
+        ],
+        "raw": "%Softmax.33 = f32[1,12,16,16]{3,2,1,0} broadcast(f32[1,12,16]{2,1,0} %Softmax.32), dimensions={0,1,2}, metadata={op_type=\"Softmax\" op_name=\"Softmax\"}",
+        "result": "%Softmax.33",
+        "result_type": "f32[1,12,16,16]{3,2,1,0}",
+        "shape": [
+          1,
+          12,
+          16,
+          16
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Softmax",
+          "metadata.op_type": "Softmax"
+        },
+        "element_type": "f32",
+        "opcode": "subtract",
+        "operands": [
+          "%mul.8",
+          "%Softmax.33"
+        ],
+        "raw": "%Softmax.34 = f32[1,12,16,16]{3,2,1,0} subtract(f32[1,12,16,16]{3,2,1,0} %mul.8, f32[1,12,16,16]{3,2,1,0} %Softmax.33), metadata={op_type=\"Softmax\" op_name=\"Softmax\"}",
+        "result": "%Softmax.34",
+        "result_type": "f32[1,12,16,16]{3,2,1,0}",
+        "shape": [
+          1,
+          12,
+          16,
+          16
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Softmax",
+          "metadata.op_type": "Softmax"
+        },
+        "element_type": "f32",
+        "opcode": "exponential",
+        "operands": [
+          "%Softmax.34"
+        ],
+        "raw": "%Softmax.35 = f32[1,12,16,16]{3,2,1,0} exponential(f32[1,12,16,16]{3,2,1,0} %Softmax.34), metadata={op_type=\"Softmax\" op_name=\"Softmax\"}",
+        "result": "%Softmax.35",
+        "result_type": "f32[1,12,16,16]{3,2,1,0}",
+        "shape": [
+          1,
+          12,
+          16,
+          16
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Softmax",
+          "metadata.op_type": "Softmax"
+        },
+        "element_type": "f32",
+        "opcode": "constant",
+        "operands": [],
+        "raw": "%Softmax.27 = f32[] constant(-0), metadata={op_type=\"Softmax\" op_name=\"Softmax\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Softmax.27",
+        "result_type": "f32[]",
+        "shape": []
+      },
+      {
+        "attributes": {
+          "dimensions": "3",
+          "metadata.op_name": "Softmax",
+          "metadata.op_type": "Softmax",
+          "to_apply": "%region_1.2"
+        },
+        "element_type": "f32",
+        "opcode": "reduce",
+        "operands": [
+          "%Softmax.35",
+          "%Softmax.27"
+        ],
+        "raw": "%Softmax.36 = f32[1,12,16]{2,1,0} reduce(f32[1,12,16,16]{3,2,1,0} %Softmax.35, f32[] %Softmax.27), dimensions={3}, to_apply=%region_1.2, metadata={op_type=\"Softmax\" op_name=\"Softmax\"}",
+        "result": "%Softmax.36",
+        "result_type": "f32[1,12,16]{2,1,0}",
+        "shape": [
+          1,
+          12,
+          16
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Softmax",
+          "metadata.op_type": "Softmax"
+        },
+        "element_type": "f32",
+        "opcode": "reshape",
+        "operands": [
+          "%Softmax.36"
+        ],
+        "raw": "%Softmax.37 = f32[1,12,16,1]{3,2,1,0} reshape(f32[1,12,16]{2,1,0} %Softmax.36), metadata={op_type=\"Softmax\" op_name=\"Softmax\"}",
+        "result": "%Softmax.37",
+        "result_type": "f32[1,12,16,1]{3,2,1,0}",
+        "shape": [
+          1,
+          12,
+          16,
+          1
+        ]
+      },
+      {
+        "attributes": {
+          "dimensions": "0,1,2,3",
+          "metadata.op_name": "Softmax",
+          "metadata.op_type": "Softmax"
+        },
+        "element_type": "f32",
+        "opcode": "broadcast",
+        "operands": [
+          "%Softmax.37"
+        ],
+        "raw": "%Softmax.38 = f32[1,12,16,1]{3,2,1,0} broadcast(f32[1,12,16,1]{3,2,1,0} %Softmax.37), dimensions={0,1,2,3}, metadata={op_type=\"Softmax\" op_name=\"Softmax\"}",
+        "result": "%Softmax.38",
+        "result_type": "f32[1,12,16,1]{3,2,1,0}",
+        "shape": [
+          1,
+          12,
+          16,
+          1
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Softmax",
+          "metadata.op_type": "Softmax"
+        },
+        "element_type": "f32",
+        "opcode": "reshape",
+        "operands": [
+          "%Softmax.38"
+        ],
+        "raw": "%Softmax.39 = f32[1,12,16]{2,1,0} reshape(f32[1,12,16,1]{3,2,1,0} %Softmax.38), metadata={op_type=\"Softmax\" op_name=\"Softmax\"}",
+        "result": "%Softmax.39",
+        "result_type": "f32[1,12,16]{2,1,0}",
+        "shape": [
+          1,
+          12,
+          16
+        ]
+      },
+      {
+        "attributes": {
+          "dimensions": "0,1,2",
+          "metadata.op_name": "Softmax",
+          "metadata.op_type": "Softmax"
+        },
+        "element_type": "f32",
+        "opcode": "broadcast",
+        "operands": [
+          "%Softmax.39"
+        ],
+        "raw": "%Softmax.40 = f32[1,12,16,16]{3,2,1,0} broadcast(f32[1,12,16]{2,1,0} %Softmax.39), dimensions={0,1,2}, metadata={op_type=\"Softmax\" op_name=\"Softmax\"}",
+        "result": "%Softmax.40",
+        "result_type": "f32[1,12,16,16]{3,2,1,0}",
+        "shape": [
+          1,
+          12,
+          16,
+          16
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Softmax",
+          "metadata.op_type": "Softmax"
+        },
+        "element_type": "f32",
+        "opcode": "divide",
+        "operands": [
+          "%Softmax.35",
+          "%Softmax.40"
+        ],
+        "raw": "%Softmax.41 = f32[1,12,16,16]{3,2,1,0} divide(f32[1,12,16,16]{3,2,1,0} %Softmax.35, f32[1,12,16,16]{3,2,1,0} %Softmax.40), metadata={op_type=\"Softmax\" op_name=\"Softmax\"}",
+        "result": "%Softmax.41",
+        "result_type": "f32[1,12,16,16]{3,2,1,0}",
+        "shape": [
+          1,
+          12,
+          16,
+          16
+        ]
+      },
+      {
+        "attributes": {
+          "lhs_batch_dims": "0,1",
+          "lhs_contracting_dims": "3",
+          "metadata.op_name": "MatMul_2",
+          "metadata.op_type": "BatchMatMulV2",
+          "rhs_batch_dims": "0,1",
+          "rhs_contracting_dims": "2"
+        },
+        "element_type": "f32",
+        "opcode": "dot",
+        "operands": [
+          "%Softmax.41",
+          "%transpose.1"
+        ],
+        "raw": "%MatMul_2.2 = f32[1,12,16,64]{3,2,1,0} dot(f32[1,12,16,16]{3,2,1,0} %Softmax.41, f32[1,12,16,64]{3,1,2,0} %transpose.1), lhs_batch_dims={0,1}, lhs_contracting_dims={3}, rhs_batch_dims={0,1}, rhs_contracting_dims={2}, frontend_attributes={grad_x=\"false\",grad_y=\"false\"}, metadata={op_type=\"BatchMatMulV2\" op_name=\"MatMul_2\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%MatMul_2.2",
+        "result_type": "f32[1,12,16,64]{3,2,1,0}",
+        "shape": [
+          1,
+          12,
+          16,
+          64
+        ]
+      },
+      {
+        "attributes": {
+          "dimensions": "0,1,2,3",
+          "metadata.op_name": "MatMul_2",
+          "metadata.op_type": "BatchMatMulV2"
+        },
+        "element_type": "f32",
+        "opcode": "transpose",
+        "operands": [
+          "%MatMul_2.2"
+        ],
+        "raw": "%MatMul_2.3 = f32[1,12,16,64]{3,2,1,0} transpose(f32[1,12,16,64]{3,2,1,0} %MatMul_2.2), dimensions={0,1,2,3}, metadata={op_type=\"BatchMatMulV2\" op_name=\"MatMul_2\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%MatMul_2.3",
+        "result_type": "f32[1,12,16,64]{3,2,1,0}",
+        "shape": [
+          1,
+          12,
+          16,
+          64
+        ]
+      },
+      {
+        "attributes": {
+          "dimensions": "0,2,1,3",
+          "metadata.op_name": "transpose_1",
+          "metadata.op_type": "Transpose"
+        },
+        "element_type": "f32",
+        "opcode": "transpose",
+        "operands": [
+          "%MatMul_2.3"
+        ],
+        "raw": "%transpose_1.1 = f32[1,16,12,64]{3,1,2,0} transpose(f32[1,12,16,64]{3,2,1,0} %MatMul_2.3), dimensions={0,2,1,3}, metadata={op_type=\"Transpose\" op_name=\"transpose_1\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%transpose_1.1",
+        "result_type": "f32[1,16,12,64]{3,1,2,0}",
+        "shape": [
+          1,
+          16,
+          12,
+          64
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Reshape_1",
+          "metadata.op_type": "Reshape"
+        },
+        "element_type": "f32",
+        "opcode": "reshape",
+        "operands": [
+          "%transpose_1.1"
+        ],
+        "raw": "%Reshape_1.1 = f32[1,16,768]{2,1,0} reshape(f32[1,16,12,64]{3,1,2,0} %transpose_1.1), metadata={op_type=\"Reshape\" op_name=\"Reshape_1\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Reshape_1.1",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "XLA_Args"
+        },
+        "element_type": "f32",
+        "opcode": "parameter",
+        "operands": [],
+        "raw": "%arg2.1 = f32[768,768]{1,0} parameter(2), parameter_replication={false}, metadata={op_name=\"XLA_Args\"}",
+        "result": "%arg2.1",
+        "result_type": "f32[768,768]{1,0}",
+        "shape": [
+          768,
+          768
+        ]
+      },
+      {
+        "attributes": {},
+        "element_type": "f32",
+        "opcode": "reshape",
+        "operands": [
+          "%arg2.1"
+        ],
+        "raw": "%reshape.5 = f32[768,768]{1,0} reshape(f32[768,768]{1,0} %arg2.1)",
+        "result": "%reshape.5",
+        "result_type": "f32[768,768]{1,0}",
+        "shape": [
+          768,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "lhs_contracting_dims": "2",
+          "metadata.op_name": "MatMul_3",
+          "metadata.op_type": "BatchMatMulV2",
+          "rhs_contracting_dims": "0"
+        },
+        "element_type": "f32",
+        "opcode": "dot",
+        "operands": [
+          "%Reshape_1.1",
+          "%reshape.5"
+        ],
+        "raw": "%MatMul_3.2 = f32[1,16,768]{2,1,0} dot(f32[1,16,768]{2,1,0} %Reshape_1.1, f32[768,768]{1,0} %reshape.5), lhs_contracting_dims={2}, rhs_contracting_dims={0}, frontend_attributes={grad_x=\"false\",grad_y=\"false\"}, metadata={op_type=\"BatchMatMulV2\" op_name=\"MatMul_3\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%MatMul_3.2",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "dimensions": "0,1,2",
+          "metadata.op_name": "MatMul_3",
+          "metadata.op_type": "BatchMatMulV2"
+        },
+        "element_type": "f32",
+        "opcode": "transpose",
+        "operands": [
+          "%MatMul_3.2"
+        ],
+        "raw": "%MatMul_3.3 = f32[1,16,768]{2,1,0} transpose(f32[1,16,768]{2,1,0} %MatMul_3.2), dimensions={0,1,2}, metadata={op_type=\"BatchMatMulV2\" op_name=\"MatMul_3\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%MatMul_3.3",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "add",
+          "metadata.op_type": "AddV2"
+        },
+        "element_type": "f32",
+        "opcode": "add",
+        "operands": [
+          "%MatMul_3.3",
+          "%reshape.3"
+        ],
+        "raw": "%add.1 = f32[1,16,768]{2,1,0} add(f32[1,16,768]{2,1,0} %MatMul_3.3, f32[1,16,768]{2,1,0} %reshape.3), metadata={op_type=\"AddV2\" op_name=\"add\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%add.1",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/mul",
+          "metadata.op_type": "Mul"
+        },
+        "element_type": "f32",
+        "opcode": "multiply",
+        "operands": [
+          "%mul.10",
+          "%add.1"
+        ],
+        "raw": "%mul.11 = f32[1,16,768]{2,1,0} multiply(f32[1,16,768]{2,1,0} %mul.10, f32[1,16,768]{2,1,0} %add.1), metadata={op_type=\"Mul\" op_name=\"Gelu/mul\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%mul.11",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Neg",
+          "metadata.op_type": "Neg"
+        },
+        "element_type": "f32",
+        "opcode": "negate",
+        "operands": [
+          "%add.1"
+        ],
+        "raw": "%Neg.1 = f32[1,16,768]{2,1,0} negate(f32[1,16,768]{2,1,0} %add.1), metadata={op_type=\"Neg\" op_name=\"Gelu/Neg\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Neg.1",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/mul_1",
+          "metadata.op_type": "Mul"
+        },
+        "element_type": "f32",
+        "opcode": "constant",
+        "operands": [],
+        "raw": "%mul_1.3 = f32[] constant(0.707106769), metadata={op_type=\"Mul\" op_name=\"Gelu/mul_1\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%mul_1.3",
+        "result_type": "f32[]",
+        "shape": []
+      },
+      {
+        "attributes": {
+          "dimensions": "",
+          "metadata.op_name": "Gelu/mul_1",
+          "metadata.op_type": "Mul"
+        },
+        "element_type": "f32",
+        "opcode": "broadcast",
+        "operands": [
+          "%mul_1.3"
+        ],
+        "raw": "%mul_1.4 = f32[1,16,768]{2,1,0} broadcast(f32[] %mul_1.3), dimensions={}, metadata={op_type=\"Mul\" op_name=\"Gelu/mul_1\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%mul_1.4",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/mul_1",
+          "metadata.op_type": "Mul"
+        },
+        "element_type": "f32",
+        "opcode": "multiply",
+        "operands": [
+          "%Neg.1",
+          "%mul_1.4"
+        ],
+        "raw": "%mul_1.5 = f32[1,16,768]{2,1,0} multiply(f32[1,16,768]{2,1,0} %Neg.1, f32[1,16,768]{2,1,0} %mul_1.4), metadata={op_type=\"Mul\" op_name=\"Gelu/mul_1\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%mul_1.5",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "abs",
+        "operands": [
+          "%mul_1.5"
+        ],
+        "raw": "%Erfc.84 = f32[1,16,768]{2,1,0} abs(f32[1,16,768]{2,1,0} %mul_1.5), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.84",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "constant",
+        "operands": [],
+        "raw": "%Erfc.85 = f32[] constant(1), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.85",
+        "result_type": "f32[]",
+        "shape": []
+      },
+      {
+        "attributes": {
+          "dimensions": "",
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "broadcast",
+        "operands": [
+          "%Erfc.85"
+        ],
+        "raw": "%Erfc.86 = f32[1,16,768]{2,1,0} broadcast(f32[] %Erfc.85), dimensions={}, metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.86",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "direction": "GT",
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "pred",
+        "opcode": "compare",
+        "operands": [
+          "%Erfc.84",
+          "%Erfc.86"
+        ],
+        "raw": "%Erfc.87 = pred[1,16,768]{2,1,0} compare(f32[1,16,768]{2,1,0} %Erfc.84, f32[1,16,768]{2,1,0} %Erfc.86), direction=GT, metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.87",
+        "result_type": "pred[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "constant",
+        "operands": [],
+        "raw": "%Erfc.133 = f32[] constant(0), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.133",
+        "result_type": "f32[]",
+        "shape": []
+      },
+      {
+        "attributes": {
+          "dimensions": "",
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "broadcast",
+        "operands": [
+          "%Erfc.133"
+        ],
+        "raw": "%Erfc.134 = f32[1,16,768]{2,1,0} broadcast(f32[] %Erfc.133), dimensions={}, metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.134",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "direction": "LT",
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "pred",
+        "opcode": "compare",
+        "operands": [
+          "%mul_1.5",
+          "%Erfc.134"
+        ],
+        "raw": "%Erfc.135 = pred[1,16,768]{2,1,0} compare(f32[1,16,768]{2,1,0} %mul_1.5, f32[1,16,768]{2,1,0} %Erfc.134), direction=LT, metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.135",
+        "result_type": "pred[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "constant",
+        "operands": [],
+        "raw": "%Erfc.136 = f32[] constant(2), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.136",
+        "result_type": "f32[]",
+        "shape": []
+      },
+      {
+        "attributes": {
+          "dimensions": "",
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "broadcast",
+        "operands": [
+          "%Erfc.136"
+        ],
+        "raw": "%Erfc.137 = f32[1,16,768]{2,1,0} broadcast(f32[] %Erfc.136), dimensions={}, metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.137",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "multiply",
+        "operands": [
+          "%mul_1.5",
+          "%mul_1.5"
+        ],
+        "raw": "%Erfc.92 = f32[1,16,768]{2,1,0} multiply(f32[1,16,768]{2,1,0} %mul_1.5, f32[1,16,768]{2,1,0} %mul_1.5), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.92",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "negate",
+        "operands": [
+          "%Erfc.92"
+        ],
+        "raw": "%Erfc.93 = f32[1,16,768]{2,1,0} negate(f32[1,16,768]{2,1,0} %Erfc.92), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.93",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "exponential",
+        "operands": [
+          "%Erfc.93"
+        ],
+        "raw": "%Erfc.94 = f32[1,16,768]{2,1,0} exponential(f32[1,16,768]{2,1,0} %Erfc.93), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.94",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "constant",
+        "operands": [],
+        "raw": "%Erfc.98 = f32[] constant(0.102081165), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.98",
+        "result_type": "f32[]",
+        "shape": []
+      },
+      {
+        "attributes": {
+          "dimensions": "",
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "broadcast",
+        "operands": [
+          "%Erfc.98"
+        ],
+        "raw": "%Erfc.99 = f32[1,16,768]{2,1,0} broadcast(f32[] %Erfc.98), dimensions={}, metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.99",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "constant",
+        "operands": [],
+        "raw": "%Erfc.95 = f32[] constant(1), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.95",
+        "result_type": "f32[]",
+        "shape": []
+      },
+      {
+        "attributes": {
+          "dimensions": "",
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "broadcast",
+        "operands": [
+          "%Erfc.95"
+        ],
+        "raw": "%Erfc.96 = f32[1,16,768]{2,1,0} broadcast(f32[] %Erfc.95), dimensions={}, metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.96",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "divide",
+        "operands": [
+          "%Erfc.96",
+          "%Erfc.92"
+        ],
+        "raw": "%Erfc.97 = f32[1,16,768]{2,1,0} divide(f32[1,16,768]{2,1,0} %Erfc.96, f32[1,16,768]{2,1,0} %Erfc.92), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.97",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "multiply",
+        "operands": [
+          "%Erfc.99",
+          "%Erfc.97"
+        ],
+        "raw": "%Erfc.100 = f32[1,16,768]{2,1,0} multiply(f32[1,16,768]{2,1,0} %Erfc.99, f32[1,16,768]{2,1,0} %Erfc.97), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.100",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "constant",
+        "operands": [],
+        "raw": "%Erfc.101 = f32[] constant(0.429206669), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.101",
+        "result_type": "f32[]",
+        "shape": []
+      },
+      {
+        "attributes": {
+          "dimensions": "",
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "broadcast",
+        "operands": [
+          "%Erfc.101"
+        ],
+        "raw": "%Erfc.102 = f32[1,16,768]{2,1,0} broadcast(f32[] %Erfc.101), dimensions={}, metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.102",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "add",
+        "operands": [
+          "%Erfc.100",
+          "%Erfc.102"
+        ],
+        "raw": "%Erfc.103 = f32[1,16,768]{2,1,0} add(f32[1,16,768]{2,1,0} %Erfc.100, f32[1,16,768]{2,1,0} %Erfc.102), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.103",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "multiply",
+        "operands": [
+          "%Erfc.103",
+          "%Erfc.97"
+        ],
+        "raw": "%Erfc.104 = f32[1,16,768]{2,1,0} multiply(f32[1,16,768]{2,1,0} %Erfc.103, f32[1,16,768]{2,1,0} %Erfc.97), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.104",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "constant",
+        "operands": [],
+        "raw": "%Erfc.105 = f32[] constant(0.323790789), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.105",
+        "result_type": "f32[]",
+        "shape": []
+      },
+      {
+        "attributes": {
+          "dimensions": "",
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "broadcast",
+        "operands": [
+          "%Erfc.105"
+        ],
+        "raw": "%Erfc.106 = f32[1,16,768]{2,1,0} broadcast(f32[] %Erfc.105), dimensions={}, metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.106",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "add",
+        "operands": [
+          "%Erfc.104",
+          "%Erfc.106"
+        ],
+        "raw": "%Erfc.107 = f32[1,16,768]{2,1,0} add(f32[1,16,768]{2,1,0} %Erfc.104, f32[1,16,768]{2,1,0} %Erfc.106), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.107",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "multiply",
+        "operands": [
+          "%Erfc.107",
+          "%Erfc.97"
+        ],
+        "raw": "%Erfc.108 = f32[1,16,768]{2,1,0} multiply(f32[1,16,768]{2,1,0} %Erfc.107, f32[1,16,768]{2,1,0} %Erfc.97), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.108",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "constant",
+        "operands": [],
+        "raw": "%Erfc.109 = f32[] constant(0.053971976), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.109",
+        "result_type": "f32[]",
+        "shape": []
+      },
+      {
+        "attributes": {
+          "dimensions": "",
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "broadcast",
+        "operands": [
+          "%Erfc.109"
+        ],
+        "raw": "%Erfc.110 = f32[1,16,768]{2,1,0} broadcast(f32[] %Erfc.109), dimensions={}, metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.110",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "add",
+        "operands": [
+          "%Erfc.108",
+          "%Erfc.110"
+        ],
+        "raw": "%Erfc.111 = f32[1,16,768]{2,1,0} add(f32[1,16,768]{2,1,0} %Erfc.108, f32[1,16,768]{2,1,0} %Erfc.110), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.111",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "abs",
+        "operands": [
+          "%mul_1.5"
+        ],
+        "raw": "%Erfc.88 = f32[1,16,768]{2,1,0} abs(f32[1,16,768]{2,1,0} %mul_1.5), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.88",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "constant",
+        "operands": [],
+        "raw": "%Erfc.89 = f32[] constant(10.06), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.89",
+        "result_type": "f32[]",
+        "shape": []
+      },
+      {
+        "attributes": {
+          "dimensions": "",
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "broadcast",
+        "operands": [
+          "%Erfc.89"
+        ],
+        "raw": "%Erfc.90 = f32[1,16,768]{2,1,0} broadcast(f32[] %Erfc.89), dimensions={}, metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.90",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "minimum",
+        "operands": [
+          "%Erfc.88",
+          "%Erfc.90"
+        ],
+        "raw": "%Erfc.91 = f32[1,16,768]{2,1,0} minimum(f32[1,16,768]{2,1,0} %Erfc.88, f32[1,16,768]{2,1,0} %Erfc.90), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.91",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "constant",
+        "operands": [],
+        "raw": "%Erfc.112 = f32[] constant(0.0172516778), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.112",
+        "result_type": "f32[]",
+        "shape": []
+      },
+      {
+        "attributes": {
+          "dimensions": "",
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "broadcast",
+        "operands": [
+          "%Erfc.112"
+        ],
+        "raw": "%Erfc.113 = f32[1,16,768]{2,1,0} broadcast(f32[] %Erfc.112), dimensions={}, metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.113",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "multiply",
+        "operands": [
+          "%Erfc.113",
+          "%Erfc.97"
+        ],
+        "raw": "%Erfc.114 = f32[1,16,768]{2,1,0} multiply(f32[1,16,768]{2,1,0} %Erfc.113, f32[1,16,768]{2,1,0} %Erfc.97), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.114",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "constant",
+        "operands": [],
+        "raw": "%Erfc.115 = f32[] constant(0.391371638), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.115",
+        "result_type": "f32[]",
+        "shape": []
+      },
+      {
+        "attributes": {
+          "dimensions": "",
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "broadcast",
+        "operands": [
+          "%Erfc.115"
+        ],
+        "raw": "%Erfc.116 = f32[1,16,768]{2,1,0} broadcast(f32[] %Erfc.115), dimensions={}, metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.116",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "add",
+        "operands": [
+          "%Erfc.114",
+          "%Erfc.116"
+        ],
+        "raw": "%Erfc.117 = f32[1,16,768]{2,1,0} add(f32[1,16,768]{2,1,0} %Erfc.114, f32[1,16,768]{2,1,0} %Erfc.116), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.117",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "multiply",
+        "operands": [
+          "%Erfc.117",
+          "%Erfc.97"
+        ],
+        "raw": "%Erfc.118 = f32[1,16,768]{2,1,0} multiply(f32[1,16,768]{2,1,0} %Erfc.117, f32[1,16,768]{2,1,0} %Erfc.97), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.118",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "constant",
+        "operands": [],
+        "raw": "%Erfc.119 = f32[] constant(1), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.119",
+        "result_type": "f32[]",
+        "shape": []
+      },
+      {
+        "attributes": {
+          "dimensions": "",
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "broadcast",
+        "operands": [
+          "%Erfc.119"
+        ],
+        "raw": "%Erfc.120 = f32[1,16,768]{2,1,0} broadcast(f32[] %Erfc.119), dimensions={}, metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.120",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "add",
+        "operands": [
+          "%Erfc.118",
+          "%Erfc.120"
+        ],
+        "raw": "%Erfc.121 = f32[1,16,768]{2,1,0} add(f32[1,16,768]{2,1,0} %Erfc.118, f32[1,16,768]{2,1,0} %Erfc.120), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.121",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "multiply",
+        "operands": [
+          "%Erfc.121",
+          "%Erfc.97"
+        ],
+        "raw": "%Erfc.122 = f32[1,16,768]{2,1,0} multiply(f32[1,16,768]{2,1,0} %Erfc.121, f32[1,16,768]{2,1,0} %Erfc.97), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.122",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "constant",
+        "operands": [],
+        "raw": "%Erfc.123 = f32[] constant(0.621732414), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.123",
+        "result_type": "f32[]",
+        "shape": []
+      },
+      {
+        "attributes": {
+          "dimensions": "",
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "broadcast",
+        "operands": [
+          "%Erfc.123"
+        ],
+        "raw": "%Erfc.124 = f32[1,16,768]{2,1,0} broadcast(f32[] %Erfc.123), dimensions={}, metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.124",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "add",
+        "operands": [
+          "%Erfc.122",
+          "%Erfc.124"
+        ],
+        "raw": "%Erfc.125 = f32[1,16,768]{2,1,0} add(f32[1,16,768]{2,1,0} %Erfc.122, f32[1,16,768]{2,1,0} %Erfc.124), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.125",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "multiply",
+        "operands": [
+          "%Erfc.125",
+          "%Erfc.97"
+        ],
+        "raw": "%Erfc.126 = f32[1,16,768]{2,1,0} multiply(f32[1,16,768]{2,1,0} %Erfc.125, f32[1,16,768]{2,1,0} %Erfc.97), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.126",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "constant",
+        "operands": [],
+        "raw": "%Erfc.127 = f32[] constant(0.0956628621), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.127",
+        "result_type": "f32[]",
+        "shape": []
+      },
+      {
+        "attributes": {
+          "dimensions": "",
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "broadcast",
+        "operands": [
+          "%Erfc.127"
+        ],
+        "raw": "%Erfc.128 = f32[1,16,768]{2,1,0} broadcast(f32[] %Erfc.127), dimensions={}, metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.128",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "add",
+        "operands": [
+          "%Erfc.126",
+          "%Erfc.128"
+        ],
+        "raw": "%Erfc.129 = f32[1,16,768]{2,1,0} add(f32[1,16,768]{2,1,0} %Erfc.126, f32[1,16,768]{2,1,0} %Erfc.128), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.129",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "multiply",
+        "operands": [
+          "%Erfc.91",
+          "%Erfc.129"
+        ],
+        "raw": "%Erfc.130 = f32[1,16,768]{2,1,0} multiply(f32[1,16,768]{2,1,0} %Erfc.91, f32[1,16,768]{2,1,0} %Erfc.129), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.130",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "divide",
+        "operands": [
+          "%Erfc.111",
+          "%Erfc.130"
+        ],
+        "raw": "%Erfc.131 = f32[1,16,768]{2,1,0} divide(f32[1,16,768]{2,1,0} %Erfc.111, f32[1,16,768]{2,1,0} %Erfc.130), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.131",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "multiply",
+        "operands": [
+          "%Erfc.94",
+          "%Erfc.131"
+        ],
+        "raw": "%Erfc.132 = f32[1,16,768]{2,1,0} multiply(f32[1,16,768]{2,1,0} %Erfc.94, f32[1,16,768]{2,1,0} %Erfc.131), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.132",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "subtract",
+        "operands": [
+          "%Erfc.137",
+          "%Erfc.132"
+        ],
+        "raw": "%Erfc.138 = f32[1,16,768]{2,1,0} subtract(f32[1,16,768]{2,1,0} %Erfc.137, f32[1,16,768]{2,1,0} %Erfc.132), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.138",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "select",
+        "operands": [
+          "%Erfc.135",
+          "%Erfc.138",
+          "%Erfc.132"
+        ],
+        "raw": "%Erfc.139 = f32[1,16,768]{2,1,0} select(pred[1,16,768]{2,1,0} %Erfc.135, f32[1,16,768]{2,1,0} %Erfc.138, f32[1,16,768]{2,1,0} %Erfc.132), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.139",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "constant",
+        "operands": [],
+        "raw": "%Erfc.141 = f32[] constant(0.000561802299), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.141",
+        "result_type": "f32[]",
+        "shape": []
+      },
+      {
+        "attributes": {
+          "dimensions": "",
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "broadcast",
+        "operands": [
+          "%Erfc.141"
+        ],
+        "raw": "%Erfc.142 = f32[1,16,768]{2,1,0} broadcast(f32[] %Erfc.141), dimensions={}, metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.142",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "multiply",
+        "operands": [
+          "%mul_1.5",
+          "%mul_1.5"
+        ],
+        "raw": "%Erfc.140 = f32[1,16,768]{2,1,0} multiply(f32[1,16,768]{2,1,0} %mul_1.5, f32[1,16,768]{2,1,0} %mul_1.5), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.140",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "multiply",
+        "operands": [
+          "%Erfc.142",
+          "%Erfc.140"
+        ],
+        "raw": "%Erfc.143 = f32[1,16,768]{2,1,0} multiply(f32[1,16,768]{2,1,0} %Erfc.142, f32[1,16,768]{2,1,0} %Erfc.140), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.143",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "constant",
+        "operands": [],
+        "raw": "%Erfc.144 = f32[] constant(-0.00491381669), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.144",
+        "result_type": "f32[]",
+        "shape": []
+      },
+      {
+        "attributes": {
+          "dimensions": "",
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "broadcast",
+        "operands": [
+          "%Erfc.144"
+        ],
+        "raw": "%Erfc.145 = f32[1,16,768]{2,1,0} broadcast(f32[] %Erfc.144), dimensions={}, metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.145",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "add",
+        "operands": [
+          "%Erfc.143",
+          "%Erfc.145"
+        ],
+        "raw": "%Erfc.146 = f32[1,16,768]{2,1,0} add(f32[1,16,768]{2,1,0} %Erfc.143, f32[1,16,768]{2,1,0} %Erfc.145), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.146",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "multiply",
+        "operands": [
+          "%Erfc.146",
+          "%Erfc.140"
+        ],
+        "raw": "%Erfc.147 = f32[1,16,768]{2,1,0} multiply(f32[1,16,768]{2,1,0} %Erfc.146, f32[1,16,768]{2,1,0} %Erfc.140), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.147",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "constant",
+        "operands": [],
+        "raw": "%Erfc.148 = f32[] constant(0.0267075151), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.148",
+        "result_type": "f32[]",
+        "shape": []
+      },
+      {
+        "attributes": {
+          "dimensions": "",
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "broadcast",
+        "operands": [
+          "%Erfc.148"
+        ],
+        "raw": "%Erfc.149 = f32[1,16,768]{2,1,0} broadcast(f32[] %Erfc.148), dimensions={}, metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.149",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "add",
+        "operands": [
+          "%Erfc.147",
+          "%Erfc.149"
+        ],
+        "raw": "%Erfc.150 = f32[1,16,768]{2,1,0} add(f32[1,16,768]{2,1,0} %Erfc.147, f32[1,16,768]{2,1,0} %Erfc.149), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.150",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "multiply",
+        "operands": [
+          "%Erfc.150",
+          "%Erfc.140"
+        ],
+        "raw": "%Erfc.151 = f32[1,16,768]{2,1,0} multiply(f32[1,16,768]{2,1,0} %Erfc.150, f32[1,16,768]{2,1,0} %Erfc.140), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.151",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "constant",
+        "operands": [],
+        "raw": "%Erfc.152 = f32[] constant(-0.112800106), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.152",
+        "result_type": "f32[]",
+        "shape": []
+      },
+      {
+        "attributes": {
+          "dimensions": "",
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "broadcast",
+        "operands": [
+          "%Erfc.152"
+        ],
+        "raw": "%Erfc.153 = f32[1,16,768]{2,1,0} broadcast(f32[] %Erfc.152), dimensions={}, metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.153",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "add",
+        "operands": [
+          "%Erfc.151",
+          "%Erfc.153"
+        ],
+        "raw": "%Erfc.154 = f32[1,16,768]{2,1,0} add(f32[1,16,768]{2,1,0} %Erfc.151, f32[1,16,768]{2,1,0} %Erfc.153), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.154",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "multiply",
+        "operands": [
+          "%Erfc.154",
+          "%Erfc.140"
+        ],
+        "raw": "%Erfc.155 = f32[1,16,768]{2,1,0} multiply(f32[1,16,768]{2,1,0} %Erfc.154, f32[1,16,768]{2,1,0} %Erfc.140), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.155",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "constant",
+        "operands": [],
+        "raw": "%Erfc.156 = f32[] constant(0.376122952), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.156",
+        "result_type": "f32[]",
+        "shape": []
+      },
+      {
+        "attributes": {
+          "dimensions": "",
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "broadcast",
+        "operands": [
+          "%Erfc.156"
+        ],
+        "raw": "%Erfc.157 = f32[1,16,768]{2,1,0} broadcast(f32[] %Erfc.156), dimensions={}, metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.157",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "add",
+        "operands": [
+          "%Erfc.155",
+          "%Erfc.157"
+        ],
+        "raw": "%Erfc.158 = f32[1,16,768]{2,1,0} add(f32[1,16,768]{2,1,0} %Erfc.155, f32[1,16,768]{2,1,0} %Erfc.157), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.158",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "multiply",
+        "operands": [
+          "%Erfc.158",
+          "%Erfc.140"
+        ],
+        "raw": "%Erfc.159 = f32[1,16,768]{2,1,0} multiply(f32[1,16,768]{2,1,0} %Erfc.158, f32[1,16,768]{2,1,0} %Erfc.140), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.159",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "constant",
+        "operands": [],
+        "raw": "%Erfc.160 = f32[] constant(-1.12837911), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.160",
+        "result_type": "f32[]",
+        "shape": []
+      },
+      {
+        "attributes": {
+          "dimensions": "",
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "broadcast",
+        "operands": [
+          "%Erfc.160"
+        ],
+        "raw": "%Erfc.161 = f32[1,16,768]{2,1,0} broadcast(f32[] %Erfc.160), dimensions={}, metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.161",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "add",
+        "operands": [
+          "%Erfc.159",
+          "%Erfc.161"
+        ],
+        "raw": "%Erfc.162 = f32[1,16,768]{2,1,0} add(f32[1,16,768]{2,1,0} %Erfc.159, f32[1,16,768]{2,1,0} %Erfc.161), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.162",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "multiply",
+        "operands": [
+          "%mul_1.5",
+          "%Erfc.162"
+        ],
+        "raw": "%Erfc.163 = f32[1,16,768]{2,1,0} multiply(f32[1,16,768]{2,1,0} %mul_1.5, f32[1,16,768]{2,1,0} %Erfc.162), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.163",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "constant",
+        "operands": [],
+        "raw": "%Erfc.164 = f32[] constant(1), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.164",
+        "result_type": "f32[]",
+        "shape": []
+      },
+      {
+        "attributes": {
+          "dimensions": "",
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "broadcast",
+        "operands": [
+          "%Erfc.164"
+        ],
+        "raw": "%Erfc.165 = f32[1,16,768]{2,1,0} broadcast(f32[] %Erfc.164), dimensions={}, metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.165",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "add",
+        "operands": [
+          "%Erfc.163",
+          "%Erfc.165"
+        ],
+        "raw": "%Erfc.166 = f32[1,16,768]{2,1,0} add(f32[1,16,768]{2,1,0} %Erfc.163, f32[1,16,768]{2,1,0} %Erfc.165), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.166",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/Erfc",
+          "metadata.op_type": "Erfc"
+        },
+        "element_type": "f32",
+        "opcode": "select",
+        "operands": [
+          "%Erfc.87",
+          "%Erfc.139",
+          "%Erfc.166"
+        ],
+        "raw": "%Erfc.167 = f32[1,16,768]{2,1,0} select(pred[1,16,768]{2,1,0} %Erfc.87, f32[1,16,768]{2,1,0} %Erfc.139, f32[1,16,768]{2,1,0} %Erfc.166), metadata={op_type=\"Erfc\" op_name=\"Gelu/Erfc\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%Erfc.167",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "Gelu/mul_2",
+          "metadata.op_type": "Mul"
+        },
+        "element_type": "f32",
+        "opcode": "multiply",
+        "operands": [
+          "%mul.11",
+          "%Erfc.167"
+        ],
+        "raw": "%mul_2.1 = f32[1,16,768]{2,1,0} multiply(f32[1,16,768]{2,1,0} %mul.11, f32[1,16,768]{2,1,0} %Erfc.167), metadata={op_type=\"Mul\" op_name=\"Gelu/mul_2\" source_file=\"<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\" source_line=1221}",
+        "result": "%mul_2.1",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "XLA_Retvals"
+        },
+        "element_type": "f32",
+        "opcode": "reshape",
+        "operands": [
+          "%mul_2.1"
+        ],
+        "raw": "%XLA_Retvals.3 = f32[1,16,768]{2,1,0} reshape(f32[1,16,768]{2,1,0} %mul_2.1), metadata={op_name=\"XLA_Retvals\"}",
+        "result": "%XLA_Retvals.3",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "metadata.op_name": "XLA_Retvals"
+        },
+        "element_type": null,
+        "opcode": "tuple",
+        "operands": [
+          "%XLA_Retvals.3"
+        ],
+        "raw": "%XLA_Retvals.4 = (f32[1,16,768]{2,1,0}) tuple(f32[1,16,768]{2,1,0} %XLA_Retvals.3), metadata={op_name=\"XLA_Retvals\"}",
+        "result": "%XLA_Retvals.4",
+        "result_type": "(f32[1,16,768]{2,1,0})",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      },
+      {
+        "attributes": {
+          "index": "0",
+          "metadata.op_name": "XLA_Retvals"
+        },
+        "element_type": "f32",
+        "opcode": "get-tuple-element",
+        "operands": [
+          "%XLA_Retvals.4"
+        ],
+        "raw": "ROOT %XLA_Retvals.5 = f32[1,16,768]{2,1,0} get-tuple-element((f32[1,16,768]{2,1,0}) %XLA_Retvals.4), index=0, metadata={op_name=\"XLA_Retvals\"}",
+        "result": "%XLA_Retvals.5",
+        "result_type": "f32[1,16,768]{2,1,0}",
+        "shape": [
+          1,
+          16,
+          768
+        ]
+      }
+    ]
+  },
+  "op_histogram": {
+    "abs": 2,
+    "add": 14,
+    "broadcast": 28,
+    "compare": 2,
+    "constant": 26,
+    "divide": 3,
+    "dot": 4,
+    "exponential": 2,
+    "get-tuple-element": 1,
+    "minimum": 1,
+    "multiply": 21,
+    "negate": 2,
+    "parameter": 3,
+    "reduce": 2,
+    "reshape": 10,
+    "select": 2,
+    "subtract": 2,
+    "transpose": 6,
+    "tuple": 1
+  },
+  "status": "pass",
+  "validate_only": false,
+  "validation": {
+    "status": "pass"
+  }
+}

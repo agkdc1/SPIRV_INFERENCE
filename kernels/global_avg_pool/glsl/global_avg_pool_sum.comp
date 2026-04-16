@@ -1,0 +1,28 @@
+#version 450
+layout(local_size_x = 64, local_size_y = 1, local_size_z = 1) in;
+
+layout(std430, binding = 0) readonly buffer Input { float input_data[]; };
+layout(std430, binding = 1) readonly buffer Unused { float unused_data[]; };
+layout(std430, binding = 2) writeonly buffer Partial { float partial_data[]; };
+
+layout(push_constant) uniform Params {
+    int n;
+    int c;
+    int h;
+    int w;
+} pc;
+
+void main() {
+    uint idx = gl_GlobalInvocationID.x;
+    if (idx >= uint(pc.n * pc.c)) { return; }
+    int c = int(idx % uint(pc.c));
+    int n = int(idx / uint(pc.c));
+    float acc = 0.0;
+    for (int h = 0; h < pc.h; ++h) {
+        for (int w = 0; w < pc.w; ++w) {
+            int input_idx = ((n * pc.c + c) * pc.h + h) * pc.w + w;
+            acc += input_data[input_idx];
+        }
+    }
+    partial_data[idx] = acc;
+}

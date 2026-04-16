@@ -1,0 +1,139 @@
+{
+  "device": {
+    "device_id": "0x2544",
+    "name": "NVIDIA GeForce RTX 3060",
+    "role": "auto",
+    "vendor_id": "0x10de"
+  },
+  "edges": {
+    "batchnorm": {
+      "dump_path": "inference_poc/out/local_vulkan/tensors/batchnorm_output.raw.f32",
+      "max_abs_error": 5.960464477539063e-8,
+      "max_rel_error": 1.3172014234896778e-7,
+      "max_ulp_error": 2,
+      "mismatch_count": 0,
+      "oracle_sha256": "6afd34034e78d1d9678503057e8e063d8d8e10be27363431577832f3297daeeb",
+      "status": "pass",
+      "tensor_sha256": "ebcbb5fc1364b8189d0f1a631434672499dabf7b8f50f19d357e69f0e8497654"
+    },
+    "conv1d": {
+      "dump_path": "inference_poc/out/local_vulkan/tensors/conv1d_output.raw.f32",
+      "max_abs_error": 0.0,
+      "max_rel_error": 0.0,
+      "max_ulp_error": 0,
+      "mismatch_count": 0,
+      "oracle_sha256": "f54d86d725389132fd66d53b0863ae0651d450b7b4ce22bb66f175107bbd22f8",
+      "status": "pass",
+      "tensor_sha256": "f54d86d725389132fd66d53b0863ae0651d450b7b4ce22bb66f175107bbd22f8"
+    },
+    "fc": {
+      "dump_path": "inference_poc/out/local_vulkan/tensors/logits_output.raw.f32",
+      "max_abs_error": 1.4901161193847656e-8,
+      "max_rel_error": 4.506686082095257e-7,
+      "max_ulp_error": 7,
+      "mismatch_count": 0,
+      "oracle_sha256": "749a8428a19a9c7298f476bab9506fa31fb00e58ee952a13b7c45a9da678b32f",
+      "status": "pass",
+      "tensor_sha256": "a52640df4433f08c82843aa302b7c93b565cbc3bcbc4a5e9fa4584d4069e64e9"
+    },
+    "relu": {
+      "dump_path": "inference_poc/out/local_vulkan/tensors/relu_output.raw.f32",
+      "max_abs_error": 5.960464477539063e-8,
+      "max_rel_error": 1.3172014234896778e-7,
+      "max_ulp_error": 2,
+      "mismatch_count": 0,
+      "oracle_sha256": "12f5f713004cee6629de4f7edd14f4f2032a135f8844a4acf4c311838137bd99",
+      "status": "pass",
+      "tensor_sha256": "03567a444cd7ab994552102d70f694176110ff51b4d2bbece2d17f822bc264b8"
+    },
+    "softmax": {
+      "dump_path": "inference_poc/out/local_vulkan/tensors/softmax_output.raw.f32",
+      "max_abs_error": 1.4901161193847656e-8,
+      "max_rel_error": 1.616573541696198e-7,
+      "max_ulp_error": 2,
+      "mismatch_count": 0,
+      "oracle_sha256": "012ce707603ee12a1f41320796a670a5e814d38f58bec5b20805b4f01ec91a70",
+      "status": "pass",
+      "tensor_sha256": "e7101f7f0de2d37161267de18dc2c3579a0bd334682bdde05a33258a7dee19e9"
+    }
+  },
+  "fixture_hashes": {
+    "batchnorm_output_ref": "6afd34034e78d1d9678503057e8e063d8d8e10be27363431577832f3297daeeb",
+    "batchnorm_param": "81a595135e7897df560a54ebf831d7c71c259aec0a418ff4d5fdc5170a5945ff",
+    "conv_output_ref": "f54d86d725389132fd66d53b0863ae0651d450b7b4ce22bb66f175107bbd22f8",
+    "conv_weight": "2dd819c35036247a7704860e99d9ab0ad3dda7a863abc68535cb4bf1f9d9908d",
+    "fc_param": "9d8dcf0b091fab8643afbe66f120cb39d5b10d4d0d9da83f2ed528acb213ca84",
+    "input": "2eeef514dcdb4428d2146de12f0e8d08d7577337345b4c17906b11443102e975",
+    "logits_ref": "749a8428a19a9c7298f476bab9506fa31fb00e58ee952a13b7c45a9da678b32f",
+    "relu_output_ref": "12f5f713004cee6629de4f7edd14f4f2032a135f8844a4acf4c311838137bd99",
+    "softmax_output_ref": "012ce707603ee12a1f41320796a670a5e814d38f58bec5b20805b4f01ec91a70"
+  },
+  "fixture_manifest": "inference_poc/fixtures/manifest.json",
+  "graph": [
+    "conv1d",
+    "batchnorm",
+    "relu",
+    "fc",
+    "softmax"
+  ],
+  "graph_execution_kind": "multi-dispatch_vulkan_spirv_storage_buffers",
+  "latency_ms": {
+    "batchnorm": 0.070054,
+    "conv1d": 0.081555,
+    "fc": 0.08387,
+    "relu": 0.07364000000000001,
+    "softmax": 0.083609,
+    "total": 0.392728
+  },
+  "max_abs_error": 5.960464477539063e-8,
+  "max_rel_error": 4.506686082095257e-7,
+  "max_ulp_error": 7,
+  "mismatch_count": 0,
+  "non_claims": {
+    "claims_full_tensorflow_gpu_support": false,
+    "claims_tensorflow_runtime": false,
+    "uses_cublas": false,
+    "uses_cuda": false,
+    "uses_cudnn": false,
+    "uses_handwritten_spirv": false,
+    "uses_tensorrt": false
+  },
+  "output_sha256": "e7101f7f0de2d37161267de18dc2c3579a0bd334682bdde05a33258a7dee19e9",
+  "spirv_modules": {
+    "batchnorm": {
+      "bytes": 2312,
+      "path": "inference_poc/kernels/batchnorm_infer.spv",
+      "sha256": "e3264ce8d4593a60838311767c3169d7de539db8526dfb77bcf903595922f3a5"
+    },
+    "conv1d": {
+      "bytes": 2180,
+      "path": "inference_poc/kernels/conv1d_infer.spv",
+      "sha256": "db89ef574463d44f619422346bcec7e33a654491c9a30b96ba0cbaf1f0e4f707"
+    },
+    "fc": {
+      "bytes": 2016,
+      "path": "inference_poc/kernels/fc_infer.spv",
+      "sha256": "b03c5c177b72c1e13d43c23218d0d6e32e42ff42861b156dd09fcb60f3fc173c"
+    },
+    "relu": {
+      "bytes": 1456,
+      "path": "inference_poc/kernels/relu_infer.spv",
+      "sha256": "b5757ce6a5750dd5efc6f2aa8b0163259035b7152ca55db32a09468fb0883c58"
+    },
+    "softmax": {
+      "bytes": 2408,
+      "path": "inference_poc/kernels/softmax10_infer.spv",
+      "sha256": "0b607f43201cc4c82fb26b114496b1bc73279c9d5e6d4241cc1cdd2d68fadf90"
+    }
+  },
+  "status": "pass",
+  "thresholds": {
+    "max_abs_error": 9.999999747378752e-6,
+    "max_rel_error": 0.0001,
+    "max_ulp_error": 64
+  },
+  "top1": {
+    "class": 6,
+    "confidence": 0.11392594873905182
+  }
+}

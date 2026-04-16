@@ -1,0 +1,97 @@
+{
+  "epsilon": 9.999999747378752e-6,
+  "files": {
+    "batchnorm_output_ref": {
+      "elements": 24,
+      "path": "batchnorm_output_ref.raw.f32",
+      "sha256": "6afd34034e78d1d9678503057e8e063d8d8e10be27363431577832f3297daeeb",
+      "shape": [
+        6,
+        4
+      ]
+    },
+    "batchnorm_param": {
+      "elements": 16,
+      "path": "batchnorm_param.raw.f32",
+      "sha256": "81a595135e7897df560a54ebf831d7c71c259aec0a418ff4d5fdc5170a5945ff",
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "conv_output_ref": {
+      "elements": 24,
+      "path": "conv_output_ref.raw.f32",
+      "sha256": "f54d86d725389132fd66d53b0863ae0651d450b7b4ce22bb66f175107bbd22f8",
+      "shape": [
+        6,
+        4
+      ]
+    },
+    "conv_weight": {
+      "elements": 12,
+      "path": "conv_weight.raw.f32",
+      "sha256": "2dd819c35036247a7704860e99d9ab0ad3dda7a863abc68535cb4bf1f9d9908d",
+      "shape": [
+        3,
+        1,
+        4
+      ]
+    },
+    "fc_param": {
+      "elements": 250,
+      "path": "fc_param.raw.f32",
+      "sha256": "9d8dcf0b091fab8643afbe66f120cb39d5b10d4d0d9da83f2ed528acb213ca84",
+      "shape": [
+        250
+      ]
+    },
+    "input": {
+      "elements": 64,
+      "path": "input.raw.f32",
+      "sha256": "2eeef514dcdb4428d2146de12f0e8d08d7577337345b4c17906b11443102e975",
+      "shape": [
+        8,
+        8
+      ]
+    },
+    "logits_ref": {
+      "elements": 10,
+      "path": "logits_ref.raw.f32",
+      "sha256": "749a8428a19a9c7298f476bab9506fa31fb00e58ee952a13b7c45a9da678b32f",
+      "shape": [
+        10
+      ]
+    },
+    "relu_output_ref": {
+      "elements": 24,
+      "path": "relu_output_ref.raw.f32",
+      "sha256": "12f5f713004cee6629de4f7edd14f4f2032a135f8844a4acf4c311838137bd99",
+      "shape": [
+        6,
+        4
+      ]
+    },
+    "softmax_output_ref": {
+      "elements": 10,
+      "path": "softmax_output_ref.raw.f32",
+      "sha256": "012ce707603ee12a1f41320796a670a5e814d38f58bec5b20805b4f01ec91a70",
+      "shape": [
+        10
+      ]
+    }
+  },
+  "format": "raw little-endian float32",
+  "graph": [
+    "conv1d",
+    "batchnorm",
+    "relu",
+    "fc",
+    "softmax"
+  ],
+  "notes": {
+    "conv1d": "valid kernel width 3, 4 output channels, output shape 6x4",
+    "fc": "24 features by 10 classes plus 10 bias values",
+    "input": "8x8 tensor; Conv1D consumes the first column as a length-8 one-channel signal"
+  }
+}

@@ -1,0 +1,30 @@
+#version 450
+layout(local_size_x = 256) in;
+layout(std430, binding = 0) readonly buffer A { float input_data[]; };
+layout(std430, binding = 1) readonly buffer B { float dummy[]; };
+layout(std430, binding = 2) buffer C { float output_data[]; };
+layout(push_constant) uniform P { int N; int C; int H; int W; } pc;
+shared float partial[256];
+void main() {
+    uint c = gl_WorkGroupID.x;
+    if (c >= uint(pc.C)) return;
+    uint lid = gl_LocalInvocationID.x;
+    int HW = pc.H * pc.W;
+    int m = pc.N * HW;
+    float acc = 0.0;
+    for (int i = int(lid); i < m; i += 256) {
+        int n = i / HW;
+        int hw = i % HW;
+        int idx = (n * pc.C + int(c)) * HW + hw;
+        acc += input_data[idx];
+    }
+    partial[lid] = acc;
+    barrier();
+    for (uint s = 128u; s > 0u; s >>= 1u) {
+        if (lid < s) partial[lid] += partial[lid + s];
+        barrier();
+    }
+    if (lid == 0u) {
+        output_data[c] = partial[0];
+    }
+}

@@ -1,0 +1,73 @@
+{
+  "epsilon_policy": {
+    "batchnorm": "max ULP <= 8 and max abs <= 1e-6",
+    "conv1d": "max ULP <= 16 and max relative <= 1e-5",
+    "relu": "bit-exact required",
+    "softmax": "max ULP <= 8 and max abs <= 1e-6"
+  },
+  "fixture_manifest": "parity_test/out/fixtures/manifest.json",
+  "kernels": {
+    "batchnorm": {
+      "bit_mismatch_count": 0,
+      "cuda_sha256": "de2d9d9458180dbb8a8b518e01d592ccfcc4764af8ee14f475c44a7b5cff47ab",
+      "elements": 256,
+      "max_abs_error": 0.0,
+      "max_rel_error": 0.0,
+      "max_ulp_error": 0,
+      "mismatch_count": 0,
+      "spirv_sha256": "de2d9d9458180dbb8a8b518e01d592ccfcc4764af8ee14f475c44a7b5cff47ab",
+      "status": "pass",
+      "threshold": {
+        "max_abs": 1e-06,
+        "max_ulp": 8
+      }
+    },
+    "conv1d": {
+      "bit_mismatch_count": 0,
+      "cuda_sha256": "10072ca9d332907dec423b16a417088c536f5ab5d132ce7455050154a087db66",
+      "elements": 512,
+      "max_abs_error": 0.0,
+      "max_rel_error": 0.0,
+      "max_ulp_error": 0,
+      "mismatch_count": 0,
+      "spirv_sha256": "10072ca9d332907dec423b16a417088c536f5ab5d132ce7455050154a087db66",
+      "status": "pass",
+      "threshold": {
+        "max_rel": 1e-05,
+        "max_ulp": 16
+      }
+    },
+    "relu": {
+      "bit_mismatch_count": 0,
+      "cuda_sha256": "7669adf27dc478c78bd2711ff8252f8a514b94f3735cda40338bfa885edfa810",
+      "elements": 4096,
+      "max_abs_error": 0.0,
+      "max_rel_error": 0.0,
+      "max_ulp_error": 0,
+      "mismatch_count": 0,
+      "spirv_sha256": "7669adf27dc478c78bd2711ff8252f8a514b94f3735cda40338bfa885edfa810",
+      "status": "pass",
+      "threshold": {
+        "bit_exact": true,
+        "max_abs": 0.0,
+        "max_ulp": 0
+      }
+    },
+    "softmax": {
+      "bit_mismatch_count": 59,
+      "cuda_sha256": "198734445925b872ca7169b3d3b1ad81d9187310fa76a7306867a37e7b88b593",
+      "elements": 128,
+      "max_abs_error": 1.862645149230957e-09,
+      "max_rel_error": 1.8884619600969876e-07,
+      "max_ulp_error": 2,
+      "mismatch_count": 0,
+      "spirv_sha256": "95242b0638bf3f098ff651702e8ae824f93e6fc6d2009c9c549e4dbd90dbd321",
+      "status": "pass",
+      "threshold": {
+        "max_abs": 1e-06,
+        "max_ulp": 8
+      }
+    }
+  },
+  "overall_status": "pass"
+}

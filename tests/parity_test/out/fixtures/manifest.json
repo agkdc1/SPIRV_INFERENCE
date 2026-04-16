@@ -1,0 +1,105 @@
+{
+  "files": {
+    "batchnorm_input": {
+      "elements": 256,
+      "path": "batchnorm_input.raw.f32",
+      "sha256": "e4be769575fd77f769ffc4a77d45728c667399a45821dd80c7614807a11236a0"
+    },
+    "batchnorm_params": {
+      "elements": 5,
+      "path": "batchnorm_params.raw.f32",
+      "sha256": "5b5867c269a649befc08bc9878db0a88dee1fb6e5d6ae494fc62adbd6267b588"
+    },
+    "batchnorm_ref": {
+      "elements": 256,
+      "path": "batchnorm_ref.raw.f32",
+      "sha256": "de2d9d9458180dbb8a8b518e01d592ccfcc4764af8ee14f475c44a7b5cff47ab"
+    },
+    "conv1d_filter": {
+      "elements": 6144,
+      "path": "conv1d_filter.raw.f32",
+      "sha256": "02cf21162dc7c38b5a035b9152aed00d169baaf08b9070be0b36d6d31d9b5611"
+    },
+    "conv1d_input": {
+      "elements": 1024,
+      "path": "conv1d_input.raw.f32",
+      "sha256": "01e1926cf274e88d817b7e7a69bd6e6ac0d3c5196e18f5248c6c0a4815abc57f"
+    },
+    "conv1d_ref": {
+      "elements": 512,
+      "path": "conv1d_ref.raw.f32",
+      "sha256": "10072ca9d332907dec423b16a417088c536f5ab5d132ce7455050154a087db66"
+    },
+    "relu_input": {
+      "elements": 4096,
+      "path": "relu_input.raw.f32",
+      "sha256": "b7c21d15c89d808e3ed5e9a1f56bc9e7551f2947c0b0d0e8ca8a8d20c6f5589f"
+    },
+    "relu_ref": {
+      "elements": 4096,
+      "path": "relu_ref.raw.f32",
+      "sha256": "7669adf27dc478c78bd2711ff8252f8a514b94f3735cda40338bfa885edfa810"
+    },
+    "softmax_input": {
+      "elements": 128,
+      "path": "softmax_input.raw.f32",
+      "sha256": "f6727bd02b0294365edec757066883a46716f07e10401c853f68471f43d203d9"
+    },
+    "softmax_ref": {
+      "elements": 128,
+      "path": "softmax_ref.raw.f32",
+      "sha256": "2c9f71ca72b4f044c9e14cf0f1c49182c9d6ecb64f03ef0bde7d99dcbe83f7b3"
+    }
+  },
+  "format": "raw little-endian float32",
+  "shapes": {
+    "batchnorm": [
+      256
+    ],
+    "batchnorm_params": [
+      "mean",
+      "variance",
+      "gamma",
+      "beta",
+      "epsilon"
+    ],
+    "conv1d_filter": [
+      3,
+      64,
+      32
+    ],
+    "conv1d_input": [
+      16,
+      64
+    ],
+    "conv1d_output": [
+      16,
+      32
+    ],
+    "relu": [
+      4096
+    ],
+    "softmax": [
+      128
+    ]
+  },
+  "thresholds": {
+    "batchnorm": {
+      "max_abs": 1e-06,
+      "max_ulp": 8
+    },
+    "conv1d": {
+      "max_rel": 1e-05,
+      "max_ulp": 16
+    },
+    "relu": {
+      "bit_exact": true,
+      "max_abs": 0.0,
+      "max_ulp": 0
+    },
+    "softmax": {
+      "max_abs": 1e-06,
+      "max_ulp": 8
+    }
+  }
+}

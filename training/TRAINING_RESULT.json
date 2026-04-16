@@ -1,0 +1,19 @@
+{
+  "fixture": "mnist_mlp_training",
+  "device_name": "NVIDIA GeForce RTX 3060",
+  "cuda_used_by_spirv_path": false,
+  "epochs": 5,
+  "final_test_accuracy": 0.9745593,
+  "final_train_loss": 0.056930732,
+  "reference": {
+    "runtime": "pytorch_cuda",
+    "final_test_accuracy": 0.9739,
+    "final_train_loss": 0.0551
+  },
+  "status": "fixture_pass",
+  "nonclaims": [
+    "not a general training framework",
+    "not a production performance claim",
+    "not a uniqueness or first-demonstration claim"
+  ]
+}

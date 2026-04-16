@@ -1,0 +1,14 @@
+{
+  "blocked_op": "pad",
+  "error": "Error: no Vulkan kernel mapping for HLO op pad",
+  "execution": {
+    "reason": "Error: no Vulkan kernel mapping for HLO op pad",
+    "status": "blocked_unsupported_feature"
+  },
+  "model": "resnet50",
+  "parity": {
+    "status": "not_run"
+  },
+  "status": "blocked_unsupported_feature",
+  "timestamp_utc": "2026-04-15T22:42:22Z"
+}

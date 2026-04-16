@@ -1,0 +1,55 @@
+#version 450
+layout(local_size_x = 64, local_size_y = 1, local_size_z = 1) in;
+
+layout(std430, binding = 0) readonly buffer Input { float input_data[]; };
+layout(std430, binding = 1) readonly buffer Unused { float unused_data[]; };
+layout(std430, binding = 2) writeonly buffer Output { float output_data[]; };
+
+layout(push_constant) uniform Params {
+    int n;
+    int c;
+    int ih;
+    int iw;
+    int oh;
+    int ow;
+    int align_corners;
+    int half_pixel_centers;
+    int total;
+} pc;
+
+float source_coord(int out_idx, int in_size, int out_size) {
+    if (pc.align_corners != 0 && out_size > 1) {
+        return float(out_idx) * float(in_size - 1) / float(out_size - 1);
+    }
+    if (pc.half_pixel_centers != 0) {
+        return (float(out_idx) + 0.5) * float(in_size) / float(out_size) - 0.5;
+    }
+    return float(out_idx) * float(in_size) / float(out_size);
+}
+
+void main() {
+    uint idx = gl_GlobalInvocationID.x;
+    if (idx >= uint(pc.total)) { return; }
+    int ow = int(idx % uint(pc.ow));
+    int oh = int((idx / uint(pc.ow)) % uint(pc.oh));
+    int c = int((idx / uint(pc.ow * pc.oh)) % uint(pc.c));
+    int n = int(idx / uint(pc.ow * pc.oh * pc.c));
+
+    float in_y = clamp(source_coord(oh, pc.ih, pc.oh), 0.0, float(pc.ih - 1));
+    float in_x = clamp(source_coord(ow, pc.iw, pc.ow), 0.0, float(pc.iw - 1));
+    int y0 = int(floor(in_y));
+    int x0 = int(floor(in_x));
+    int y1 = min(y0 + 1, pc.ih - 1);
+    int x1 = min(x0 + 1, pc.iw - 1);
+    float y_lerp = in_y - float(y0);
+    float x_lerp = in_x - float(x0);
+
+    int base00 = ((n * pc.c + c) * pc.ih + y0) * pc.iw + x0;
+    int base01 = ((n * pc.c + c) * pc.ih + y0) * pc.iw + x1;
+    int base10 = ((n * pc.c + c) * pc.ih + y1) * pc.iw + x0;
+    int base11 = ((n * pc.c + c) * pc.ih + y1) * pc.iw + x1;
+
+    float top = mix(input_data[base00], input_data[base01], x_lerp);
+    float bottom = mix(input_data[base10], input_data[base11], x_lerp);
+    output_data[idx] = mix(top, bottom, y_lerp);
+}

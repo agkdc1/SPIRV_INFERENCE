@@ -1,0 +1,859 @@
+{
+  "bytes": 301974,
+  "error": null,
+  "export_blocked": false,
+  "hlo_like_tokens": {
+    "add": 125,
+    "broadcast": 204,
+    "constant": 105,
+    "convert": 104,
+    "divide": 34,
+    "dot": 57,
+    "exponential": 8,
+    "get-tuple-element": 1,
+    "maximum": 8,
+    "multiply": 71,
+    "parameter": 195,
+    "reduce": 42,
+    "reshape": 245,
+    "rsqrt": 13,
+    "subtract": 34,
+    "tanh": 4,
+    "transpose": 89,
+    "tuple": 1
+  },
+  "input_specs": [
+    {
+      "dtype": "float32",
+      "name": "encoder_output",
+      "shape": [
+        1,
+        1500,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "token_emb",
+      "shape": [
+        1,
+        64,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "pos_emb",
+      "shape": [
+        1,
+        64,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "causal_mask",
+      "shape": [
+        1,
+        1,
+        64,
+        64
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec0_ln1_gamma",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec0_ln1_beta",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec0_sq_w",
+      "shape": [
+        384,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec0_sq_b",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec0_sk_w",
+      "shape": [
+        384,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec0_sk_b",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec0_sv_w",
+      "shape": [
+        384,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec0_sv_b",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec0_sout_w",
+      "shape": [
+        384,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec0_sout_b",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec0_ln2_gamma",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec0_ln2_beta",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec0_cq_w",
+      "shape": [
+        384,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec0_cq_b",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec0_ck_w",
+      "shape": [
+        384,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec0_ck_b",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec0_cv_w",
+      "shape": [
+        384,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec0_cv_b",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec0_cout_w",
+      "shape": [
+        384,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec0_cout_b",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec0_ln3_gamma",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec0_ln3_beta",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec0_fc1_w",
+      "shape": [
+        384,
+        1536
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec0_fc1_b",
+      "shape": [
+        1536
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec0_fc2_w",
+      "shape": [
+        1536,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec0_fc2_b",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec1_ln1_gamma",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec1_ln1_beta",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec1_sq_w",
+      "shape": [
+        384,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec1_sq_b",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec1_sk_w",
+      "shape": [
+        384,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec1_sk_b",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec1_sv_w",
+      "shape": [
+        384,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec1_sv_b",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec1_sout_w",
+      "shape": [
+        384,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec1_sout_b",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec1_ln2_gamma",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec1_ln2_beta",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec1_cq_w",
+      "shape": [
+        384,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec1_cq_b",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec1_ck_w",
+      "shape": [
+        384,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec1_ck_b",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec1_cv_w",
+      "shape": [
+        384,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec1_cv_b",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec1_cout_w",
+      "shape": [
+        384,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec1_cout_b",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec1_ln3_gamma",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec1_ln3_beta",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec1_fc1_w",
+      "shape": [
+        384,
+        1536
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec1_fc1_b",
+      "shape": [
+        1536
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec1_fc2_w",
+      "shape": [
+        1536,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec1_fc2_b",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec2_ln1_gamma",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec2_ln1_beta",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec2_sq_w",
+      "shape": [
+        384,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec2_sq_b",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec2_sk_w",
+      "shape": [
+        384,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec2_sk_b",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec2_sv_w",
+      "shape": [
+        384,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec2_sv_b",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec2_sout_w",
+      "shape": [
+        384,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec2_sout_b",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec2_ln2_gamma",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec2_ln2_beta",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec2_cq_w",
+      "shape": [
+        384,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec2_cq_b",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec2_ck_w",
+      "shape": [
+        384,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec2_ck_b",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec2_cv_w",
+      "shape": [
+        384,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec2_cv_b",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec2_cout_w",
+      "shape": [
+        384,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec2_cout_b",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec2_ln3_gamma",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec2_ln3_beta",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec2_fc1_w",
+      "shape": [
+        384,
+        1536
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec2_fc1_b",
+      "shape": [
+        1536
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec2_fc2_w",
+      "shape": [
+        1536,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec2_fc2_b",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec3_ln1_gamma",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec3_ln1_beta",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec3_sq_w",
+      "shape": [
+        384,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec3_sq_b",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec3_sk_w",
+      "shape": [
+        384,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec3_sk_b",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec3_sv_w",
+      "shape": [
+        384,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec3_sv_b",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec3_sout_w",
+      "shape": [
+        384,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec3_sout_b",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec3_ln2_gamma",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec3_ln2_beta",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec3_cq_w",
+      "shape": [
+        384,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec3_cq_b",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec3_ck_w",
+      "shape": [
+        384,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec3_ck_b",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec3_cv_w",
+      "shape": [
+        384,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec3_cv_b",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec3_cout_w",
+      "shape": [
+        384,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec3_cout_b",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec3_ln3_gamma",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec3_ln3_beta",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec3_fc1_w",
+      "shape": [
+        384,
+        1536
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec3_fc1_b",
+      "shape": [
+        1536
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec3_fc2_w",
+      "shape": [
+        1536,
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec3_fc2_b",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec_ln_f_gamma",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "dec_ln_f_beta",
+      "shape": [
+        384
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "proj_w",
+      "shape": [
+        384,
+        51865
+      ]
+    }
+  ],
+  "model": "whisper_decoder",
+  "output": "xla_hlo/fixtures/whisper_decoder.stablehlo.txt",
+  "stablehlo_ops": {},
+  "status": "pass",
+  "tensorflow_version": "2.21.0"
+}

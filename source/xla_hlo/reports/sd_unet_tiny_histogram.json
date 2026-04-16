@@ -1,0 +1,216 @@
+{
+  "bytes": 85293,
+  "error": null,
+  "export_blocked": false,
+  "hlo_like_tokens": {
+    "add": 22,
+    "broadcast": 44,
+    "concatenate": 2,
+    "constant": 42,
+    "convert": 32,
+    "convolution": 4,
+    "cosine": 1,
+    "divide": 10,
+    "dot": 11,
+    "exponential": 2,
+    "get-tuple-element": 1,
+    "logistic": 4,
+    "maximum": 2,
+    "multiply": 34,
+    "parameter": 46,
+    "reduce": 12,
+    "reshape": 72,
+    "rsqrt": 4,
+    "sine": 1,
+    "slice": 2,
+    "subtract": 10,
+    "transpose": 16,
+    "tuple": 1
+  },
+  "input_specs": [
+    {
+      "dtype": "float32",
+      "name": "latent",
+      "shape": [
+        1,
+        8,
+        8,
+        4
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "timestep_emb",
+      "shape": [
+        1,
+        128
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "context",
+      "shape": [
+        1,
+        8,
+        64
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "down1_conv_w",
+      "shape": [
+        3,
+        3,
+        4,
+        64
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "down1_gn_gamma",
+      "shape": [
+        64
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "down1_gn_beta",
+      "shape": [
+        64
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "down1_temb_w",
+      "shape": [
+        128,
+        64
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "down2_conv_w",
+      "shape": [
+        3,
+        3,
+        64,
+        128
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "down2_gn_gamma",
+      "shape": [
+        128
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "down2_gn_beta",
+      "shape": [
+        128
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "down2_temb_w",
+      "shape": [
+        128,
+        128
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "mid_self_qkv_w",
+      "shape": [
+        128,
+        128
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "mid_self_out_w",
+      "shape": [
+        128,
+        128
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "mid_cross_q_w",
+      "shape": [
+        128,
+        128
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "mid_cross_kv_w",
+      "shape": [
+        64,
+        128
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "mid_cross_out_w",
+      "shape": [
+        128,
+        128
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "mid_gn_gamma",
+      "shape": [
+        128
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "mid_gn_beta",
+      "shape": [
+        128
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "up_conv_w",
+      "shape": [
+        3,
+        3,
+        256,
+        64
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "up_gn_gamma",
+      "shape": [
+        64
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "up_gn_beta",
+      "shape": [
+        64
+      ]
+    },
+    {
+      "dtype": "float32",
+      "name": "out_conv_w",
+      "shape": [
+        3,
+        3,
+        64,
+        4
+      ]
+    }
+  ],
+  "model": "sd_unet_tiny",
+  "output": "xla_hlo/fixtures/sd_unet_tiny.stablehlo.txt",
+  "stablehlo_ops": {},
+  "status": "pass",
+  "tensorflow_version": "2.21.0"
+}

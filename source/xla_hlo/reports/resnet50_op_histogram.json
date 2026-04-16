@@ -1,0 +1,43 @@
+{
+  "bytes": 464561,
+  "error": null,
+  "export_blocked": false,
+  "hlo_like_tokens": {
+    "add": 178,
+    "broadcast": 267,
+    "constant": 110,
+    "convert": 4,
+    "convolution": 53,
+    "divide": 2,
+    "dot": 1,
+    "exponential": 1,
+    "get-tuple-element": 1,
+    "maximum": 51,
+    "multiply": 160,
+    "pad": 2,
+    "parameter": 329,
+    "reduce": 3,
+    "reduce-window": 1,
+    "reshape": 430,
+    "rsqrt": 53,
+    "subtract": 54,
+    "transpose": 1,
+    "tuple": 1
+  },
+  "input_specs": [
+    {
+      "dtype": "float32",
+      "shape": [
+        1,
+        224,
+        224,
+        3
+      ]
+    }
+  ],
+  "model": "resnet50",
+  "output": "xla_hlo/fixtures/resnet50.stablehlo.txt",
+  "stablehlo_ops": {},
+  "status": "pass",
+  "tensorflow_version": "2.21.0"
+}

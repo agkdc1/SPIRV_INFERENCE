@@ -1,0 +1,49 @@
+#version 450
+layout(local_size_x = 64, local_size_y = 1, local_size_z = 1) in;
+
+layout(std430, binding = 0) readonly buffer Input { float input_data[]; };
+layout(std430, binding = 1) readonly buffer Unused { float unused_data[]; };
+layout(std430, binding = 2) writeonly buffer Output { float output_data[]; };
+
+layout(push_constant) uniform Params {
+    int n;
+    int ih;
+    int iw;
+    int c;
+    int oh;
+    int ow;
+    int wh;
+    int ww;
+    int stride_h;
+    int stride_w;
+    int pad_top;
+    int pad_left;
+    int kind;
+    int total;
+} pc;
+
+void main() {
+    uint idx = gl_GlobalInvocationID.x;
+    if (idx >= uint(pc.total)) { return; }
+
+    int ch = int(idx % uint(pc.c));
+    int ox = int((idx / uint(pc.c)) % uint(pc.ow));
+    int oy = int((idx / uint(pc.c * pc.ow)) % uint(pc.oh));
+    int b = int(idx / uint(pc.c * pc.ow * pc.oh));
+    float acc = (pc.kind == 1) ? -3.4028234663852886e+38 : 0.0;
+    for (int ky = 0; ky < pc.wh; ++ky) {
+        int iy = oy * pc.stride_h + ky - pc.pad_top;
+        if (iy < 0 || iy >= pc.ih) { continue; }
+        for (int kx = 0; kx < pc.ww; ++kx) {
+            int ix = ox * pc.stride_w + kx - pc.pad_left;
+            if (ix < 0 || ix >= pc.iw) { continue; }
+            float v = input_data[((b * pc.ih + iy) * pc.iw + ix) * pc.c + ch];
+            if (pc.kind == 1) {
+                acc = max(acc, v);
+            } else {
+                acc += v;
+            }
+        }
+    }
+    output_data[idx] = acc;
+}

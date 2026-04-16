@@ -1,0 +1,16 @@
+#version 450
+layout(local_size_x = 64) in;
+layout(std430, binding = 0) readonly buffer A { float a[]; };
+layout(std430, binding = 1) readonly buffer B { float b[]; };
+layout(std430, binding = 2) writeonly buffer C { float c[]; };
+layout(push_constant) uniform P { int m; int k; int n; int total; } pc;
+void main() {
+    uint idx = gl_GlobalInvocationID.x;
+    if (idx >= uint(pc.total)) return;
+    int col = int(idx % uint(pc.n));
+    int row = int(idx / uint(pc.n));
+    float acc = 0.0;
+    for (int kk = 0; kk < pc.k; ++kk)
+        acc += a[row * pc.k + kk] * b[col * pc.k + kk];
+    c[idx] = acc;
+}

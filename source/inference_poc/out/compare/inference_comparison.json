@@ -1,0 +1,67 @@
+{
+  "baseline_device": {
+    "compute_capability": "8.6",
+    "name": "NVIDIA GeForce RTX 3060"
+  },
+  "baseline_kind": "cuda_custom_kernels",
+  "elements": 10,
+  "fixture_hashes": {
+    "batchnorm_output_ref.raw.f32": "6afd34034e78d1d9678503057e8e063d8d8e10be27363431577832f3297daeeb",
+    "batchnorm_param.raw.f32": "81a595135e7897df560a54ebf831d7c71c259aec0a418ff4d5fdc5170a5945ff",
+    "conv_output_ref.raw.f32": "f54d86d725389132fd66d53b0863ae0651d450b7b4ce22bb66f175107bbd22f8",
+    "conv_weight.raw.f32": "2dd819c35036247a7704860e99d9ab0ad3dda7a863abc68535cb4bf1f9d9908d",
+    "fc_param.raw.f32": "9d8dcf0b091fab8643afbe66f120cb39d5b10d4d0d9da83f2ed528acb213ca84",
+    "input.raw.f32": "2eeef514dcdb4428d2146de12f0e8d08d7577337345b4c17906b11443102e975",
+    "logits_ref.raw.f32": "749a8428a19a9c7298f476bab9506fa31fb00e58ee952a13b7c45a9da678b32f",
+    "manifest.json": "e636922575a832f7df0ba24d06c96d51ed29b366fb0b007d132a8e35fe0f7d7e",
+    "relu_output_ref.raw.f32": "12f5f713004cee6629de4f7edd14f4f2032a135f8844a4acf4c311838137bd99",
+    "softmax_output_ref.raw.f32": "012ce707603ee12a1f41320796a670a5e814d38f58bec5b20805b4f01ec91a70"
+  },
+  "intel_device": {
+    "device_id": "0x5912",
+    "name": "Intel(R) HD Graphics 630 (KBL GT2)",
+    "role": "intel",
+    "vendor_id": "0x8086"
+  },
+  "max_abs_error": 7.450580596923828e-09,
+  "max_rel_error": 8.082866844144868e-08,
+  "max_ulp_error": 1,
+  "mismatch_count": 0,
+  "non_claims": {
+    "claims_full_tensorflow_gpu_support": false,
+    "claims_tensorflow_runtime": false,
+    "uses_cublas": false,
+    "uses_cudnn": false
+  },
+  "output_hashes": {
+    "baseline_sha256": "9580b4e7e354515b8e733481e2e5202e600709c4e73f26f6bc37b1e2e9c062d9",
+    "intel_sha256": "70e2c3093ce6d01df8af1d7477c1f69c2340afec1da55122d2b3bd3e72ab1ff1"
+  },
+  "reports": {
+    "baseline": "inference_poc/out/nvidia_cuda/report.json",
+    "intel": "inference_poc/out/intel_igpu/report.json"
+  },
+  "spirv_hashes": {
+    "batchnorm_infer.spv": "e3264ce8d4593a60838311767c3169d7de539db8526dfb77bcf903595922f3a5",
+    "conv1d_infer.spv": "db89ef574463d44f619422346bcec7e33a654491c9a30b96ba0cbaf1f0e4f707",
+    "fc_infer.spv": "b03c5c177b72c1e13d43c23218d0d6e32e42ff42861b156dd09fcb60f3fc173c",
+    "relu_infer.spv": "b5757ce6a5750dd5efc6f2aa8b0163259035b7152ca55db32a09468fb0883c58",
+    "softmax10_infer.spv": "0b607f43201cc4c82fb26b114496b1bc73279c9d5e6d4241cc1cdd2d68fadf90"
+  },
+  "status": "pass",
+  "thresholds": {
+    "max_abs_error": 1e-05,
+    "max_rel_error": 0.0001,
+    "max_ulp_error": 64
+  },
+  "top1": {
+    "baseline": {
+      "class": 6,
+      "confidence": 0.11392594873905182
+    },
+    "intel": {
+      "class": 6,
+      "confidence": 0.11392594873905182
+    }
+  }
+}

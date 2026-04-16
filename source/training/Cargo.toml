@@ -1,0 +1,26 @@
+[package]
+name = "spv-training"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[[bin]]
+name = "spv-train"
+path = "src/main.rs"
+
+[[bin]]
+name = "cnn-train"
+path = "src/cnn_main.rs"
+
+[[bin]]
+name = "resnet-train"
+path = "src/resnet_main.rs"
+
+[dependencies]
+ash = "0.38"
+anyhow = "1"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+sha2 = "0.10"
+rand = "0.8"
+bytemuck = { version = "1", features = ["derive"] }

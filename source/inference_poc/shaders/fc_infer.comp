@@ -1,0 +1,15 @@
+#version 450
+layout(local_size_x = 10, local_size_y = 1, local_size_z = 1) in;
+layout(std430, binding = 0) readonly buffer Input { float input_data[]; };
+layout(std430, binding = 1) readonly buffer Param { float param_data[]; };
+layout(std430, binding = 2) writeonly buffer Output { float output_data[]; };
+
+void main() {
+    uint cls = gl_LocalInvocationID.x;
+    if (cls >= 10) { return; }
+    float acc = param_data[240 + cls];
+    for (uint i = 0; i < 24; ++i) {
+        acc += input_data[i] * param_data[i * 10 + cls];
+    }
+    output_data[cls] = acc;
+}

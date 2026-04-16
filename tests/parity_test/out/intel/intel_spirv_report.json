@@ -1,0 +1,52 @@
+{
+  "device": {
+    "device_id": "0x5912",
+    "name": "Intel(R) HD Graphics 630 (KBL GT2)",
+    "vendor_id": "0x8086"
+  },
+  "kernels": {
+    "batchnorm": {
+      "dispatch_x": 1,
+      "elements": 256,
+      "output_path": "out/batchnorm/output.raw.f32",
+      "output_sha256": "de2d9d9458180dbb8a8b518e01d592ccfcc4764af8ee14f475c44a7b5cff47ab",
+      "spv_path": "spirv/batchnorm.spv",
+      "spv_sha256": "4eac6c5d13a8f043248ab1c165e9984edac948e92a92bf8cf369692b6aea8cbe",
+      "status": "pass"
+    },
+    "conv1d": {
+      "dispatch_x": 4,
+      "elements": 512,
+      "output_path": "out/conv1d/output.raw.f32",
+      "output_sha256": "10072ca9d332907dec423b16a417088c536f5ab5d132ce7455050154a087db66",
+      "spv_path": "spirv/conv1d.spv",
+      "spv_sha256": "4f6b90b318a3928f4f1c3a99a3df519d80461b70f068671d98f35cfab44a11fa",
+      "status": "pass"
+    },
+    "relu": {
+      "dispatch_x": 16,
+      "elements": 4096,
+      "output_path": "out/relu/output.raw.f32",
+      "output_sha256": "7669adf27dc478c78bd2711ff8252f8a514b94f3735cda40338bfa885edfa810",
+      "spv_path": "spirv/relu.spv",
+      "spv_sha256": "2e2c289235850ab6bbb67cb81240a6c41a07fdd3f4cc46a0d73d5f92302161b0",
+      "status": "pass"
+    },
+    "softmax": {
+      "dispatch_x": 1,
+      "elements": 128,
+      "output_path": "out/softmax/output.raw.f32",
+      "output_sha256": "95242b0638bf3f098ff651702e8ae824f93e6fc6d2009c9c549e4dbd90dbd321",
+      "spv_path": "spirv/softmax.spv",
+      "spv_sha256": "6f18764be951a593c0c87e7b4112edaa52910f2b3d9d6d1e01f196ef5d5a33c6",
+      "status": "pass"
+    }
+  },
+  "non_claims": {
+    "claims_full_tensorflow_gpu_support": false,
+    "proprietary_cuda_libraries_used": false,
+    "uses_cuda": false
+  },
+  "runtime": "Vulkan/SPIR-V",
+  "status": "pass"
+}

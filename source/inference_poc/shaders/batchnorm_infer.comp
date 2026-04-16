@@ -1,0 +1,16 @@
+#version 450
+layout(local_size_x = 24, local_size_y = 1, local_size_z = 1) in;
+layout(std430, binding = 0) readonly buffer Input { float input_data[]; };
+layout(std430, binding = 1) readonly buffer Param { float param_data[]; };
+layout(std430, binding = 2) writeonly buffer Output { float output_data[]; };
+
+void main() {
+    uint i = gl_LocalInvocationID.x;
+    if (i >= 24) { return; }
+    uint c = i % 4;
+    float scale = param_data[c * 4 + 0];
+    float bias = param_data[c * 4 + 1];
+    float mean = param_data[c * 4 + 2];
+    float var = param_data[c * 4 + 3];
+    output_data[i] = (input_data[i] - mean) * inversesqrt(var + 0.00001) * scale + bias;
+}

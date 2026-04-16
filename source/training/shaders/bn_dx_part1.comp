@@ -1,0 +1,16 @@
+#version 450
+layout(local_size_x = 128) in;
+layout(std430, binding = 0) readonly buffer A { float xhat[]; };
+layout(std430, binding = 1) readonly buffer B { float dparams[]; };
+layout(std430, binding = 2) writeonly buffer C { float scratch[]; };
+layout(push_constant) uniform P { int N; int C; int H; int W; } pc;
+void main() {
+    uint i = gl_GlobalInvocationID.x;
+    int total = pc.N * pc.C * pc.H * pc.W;
+    if (i >= uint(total)) return;
+    int HW = pc.H * pc.W;
+    int c = (int(i) / HW) % pc.C;
+    float dgamma = dparams[c];
+    float dbeta  = dparams[pc.C + c];
+    scratch[i] = xhat[i] * dgamma + dbeta;
+}

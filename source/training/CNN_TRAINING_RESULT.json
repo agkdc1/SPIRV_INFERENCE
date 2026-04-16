@@ -1,0 +1,98 @@
+{
+  "model": "CNN: Conv2D(3->32)->BN->ReLU->Pool->Conv2D(32->64)->BN->ReLU->Pool->FC(4096->10)",
+  "architecture": "Conv2D(3,32,3x3,pad=1)->BN(32)->ReLU->MaxPool(2)->Conv2D(32,64,3x3,pad=1)->BN(64)->ReLU->MaxPool(2)->FC(4096,10)->Softmax+CE",
+  "optimizer": "Adam(lr=0.001, beta1=0.9, beta2=0.999, eps=0.00000001)",
+  "learning_rate": 0.001,
+  "batch_size": 64,
+  "epochs": 10,
+  "device_name": "NVIDIA GeForce RTX 3060",
+  "vendor_id": 4318,
+  "device_id": 9540,
+  "runtime": "Vulkan 1.1 compute via ash 0.38 (SPIR-V shaders)",
+  "cuda_used": false,
+  "epoch_results": [
+    {
+      "epoch": 1,
+      "train_loss": 1.5393088,
+      "test_accuracy": 0.5751202
+    },
+    {
+      "epoch": 2,
+      "train_loss": 1.2714589,
+      "test_accuracy": 0.5823317
+    },
+    {
+      "epoch": 3,
+      "train_loss": 1.2250825,
+      "test_accuracy": 0.57421875
+    },
+    {
+      "epoch": 4,
+      "train_loss": 1.1549366,
+      "test_accuracy": 0.61708736
+    },
+    {
+      "epoch": 5,
+      "train_loss": 1.1447676,
+      "test_accuracy": 0.60336536
+    },
+    {
+      "epoch": 6,
+      "train_loss": 1.1307164,
+      "test_accuracy": 0.6333133
+    },
+    {
+      "epoch": 7,
+      "train_loss": 1.1395853,
+      "test_accuracy": 0.63251203
+    },
+    {
+      "epoch": 8,
+      "train_loss": 1.1080536,
+      "test_accuracy": 0.63371396
+    },
+    {
+      "epoch": 9,
+      "train_loss": 1.0897214,
+      "test_accuracy": 0.62680286
+    },
+    {
+      "epoch": 10,
+      "train_loss": 1.0847796,
+      "test_accuracy": 0.6145833
+    }
+  ],
+  "final_test_accuracy": 0.6145833,
+  "final_train_loss": 1.0847796,
+  "total_training_time_secs": 465.55832866,
+  "spv_kernels": [
+    "matmul.spv",
+    "matmul_tn.spv",
+    "matmul_nt.spv",
+    "relu_forward.spv",
+    "relu_backward.spv",
+    "bias_add.spv",
+    "batched_softmax10.spv",
+    "cross_entropy_loss.spv",
+    "softmax_ce_backward.spv",
+    "reduce_sum_rows.spv",
+    "adam_step.spv",
+    "conv2d_forward.spv",
+    "conv_bias_add.spv",
+    "conv2d_backward_data.spv",
+    "conv2d_backward_weight.spv",
+    "bn_mean.spv",
+    "bn_var.spv",
+    "bn_pack_params.spv",
+    "bn_forward.spv",
+    "bn_xhat.spv",
+    "bn_dgamma_dbeta.spv",
+    "bn_dx_part1.spv",
+    "bn_dx_part2.spv",
+    "bn_dx_part3.spv",
+    "maxpool2d_forward_mask.spv",
+    "maxpool2d_backward.spv",
+    "reduce_sum_nhw.spv",
+    "zero_fill.spv"
+  ]
+}

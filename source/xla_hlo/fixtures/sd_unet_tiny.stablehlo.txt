@@ -1,0 +1,416 @@
+HloModule a_inference_sd_unet_tiny_236__.13, entry_computation_layout={(f32[1,8,8,4]{3,2,1,0}, f32[1,128]{1,0}, f32[1,8,64]{2,1,0}, f32[3,3,4,64]{3,2,1,0}, f32[64]{0}, /*index=5*/f32[64]{0}, f32[128,64]{1,0}, f32[3,3,64,128]{3,2,1,0}, f32[128]{0}, f32[128]{0}, /*index=10*/f32[128,128]{1,0}, f32[128,128]{1,0}, f32[128,128]{1,0}, f32[128,128]{1,0}, f32[64,128]{1,0}, /*index=15*/f32[128,128]{1,0}, f32[128]{0}, f32[128]{0}, f32[3,3,256,64]{3,2,1,0}, f32[64]{0}, /*index=20*/f32[64]{0}, f32[3,3,64,4]{3,2,1,0})->f32[1,8,8,4]{3,2,1,0}}
+
+%Mean-reduction.1 (x.1: f32[], y.1: f32[]) -> f32[] {
+  %x.1 = f32[] parameter(0)
+  %y.1 = f32[] parameter(1)
+  ROOT %add.1 = f32[] add(f32[] %x.1, f32[] %y.1)
+}
+
+%Mean_1-reduction.2 (x.0: f32[], y.0: f32[]) -> f32[] {
+  %x.0 = f32[] parameter(0)
+  %y.0 = f32[] parameter(1)
+  ROOT %add.0 = f32[] add(f32[] %x.0, f32[] %y.0)
+}
+
+%Mean_2-reduction.3 (x.2: f32[], y.2: f32[]) -> f32[] {
+  %x.2 = f32[] parameter(0)
+  %y.2 = f32[] parameter(1)
+  ROOT %add.5 = f32[] add(f32[] %x.2, f32[] %y.2)
+}
+
+%Mean_3-reduction.4 (x.3: f32[], y.3: f32[]) -> f32[] {
+  %x.3 = f32[] parameter(0)
+  %y.3 = f32[] parameter(1)
+  ROOT %add.6 = f32[] add(f32[] %x.3, f32[] %y.3)
+}
+
+%Mean_4-reduction.5 (x.4: f32[], y.4: f32[]) -> f32[] {
+  %x.4 = f32[] parameter(0)
+  %y.4 = f32[] parameter(1)
+  ROOT %add.7 = f32[] add(f32[] %x.4, f32[] %y.4)
+}
+
+%Mean_5-reduction.6 (x.5: f32[], y.5: f32[]) -> f32[] {
+  %x.5 = f32[] parameter(0)
+  %y.5 = f32[] parameter(1)
+  ROOT %add.8 = f32[] add(f32[] %x.5, f32[] %y.5)
+}
+
+%region_0.7 (Softmax.5: f32[], Softmax.6: f32[]) -> f32[] {
+  %Softmax.5 = f32[] parameter(0), metadata={op_name="Softmax"}
+  %Softmax.6 = f32[] parameter(1), metadata={op_name="Softmax"}
+  ROOT %Softmax.7 = f32[] maximum(f32[] %Softmax.5, f32[] %Softmax.6), metadata={op_type="Softmax" op_name="Softmax"}
+}
+
+%region_1.8 (Softmax.18: f32[], Softmax.19: f32[]) -> f32[] {
+  %Softmax.18 = f32[] parameter(0), metadata={op_name="Softmax"}
+  %Softmax.19 = f32[] parameter(1), metadata={op_name="Softmax"}
+  ROOT %Softmax.20 = f32[] add(f32[] %Softmax.18, f32[] %Softmax.19), metadata={op_type="Softmax" op_name="Softmax"}
+}
+
+%region_0.9 (Softmax_1.5: f32[], Softmax_1.6: f32[]) -> f32[] {
+  %Softmax_1.5 = f32[] parameter(0), metadata={op_name="Softmax_1"}
+  %Softmax_1.6 = f32[] parameter(1), metadata={op_name="Softmax_1"}
+  ROOT %Softmax_1.7 = f32[] maximum(f32[] %Softmax_1.5, f32[] %Softmax_1.6), metadata={op_type="Softmax" op_name="Softmax_1"}
+}
+
+%region_1.10 (Softmax_1.18: f32[], Softmax_1.19: f32[]) -> f32[] {
+  %Softmax_1.18 = f32[] parameter(0), metadata={op_name="Softmax_1"}
+  %Softmax_1.19 = f32[] parameter(1), metadata={op_name="Softmax_1"}
+  ROOT %Softmax_1.20 = f32[] add(f32[] %Softmax_1.18, f32[] %Softmax_1.19), metadata={op_type="Softmax" op_name="Softmax_1"}
+}
+
+%Mean_6-reduction.11 (x.6: f32[], y.6: f32[]) -> f32[] {
+  %x.6 = f32[] parameter(0)
+  %y.6 = f32[] parameter(1)
+  ROOT %add.9 = f32[] add(f32[] %x.6, f32[] %y.6)
+}
+
+%Mean_7-reduction.12 (x.7: f32[], y.7: f32[]) -> f32[] {
+  %x.7 = f32[] parameter(0)
+  %y.7 = f32[] parameter(1)
+  ROOT %add.10 = f32[] add(f32[] %x.7, f32[] %y.7)
+}
+
+ENTRY %a_inference_sd_unet_tiny_236__.13 (arg0.1: f32[1,8,8,4], arg1.1: f32[1,128], arg2.1: f32[1,8,64], arg3.1: f32[3,3,4,64], arg4.1: f32[64], arg5.1: f32[64], arg6.1: f32[128,64], arg7.1: f32[3,3,64,128], arg8.1: f32[128], arg9.1: f32[128], arg10.1: f32[128,128], arg11.1: f32[128,128], arg12.1: f32[128,128], arg13.1: f32[128,128], arg14.1: f32[64,128], arg15.1: f32[128,128], arg16.1: f32[128], arg17.1: f32[128], arg18.1: f32[3,3,256,64], arg19.1: f32[64], arg20.1: f32[64], arg21.1: f32[3,3,64,4]) -> f32[1,8,8,4] {
+  %arg0.1 = f32[1,8,8,4]{3,2,1,0} parameter(0), parameter_replication={false}, metadata={op_name="XLA_Args"}
+  %reshape.22 = f32[1,8,8,4]{3,2,1,0} reshape(f32[1,8,8,4]{3,2,1,0} %arg0.1)
+  %arg3.1 = f32[3,3,4,64]{3,2,1,0} parameter(3), parameter_replication={false}, metadata={op_name="XLA_Args"}
+  %reshape.25 = f32[3,3,4,64]{3,2,1,0} reshape(f32[3,3,4,64]{3,2,1,0} %arg3.1)
+  %Conv2D.1 = f32[1,8,8,64]{3,2,1,0} convolution(f32[1,8,8,4]{3,2,1,0} %reshape.22, f32[3,3,4,64]{3,2,1,0} %reshape.25), window={size=3x3 pad=1_1x1_1}, dim_labels=b01f_01io->b01f, metadata={op_type="Conv2D" op_name="Conv2D" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Reshape.1 = f32[1,8,8,4,16]{4,3,2,1,0} reshape(f32[1,8,8,64]{3,2,1,0} %Conv2D.1), metadata={op_type="Reshape" op_name="Reshape" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean.14 = f32[1,8,8,4,16]{4,3,2,1,0} convert(f32[1,8,8,4,16]{4,3,2,1,0} %Reshape.1), metadata={op_type="Mean" op_name="Mean" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean.15 = f32[] constant(0), metadata={op_type="Mean" op_name="Mean" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean.16 = f32[] convert(f32[] %Mean.15), metadata={op_type="Mean" op_name="Mean" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean.17 = f32[1,4]{1,0} reduce(f32[1,8,8,4,16]{4,3,2,1,0} %Mean.14, f32[] %Mean.16), dimensions={1,2,4}, to_apply=%Mean-reduction.1, metadata={op_type="Mean" op_name="Mean" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean.18 = s32[] constant(8), metadata={op_type="Mean" op_name="Mean" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean.19 = s32[] constant(8), metadata={op_type="Mean" op_name="Mean" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean.20 = s32[] multiply(s32[] %Mean.18, s32[] %Mean.19), metadata={op_type="Mean" op_name="Mean" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean.21 = s32[] constant(16), metadata={op_type="Mean" op_name="Mean" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean.22 = s32[] multiply(s32[] %Mean.20, s32[] %Mean.21), metadata={op_type="Mean" op_name="Mean" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean.23 = f32[] convert(s32[] %Mean.22), metadata={op_type="Mean" op_name="Mean" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean.24 = f32[1,4]{1,0} broadcast(f32[] %Mean.23), dimensions={}, metadata={op_type="Mean" op_name="Mean" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean.25 = f32[1,4]{1,0} divide(f32[1,4]{1,0} %Mean.17, f32[1,4]{1,0} %Mean.24), metadata={op_type="Mean" op_name="Mean" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean.26 = f32[1,4]{1,0} convert(f32[1,4]{1,0} %Mean.25), metadata={op_type="Mean" op_name="Mean" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean.27 = f32[1,1,1,4,1]{4,3,2,1,0} reshape(f32[1,4]{1,0} %Mean.26), metadata={op_type="Mean" op_name="Mean" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %sub_1.3 = f32[1,4]{1,0} reshape(f32[1,1,1,4,1]{4,3,2,1,0} %Mean.27), metadata={op_type="Sub" op_name="sub_1" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %sub_1.4 = f32[1,8,8,4,16]{4,3,2,1,0} broadcast(f32[1,4]{1,0} %sub_1.3), dimensions={0,3}, metadata={op_type="Sub" op_name="sub_1" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %sub_1.5 = f32[1,8,8,4,16]{4,3,2,1,0} subtract(f32[1,8,8,4,16]{4,3,2,1,0} %Reshape.1, f32[1,8,8,4,16]{4,3,2,1,0} %sub_1.4), metadata={op_type="Sub" op_name="sub_1" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %sub.3 = f32[1,4]{1,0} reshape(f32[1,1,1,4,1]{4,3,2,1,0} %Mean.27), metadata={op_type="Sub" op_name="sub" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %sub.4 = f32[1,8,8,4,16]{4,3,2,1,0} broadcast(f32[1,4]{1,0} %sub.3), dimensions={0,3}, metadata={op_type="Sub" op_name="sub" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %sub.5 = f32[1,8,8,4,16]{4,3,2,1,0} subtract(f32[1,8,8,4,16]{4,3,2,1,0} %Reshape.1, f32[1,8,8,4,16]{4,3,2,1,0} %sub.4), metadata={op_type="Sub" op_name="sub" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Square.1 = f32[1,8,8,4,16]{4,3,2,1,0} multiply(f32[1,8,8,4,16]{4,3,2,1,0} %sub.5, f32[1,8,8,4,16]{4,3,2,1,0} %sub.5), metadata={op_type="Square" op_name="Square" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_1.14 = f32[1,8,8,4,16]{4,3,2,1,0} convert(f32[1,8,8,4,16]{4,3,2,1,0} %Square.1), metadata={op_type="Mean" op_name="Mean_1" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_1.15 = f32[] constant(0), metadata={op_type="Mean" op_name="Mean_1" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_1.16 = f32[] convert(f32[] %Mean_1.15), metadata={op_type="Mean" op_name="Mean_1" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_1.17 = f32[1,4]{1,0} reduce(f32[1,8,8,4,16]{4,3,2,1,0} %Mean_1.14, f32[] %Mean_1.16), dimensions={1,2,4}, to_apply=%Mean_1-reduction.2, metadata={op_type="Mean" op_name="Mean_1" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_1.18 = s32[] constant(8), metadata={op_type="Mean" op_name="Mean_1" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_1.19 = s32[] constant(8), metadata={op_type="Mean" op_name="Mean_1" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_1.20 = s32[] multiply(s32[] %Mean_1.18, s32[] %Mean_1.19), metadata={op_type="Mean" op_name="Mean_1" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_1.21 = s32[] constant(16), metadata={op_type="Mean" op_name="Mean_1" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_1.22 = s32[] multiply(s32[] %Mean_1.20, s32[] %Mean_1.21), metadata={op_type="Mean" op_name="Mean_1" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_1.23 = f32[] convert(s32[] %Mean_1.22), metadata={op_type="Mean" op_name="Mean_1" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_1.24 = f32[1,4]{1,0} broadcast(f32[] %Mean_1.23), dimensions={}, metadata={op_type="Mean" op_name="Mean_1" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_1.25 = f32[1,4]{1,0} divide(f32[1,4]{1,0} %Mean_1.17, f32[1,4]{1,0} %Mean_1.24), metadata={op_type="Mean" op_name="Mean_1" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_1.26 = f32[1,4]{1,0} convert(f32[1,4]{1,0} %Mean_1.25), metadata={op_type="Mean" op_name="Mean_1" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_1.27 = f32[1,1,1,4,1]{4,3,2,1,0} reshape(f32[1,4]{1,0} %Mean_1.26), metadata={op_type="Mean" op_name="Mean_1" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %add.11 = f32[] constant(1e-05), metadata={op_type="AddV2" op_name="add" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %add.12 = f32[1,1,1,4,1]{4,3,2,1,0} broadcast(f32[] %add.11), dimensions={}, metadata={op_type="AddV2" op_name="add" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %add.13 = f32[1,1,1,4,1]{4,3,2,1,0} add(f32[1,1,1,4,1]{4,3,2,1,0} %Mean_1.27, f32[1,1,1,4,1]{4,3,2,1,0} %add.12), metadata={op_type="AddV2" op_name="add" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Rsqrt.1 = f32[1,1,1,4,1]{4,3,2,1,0} rsqrt(f32[1,1,1,4,1]{4,3,2,1,0} %add.13), metadata={op_type="Rsqrt" op_name="Rsqrt"}
+  %mul_1.3 = f32[1,4]{1,0} reshape(f32[1,1,1,4,1]{4,3,2,1,0} %Rsqrt.1), metadata={op_type="Mul" op_name="mul_1" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %mul_1.4 = f32[1,8,8,4,16]{4,3,2,1,0} broadcast(f32[1,4]{1,0} %mul_1.3), dimensions={0,3}, metadata={op_type="Mul" op_name="mul_1" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %mul_1.5 = f32[1,8,8,4,16]{4,3,2,1,0} multiply(f32[1,8,8,4,16]{4,3,2,1,0} %sub_1.5, f32[1,8,8,4,16]{4,3,2,1,0} %mul_1.4), metadata={op_type="Mul" op_name="mul_1" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Reshape_1.1 = f32[1,8,8,64]{3,2,1,0} reshape(f32[1,8,8,4,16]{4,3,2,1,0} %mul_1.5), metadata={op_type="Reshape" op_name="Reshape_1" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %arg4.1 = f32[64]{0} parameter(4), parameter_replication={false}, metadata={op_name="XLA_Args"}
+  %reshape.26 = f32[64]{0} reshape(f32[64]{0} %arg4.1)
+  %mul_2.2 = f32[1,8,8,64]{3,2,1,0} broadcast(f32[64]{0} %reshape.26), dimensions={3}, metadata={op_type="Mul" op_name="mul_2" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %mul_2.3 = f32[1,8,8,64]{3,2,1,0} multiply(f32[1,8,8,64]{3,2,1,0} %Reshape_1.1, f32[1,8,8,64]{3,2,1,0} %mul_2.2), metadata={op_type="Mul" op_name="mul_2" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %arg5.1 = f32[64]{0} parameter(5), parameter_replication={false}, metadata={op_name="XLA_Args"}
+  %reshape.27 = f32[64]{0} reshape(f32[64]{0} %arg5.1)
+  %add_1.2 = f32[1,8,8,64]{3,2,1,0} broadcast(f32[64]{0} %reshape.27), dimensions={3}, metadata={op_type="AddV2" op_name="add_1" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %add_1.3 = f32[1,8,8,64]{3,2,1,0} add(f32[1,8,8,64]{3,2,1,0} %mul_2.3, f32[1,8,8,64]{3,2,1,0} %add_1.2), metadata={op_type="AddV2" op_name="add_1" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Sigmoid_1.1 = f32[1,8,8,64]{3,2,1,0} logistic(f32[1,8,8,64]{3,2,1,0} %add_1.3), metadata={op_type="Sigmoid" op_name="Sigmoid_1"}
+  %mul_3.1 = f32[1,8,8,64]{3,2,1,0} multiply(f32[1,8,8,64]{3,2,1,0} %add_1.3, f32[1,8,8,64]{3,2,1,0} %Sigmoid_1.1), metadata={op_type="Mul" op_name="mul_3" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %arg1.1 = f32[1,128]{1,0} parameter(1), parameter_replication={false}, metadata={op_name="XLA_Args"}
+  %reshape.23 = f32[1,128]{1,0} reshape(f32[1,128]{1,0} %arg1.1)
+  %strided_slice.2 = f32[1,64]{1,0} slice(f32[1,128]{1,0} %reshape.23), slice={[0:1], [0:64]}, metadata={op_type="StridedSlice" op_name="strided_slice" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %strided_slice.3 = f32[1,64]{1,0} reshape(f32[1,64]{1,0} %strided_slice.2), metadata={op_type="StridedSlice" op_name="strided_slice" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Sin.1 = f32[1,64]{1,0} sine(f32[1,64]{1,0} %strided_slice.3), metadata={op_type="Sin" op_name="Sin" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %strided_slice_1.2 = f32[1,64]{1,0} slice(f32[1,128]{1,0} %reshape.23), slice={[0:1], [64:128]}, metadata={op_type="StridedSlice" op_name="strided_slice_1" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %strided_slice_1.3 = f32[1,64]{1,0} reshape(f32[1,64]{1,0} %strided_slice_1.2), metadata={op_type="StridedSlice" op_name="strided_slice_1" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Cos.1 = f32[1,64]{1,0} cosine(f32[1,64]{1,0} %strided_slice_1.3), metadata={op_type="Cos" op_name="Cos"}
+  %concat.1 = f32[1,128]{1,0} concatenate(f32[1,64]{1,0} %Sin.1, f32[1,64]{1,0} %Cos.1), dimensions={1}, metadata={op_type="ConcatV2" op_name="concat" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Sigmoid.1 = f32[1,128]{1,0} logistic(f32[1,128]{1,0} %concat.1), metadata={op_type="Sigmoid" op_name="Sigmoid"}
+  %mul.1 = f32[1,128]{1,0} multiply(f32[1,128]{1,0} %concat.1, f32[1,128]{1,0} %Sigmoid.1), metadata={op_type="Mul" op_name="mul" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %arg6.1 = f32[128,64]{1,0} parameter(6), parameter_replication={false}, metadata={op_name="XLA_Args"}
+  %reshape.28 = f32[128,64]{1,0} reshape(f32[128,64]{1,0} %arg6.1)
+  %MatMul.2 = f32[1,64]{1,0} dot(f32[1,128]{1,0} %mul.1, f32[128,64]{1,0} %reshape.28), lhs_contracting_dims={1}, rhs_contracting_dims={0}, frontend_attributes={grad_x="false",grad_y="false"}, metadata={op_type="MatMul" op_name="MatMul" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %MatMul.3 = f32[1,64]{1,0} transpose(f32[1,64]{1,0} %MatMul.2), dimensions={0,1}, metadata={op_type="MatMul" op_name="MatMul" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Reshape_2.1 = f32[1,1,1,64]{3,2,1,0} reshape(f32[1,64]{1,0} %MatMul.3), metadata={op_type="Reshape" op_name="Reshape_2" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %add_2.3 = f32[1,64]{1,0} reshape(f32[1,1,1,64]{3,2,1,0} %Reshape_2.1), metadata={op_type="AddV2" op_name="add_2" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %add_2.4 = f32[1,8,8,64]{3,2,1,0} broadcast(f32[1,64]{1,0} %add_2.3), dimensions={0,3}, metadata={op_type="AddV2" op_name="add_2" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %add_2.5 = f32[1,8,8,64]{3,2,1,0} add(f32[1,8,8,64]{3,2,1,0} %mul_3.1, f32[1,8,8,64]{3,2,1,0} %add_2.4), metadata={op_type="AddV2" op_name="add_2" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %arg7.1 = f32[3,3,64,128]{3,2,1,0} parameter(7), parameter_replication={false}, metadata={op_name="XLA_Args"}
+  %reshape.29 = f32[3,3,64,128]{3,2,1,0} reshape(f32[3,3,64,128]{3,2,1,0} %arg7.1)
+  %Conv2D_1.1 = f32[1,8,8,128]{3,2,1,0} convolution(f32[1,8,8,64]{3,2,1,0} %add_2.5, f32[3,3,64,128]{3,2,1,0} %reshape.29), window={size=3x3 pad=1_1x1_1}, dim_labels=b01f_01io->b01f, metadata={op_type="Conv2D" op_name="Conv2D_1" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Reshape_3.1 = f32[1,8,8,4,32]{4,3,2,1,0} reshape(f32[1,8,8,128]{3,2,1,0} %Conv2D_1.1), metadata={op_type="Reshape" op_name="Reshape_3" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_2.14 = f32[1,8,8,4,32]{4,3,2,1,0} convert(f32[1,8,8,4,32]{4,3,2,1,0} %Reshape_3.1), metadata={op_type="Mean" op_name="Mean_2" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_2.15 = f32[] constant(0), metadata={op_type="Mean" op_name="Mean_2" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_2.16 = f32[] convert(f32[] %Mean_2.15), metadata={op_type="Mean" op_name="Mean_2" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_2.17 = f32[1,4]{1,0} reduce(f32[1,8,8,4,32]{4,3,2,1,0} %Mean_2.14, f32[] %Mean_2.16), dimensions={1,2,4}, to_apply=%Mean_2-reduction.3, metadata={op_type="Mean" op_name="Mean_2" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_2.18 = s32[] constant(8), metadata={op_type="Mean" op_name="Mean_2" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_2.19 = s32[] constant(8), metadata={op_type="Mean" op_name="Mean_2" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_2.20 = s32[] multiply(s32[] %Mean_2.18, s32[] %Mean_2.19), metadata={op_type="Mean" op_name="Mean_2" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_2.21 = s32[] constant(32), metadata={op_type="Mean" op_name="Mean_2" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_2.22 = s32[] multiply(s32[] %Mean_2.20, s32[] %Mean_2.21), metadata={op_type="Mean" op_name="Mean_2" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_2.23 = f32[] convert(s32[] %Mean_2.22), metadata={op_type="Mean" op_name="Mean_2" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_2.24 = f32[1,4]{1,0} broadcast(f32[] %Mean_2.23), dimensions={}, metadata={op_type="Mean" op_name="Mean_2" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_2.25 = f32[1,4]{1,0} divide(f32[1,4]{1,0} %Mean_2.17, f32[1,4]{1,0} %Mean_2.24), metadata={op_type="Mean" op_name="Mean_2" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_2.26 = f32[1,4]{1,0} convert(f32[1,4]{1,0} %Mean_2.25), metadata={op_type="Mean" op_name="Mean_2" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_2.27 = f32[1,1,1,4,1]{4,3,2,1,0} reshape(f32[1,4]{1,0} %Mean_2.26), metadata={op_type="Mean" op_name="Mean_2" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %sub_3.3 = f32[1,4]{1,0} reshape(f32[1,1,1,4,1]{4,3,2,1,0} %Mean_2.27), metadata={op_type="Sub" op_name="sub_3" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %sub_3.4 = f32[1,8,8,4,32]{4,3,2,1,0} broadcast(f32[1,4]{1,0} %sub_3.3), dimensions={0,3}, metadata={op_type="Sub" op_name="sub_3" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %sub_3.5 = f32[1,8,8,4,32]{4,3,2,1,0} subtract(f32[1,8,8,4,32]{4,3,2,1,0} %Reshape_3.1, f32[1,8,8,4,32]{4,3,2,1,0} %sub_3.4), metadata={op_type="Sub" op_name="sub_3" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %sub_2.3 = f32[1,4]{1,0} reshape(f32[1,1,1,4,1]{4,3,2,1,0} %Mean_2.27), metadata={op_type="Sub" op_name="sub_2" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %sub_2.4 = f32[1,8,8,4,32]{4,3,2,1,0} broadcast(f32[1,4]{1,0} %sub_2.3), dimensions={0,3}, metadata={op_type="Sub" op_name="sub_2" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %sub_2.5 = f32[1,8,8,4,32]{4,3,2,1,0} subtract(f32[1,8,8,4,32]{4,3,2,1,0} %Reshape_3.1, f32[1,8,8,4,32]{4,3,2,1,0} %sub_2.4), metadata={op_type="Sub" op_name="sub_2" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Square_1.1 = f32[1,8,8,4,32]{4,3,2,1,0} multiply(f32[1,8,8,4,32]{4,3,2,1,0} %sub_2.5, f32[1,8,8,4,32]{4,3,2,1,0} %sub_2.5), metadata={op_type="Square" op_name="Square_1" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_3.14 = f32[1,8,8,4,32]{4,3,2,1,0} convert(f32[1,8,8,4,32]{4,3,2,1,0} %Square_1.1), metadata={op_type="Mean" op_name="Mean_3" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_3.15 = f32[] constant(0), metadata={op_type="Mean" op_name="Mean_3" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_3.16 = f32[] convert(f32[] %Mean_3.15), metadata={op_type="Mean" op_name="Mean_3" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_3.17 = f32[1,4]{1,0} reduce(f32[1,8,8,4,32]{4,3,2,1,0} %Mean_3.14, f32[] %Mean_3.16), dimensions={1,2,4}, to_apply=%Mean_3-reduction.4, metadata={op_type="Mean" op_name="Mean_3" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_3.18 = s32[] constant(8), metadata={op_type="Mean" op_name="Mean_3" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_3.19 = s32[] constant(8), metadata={op_type="Mean" op_name="Mean_3" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_3.20 = s32[] multiply(s32[] %Mean_3.18, s32[] %Mean_3.19), metadata={op_type="Mean" op_name="Mean_3" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_3.21 = s32[] constant(32), metadata={op_type="Mean" op_name="Mean_3" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_3.22 = s32[] multiply(s32[] %Mean_3.20, s32[] %Mean_3.21), metadata={op_type="Mean" op_name="Mean_3" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_3.23 = f32[] convert(s32[] %Mean_3.22), metadata={op_type="Mean" op_name="Mean_3" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_3.24 = f32[1,4]{1,0} broadcast(f32[] %Mean_3.23), dimensions={}, metadata={op_type="Mean" op_name="Mean_3" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_3.25 = f32[1,4]{1,0} divide(f32[1,4]{1,0} %Mean_3.17, f32[1,4]{1,0} %Mean_3.24), metadata={op_type="Mean" op_name="Mean_3" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_3.26 = f32[1,4]{1,0} convert(f32[1,4]{1,0} %Mean_3.25), metadata={op_type="Mean" op_name="Mean_3" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_3.27 = f32[1,1,1,4,1]{4,3,2,1,0} reshape(f32[1,4]{1,0} %Mean_3.26), metadata={op_type="Mean" op_name="Mean_3" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %add_3.3 = f32[] constant(1e-05), metadata={op_type="AddV2" op_name="add_3" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %add_3.4 = f32[1,1,1,4,1]{4,3,2,1,0} broadcast(f32[] %add_3.3), dimensions={}, metadata={op_type="AddV2" op_name="add_3" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %add_3.5 = f32[1,1,1,4,1]{4,3,2,1,0} add(f32[1,1,1,4,1]{4,3,2,1,0} %Mean_3.27, f32[1,1,1,4,1]{4,3,2,1,0} %add_3.4), metadata={op_type="AddV2" op_name="add_3" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Rsqrt_1.1 = f32[1,1,1,4,1]{4,3,2,1,0} rsqrt(f32[1,1,1,4,1]{4,3,2,1,0} %add_3.5), metadata={op_type="Rsqrt" op_name="Rsqrt_1"}
+  %mul_4.3 = f32[1,4]{1,0} reshape(f32[1,1,1,4,1]{4,3,2,1,0} %Rsqrt_1.1), metadata={op_type="Mul" op_name="mul_4" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %mul_4.4 = f32[1,8,8,4,32]{4,3,2,1,0} broadcast(f32[1,4]{1,0} %mul_4.3), dimensions={0,3}, metadata={op_type="Mul" op_name="mul_4" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %mul_4.5 = f32[1,8,8,4,32]{4,3,2,1,0} multiply(f32[1,8,8,4,32]{4,3,2,1,0} %sub_3.5, f32[1,8,8,4,32]{4,3,2,1,0} %mul_4.4), metadata={op_type="Mul" op_name="mul_4" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Reshape_4.1 = f32[1,8,8,128]{3,2,1,0} reshape(f32[1,8,8,4,32]{4,3,2,1,0} %mul_4.5), metadata={op_type="Reshape" op_name="Reshape_4" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %arg8.1 = f32[128]{0} parameter(8), parameter_replication={false}, metadata={op_name="XLA_Args"}
+  %reshape.30 = f32[128]{0} reshape(f32[128]{0} %arg8.1)
+  %mul_5.2 = f32[1,8,8,128]{3,2,1,0} broadcast(f32[128]{0} %reshape.30), dimensions={3}, metadata={op_type="Mul" op_name="mul_5" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %mul_5.3 = f32[1,8,8,128]{3,2,1,0} multiply(f32[1,8,8,128]{3,2,1,0} %Reshape_4.1, f32[1,8,8,128]{3,2,1,0} %mul_5.2), metadata={op_type="Mul" op_name="mul_5" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %arg9.1 = f32[128]{0} parameter(9), parameter_replication={false}, metadata={op_name="XLA_Args"}
+  %reshape.31 = f32[128]{0} reshape(f32[128]{0} %arg9.1)
+  %add_4.2 = f32[1,8,8,128]{3,2,1,0} broadcast(f32[128]{0} %reshape.31), dimensions={3}, metadata={op_type="AddV2" op_name="add_4" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %add_4.3 = f32[1,8,8,128]{3,2,1,0} add(f32[1,8,8,128]{3,2,1,0} %mul_5.3, f32[1,8,8,128]{3,2,1,0} %add_4.2), metadata={op_type="AddV2" op_name="add_4" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Sigmoid_2.1 = f32[1,8,8,128]{3,2,1,0} logistic(f32[1,8,8,128]{3,2,1,0} %add_4.3), metadata={op_type="Sigmoid" op_name="Sigmoid_2"}
+  %mul_6.1 = f32[1,8,8,128]{3,2,1,0} multiply(f32[1,8,8,128]{3,2,1,0} %add_4.3, f32[1,8,8,128]{3,2,1,0} %Sigmoid_2.1), metadata={op_type="Mul" op_name="mul_6" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %arg10.1 = f32[128,128]{1,0} parameter(10), parameter_replication={false}, metadata={op_name="XLA_Args"}
+  %reshape.32 = f32[128,128]{1,0} reshape(f32[128,128]{1,0} %arg10.1)
+  %MatMul_1.2 = f32[1,128]{1,0} dot(f32[1,128]{1,0} %mul.1, f32[128,128]{1,0} %reshape.32), lhs_contracting_dims={1}, rhs_contracting_dims={0}, frontend_attributes={grad_x="false",grad_y="false"}, metadata={op_type="MatMul" op_name="MatMul_1" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %MatMul_1.3 = f32[1,128]{1,0} transpose(f32[1,128]{1,0} %MatMul_1.2), dimensions={0,1}, metadata={op_type="MatMul" op_name="MatMul_1" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Reshape_5.1 = f32[1,1,1,128]{3,2,1,0} reshape(f32[1,128]{1,0} %MatMul_1.3), metadata={op_type="Reshape" op_name="Reshape_5" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %add_5.3 = f32[1,128]{1,0} reshape(f32[1,1,1,128]{3,2,1,0} %Reshape_5.1), metadata={op_type="AddV2" op_name="add_5" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %add_5.4 = f32[1,8,8,128]{3,2,1,0} broadcast(f32[1,128]{1,0} %add_5.3), dimensions={0,3}, metadata={op_type="AddV2" op_name="add_5" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %add_5.5 = f32[1,8,8,128]{3,2,1,0} add(f32[1,8,8,128]{3,2,1,0} %mul_6.1, f32[1,8,8,128]{3,2,1,0} %add_5.4), metadata={op_type="AddV2" op_name="add_5" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Reshape_6.1 = f32[1,8,8,4,32]{4,3,2,1,0} reshape(f32[1,8,8,128]{3,2,1,0} %add_5.5), metadata={op_type="Reshape" op_name="Reshape_6" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_4.14 = f32[1,8,8,4,32]{4,3,2,1,0} convert(f32[1,8,8,4,32]{4,3,2,1,0} %Reshape_6.1), metadata={op_type="Mean" op_name="Mean_4" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_4.15 = f32[] constant(0), metadata={op_type="Mean" op_name="Mean_4" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_4.16 = f32[] convert(f32[] %Mean_4.15), metadata={op_type="Mean" op_name="Mean_4" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_4.17 = f32[1,4]{1,0} reduce(f32[1,8,8,4,32]{4,3,2,1,0} %Mean_4.14, f32[] %Mean_4.16), dimensions={1,2,4}, to_apply=%Mean_4-reduction.5, metadata={op_type="Mean" op_name="Mean_4" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_4.18 = s32[] constant(8), metadata={op_type="Mean" op_name="Mean_4" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_4.19 = s32[] constant(8), metadata={op_type="Mean" op_name="Mean_4" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_4.20 = s32[] multiply(s32[] %Mean_4.18, s32[] %Mean_4.19), metadata={op_type="Mean" op_name="Mean_4" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_4.21 = s32[] constant(32), metadata={op_type="Mean" op_name="Mean_4" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_4.22 = s32[] multiply(s32[] %Mean_4.20, s32[] %Mean_4.21), metadata={op_type="Mean" op_name="Mean_4" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_4.23 = f32[] convert(s32[] %Mean_4.22), metadata={op_type="Mean" op_name="Mean_4" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_4.24 = f32[1,4]{1,0} broadcast(f32[] %Mean_4.23), dimensions={}, metadata={op_type="Mean" op_name="Mean_4" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_4.25 = f32[1,4]{1,0} divide(f32[1,4]{1,0} %Mean_4.17, f32[1,4]{1,0} %Mean_4.24), metadata={op_type="Mean" op_name="Mean_4" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_4.26 = f32[1,4]{1,0} convert(f32[1,4]{1,0} %Mean_4.25), metadata={op_type="Mean" op_name="Mean_4" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_4.27 = f32[1,1,1,4,1]{4,3,2,1,0} reshape(f32[1,4]{1,0} %Mean_4.26), metadata={op_type="Mean" op_name="Mean_4" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %sub_5.3 = f32[1,4]{1,0} reshape(f32[1,1,1,4,1]{4,3,2,1,0} %Mean_4.27), metadata={op_type="Sub" op_name="sub_5" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %sub_5.4 = f32[1,8,8,4,32]{4,3,2,1,0} broadcast(f32[1,4]{1,0} %sub_5.3), dimensions={0,3}, metadata={op_type="Sub" op_name="sub_5" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %sub_5.5 = f32[1,8,8,4,32]{4,3,2,1,0} subtract(f32[1,8,8,4,32]{4,3,2,1,0} %Reshape_6.1, f32[1,8,8,4,32]{4,3,2,1,0} %sub_5.4), metadata={op_type="Sub" op_name="sub_5" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %sub_4.3 = f32[1,4]{1,0} reshape(f32[1,1,1,4,1]{4,3,2,1,0} %Mean_4.27), metadata={op_type="Sub" op_name="sub_4" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %sub_4.4 = f32[1,8,8,4,32]{4,3,2,1,0} broadcast(f32[1,4]{1,0} %sub_4.3), dimensions={0,3}, metadata={op_type="Sub" op_name="sub_4" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %sub_4.5 = f32[1,8,8,4,32]{4,3,2,1,0} subtract(f32[1,8,8,4,32]{4,3,2,1,0} %Reshape_6.1, f32[1,8,8,4,32]{4,3,2,1,0} %sub_4.4), metadata={op_type="Sub" op_name="sub_4" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Square_2.1 = f32[1,8,8,4,32]{4,3,2,1,0} multiply(f32[1,8,8,4,32]{4,3,2,1,0} %sub_4.5, f32[1,8,8,4,32]{4,3,2,1,0} %sub_4.5), metadata={op_type="Square" op_name="Square_2" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_5.14 = f32[1,8,8,4,32]{4,3,2,1,0} convert(f32[1,8,8,4,32]{4,3,2,1,0} %Square_2.1), metadata={op_type="Mean" op_name="Mean_5" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_5.15 = f32[] constant(0), metadata={op_type="Mean" op_name="Mean_5" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_5.16 = f32[] convert(f32[] %Mean_5.15), metadata={op_type="Mean" op_name="Mean_5" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_5.17 = f32[1,4]{1,0} reduce(f32[1,8,8,4,32]{4,3,2,1,0} %Mean_5.14, f32[] %Mean_5.16), dimensions={1,2,4}, to_apply=%Mean_5-reduction.6, metadata={op_type="Mean" op_name="Mean_5" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_5.18 = s32[] constant(8), metadata={op_type="Mean" op_name="Mean_5" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_5.19 = s32[] constant(8), metadata={op_type="Mean" op_name="Mean_5" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_5.20 = s32[] multiply(s32[] %Mean_5.18, s32[] %Mean_5.19), metadata={op_type="Mean" op_name="Mean_5" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_5.21 = s32[] constant(32), metadata={op_type="Mean" op_name="Mean_5" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_5.22 = s32[] multiply(s32[] %Mean_5.20, s32[] %Mean_5.21), metadata={op_type="Mean" op_name="Mean_5" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_5.23 = f32[] convert(s32[] %Mean_5.22), metadata={op_type="Mean" op_name="Mean_5" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_5.24 = f32[1,4]{1,0} broadcast(f32[] %Mean_5.23), dimensions={}, metadata={op_type="Mean" op_name="Mean_5" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_5.25 = f32[1,4]{1,0} divide(f32[1,4]{1,0} %Mean_5.17, f32[1,4]{1,0} %Mean_5.24), metadata={op_type="Mean" op_name="Mean_5" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_5.26 = f32[1,4]{1,0} convert(f32[1,4]{1,0} %Mean_5.25), metadata={op_type="Mean" op_name="Mean_5" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_5.27 = f32[1,1,1,4,1]{4,3,2,1,0} reshape(f32[1,4]{1,0} %Mean_5.26), metadata={op_type="Mean" op_name="Mean_5" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %add_6.3 = f32[] constant(1e-05), metadata={op_type="AddV2" op_name="add_6" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %add_6.4 = f32[1,1,1,4,1]{4,3,2,1,0} broadcast(f32[] %add_6.3), dimensions={}, metadata={op_type="AddV2" op_name="add_6" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %add_6.5 = f32[1,1,1,4,1]{4,3,2,1,0} add(f32[1,1,1,4,1]{4,3,2,1,0} %Mean_5.27, f32[1,1,1,4,1]{4,3,2,1,0} %add_6.4), metadata={op_type="AddV2" op_name="add_6" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Rsqrt_2.1 = f32[1,1,1,4,1]{4,3,2,1,0} rsqrt(f32[1,1,1,4,1]{4,3,2,1,0} %add_6.5), metadata={op_type="Rsqrt" op_name="Rsqrt_2"}
+  %mul_7.3 = f32[1,4]{1,0} reshape(f32[1,1,1,4,1]{4,3,2,1,0} %Rsqrt_2.1), metadata={op_type="Mul" op_name="mul_7" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %mul_7.4 = f32[1,8,8,4,32]{4,3,2,1,0} broadcast(f32[1,4]{1,0} %mul_7.3), dimensions={0,3}, metadata={op_type="Mul" op_name="mul_7" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %mul_7.5 = f32[1,8,8,4,32]{4,3,2,1,0} multiply(f32[1,8,8,4,32]{4,3,2,1,0} %sub_5.5, f32[1,8,8,4,32]{4,3,2,1,0} %mul_7.4), metadata={op_type="Mul" op_name="mul_7" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Reshape_7.1 = f32[1,8,8,128]{3,2,1,0} reshape(f32[1,8,8,4,32]{4,3,2,1,0} %mul_7.5), metadata={op_type="Reshape" op_name="Reshape_7" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %arg16.1 = f32[128]{0} parameter(16), parameter_replication={false}, metadata={op_name="XLA_Args"}
+  %reshape.38 = f32[128]{0} reshape(f32[128]{0} %arg16.1)
+  %mul_8.2 = f32[1,8,8,128]{3,2,1,0} broadcast(f32[128]{0} %reshape.38), dimensions={3}, metadata={op_type="Mul" op_name="mul_8" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %mul_8.3 = f32[1,8,8,128]{3,2,1,0} multiply(f32[1,8,8,128]{3,2,1,0} %Reshape_7.1, f32[1,8,8,128]{3,2,1,0} %mul_8.2), metadata={op_type="Mul" op_name="mul_8" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %arg17.1 = f32[128]{0} parameter(17), parameter_replication={false}, metadata={op_name="XLA_Args"}
+  %reshape.39 = f32[128]{0} reshape(f32[128]{0} %arg17.1)
+  %add_7.2 = f32[1,8,8,128]{3,2,1,0} broadcast(f32[128]{0} %reshape.39), dimensions={3}, metadata={op_type="AddV2" op_name="add_7" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %add_7.3 = f32[1,8,8,128]{3,2,1,0} add(f32[1,8,8,128]{3,2,1,0} %mul_8.3, f32[1,8,8,128]{3,2,1,0} %add_7.2), metadata={op_type="AddV2" op_name="add_7" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Reshape_8.1 = f32[1,64,128]{2,1,0} reshape(f32[1,8,8,128]{3,2,1,0} %add_7.3), metadata={op_type="Reshape" op_name="Reshape_8" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %arg11.1 = f32[128,128]{1,0} parameter(11), parameter_replication={false}, metadata={op_name="XLA_Args"}
+  %reshape.33 = f32[128,128]{1,0} reshape(f32[128,128]{1,0} %arg11.1)
+  %MatMul_2.2 = f32[1,64,128]{2,1,0} dot(f32[1,64,128]{2,1,0} %Reshape_8.1, f32[128,128]{1,0} %reshape.33), lhs_contracting_dims={2}, rhs_contracting_dims={0}, frontend_attributes={grad_x="false",grad_y="false"}, metadata={op_type="BatchMatMulV2" op_name="MatMul_2" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %MatMul_2.3 = f32[1,64,128]{2,1,0} transpose(f32[1,64,128]{2,1,0} %MatMul_2.2), dimensions={0,1,2}, metadata={op_type="BatchMatMulV2" op_name="MatMul_2" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Reshape_9.1 = f32[1,64,4,32]{3,2,1,0} reshape(f32[1,64,128]{2,1,0} %MatMul_2.3), metadata={op_type="Reshape" op_name="Reshape_9" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %transpose.1 = f32[1,4,64,32]{3,1,2,0} transpose(f32[1,64,4,32]{3,2,1,0} %Reshape_9.1), dimensions={0,2,1,3}, metadata={op_type="Transpose" op_name="transpose" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %MatMul_3.2 = f32[1,4,64,64]{3,2,1,0} dot(f32[1,4,64,32]{3,1,2,0} %transpose.1, f32[1,4,64,32]{3,1,2,0} %transpose.1), lhs_batch_dims={0,1}, lhs_contracting_dims={3}, rhs_batch_dims={0,1}, rhs_contracting_dims={3}, frontend_attributes={grad_x="false",grad_y="false"}, metadata={op_type="BatchMatMulV2" op_name="MatMul_3" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %MatMul_3.3 = f32[1,4,64,64]{3,2,1,0} transpose(f32[1,4,64,64]{3,2,1,0} %MatMul_3.2), dimensions={0,1,2,3}, metadata={op_type="BatchMatMulV2" op_name="MatMul_3" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %mul_9.3 = f32[] constant(0.176776692), metadata={op_type="Mul" op_name="mul_9" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %mul_9.4 = f32[1,4,64,64]{3,2,1,0} broadcast(f32[] %mul_9.3), dimensions={}, metadata={op_type="Mul" op_name="mul_9" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %mul_9.5 = f32[1,4,64,64]{3,2,1,0} multiply(f32[1,4,64,64]{3,2,1,0} %MatMul_3.3, f32[1,4,64,64]{3,2,1,0} %mul_9.4), metadata={op_type="Mul" op_name="mul_9" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Softmax.28 = f32[] constant(-inf), metadata={op_type="Softmax" op_name="Softmax" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Softmax.29 = f32[1,4,64]{2,1,0} reduce(f32[1,4,64,64]{3,2,1,0} %mul_9.5, f32[] %Softmax.28), dimensions={3}, to_apply=%region_0.7, metadata={op_type="Softmax" op_name="Softmax"}
+  %Softmax.30 = f32[1,4,64,1]{3,2,1,0} reshape(f32[1,4,64]{2,1,0} %Softmax.29), metadata={op_type="Softmax" op_name="Softmax"}
+  %Softmax.31 = f32[1,4,64,1]{3,2,1,0} broadcast(f32[1,4,64,1]{3,2,1,0} %Softmax.30), dimensions={0,1,2,3}, metadata={op_type="Softmax" op_name="Softmax"}
+  %Softmax.32 = f32[1,4,64]{2,1,0} reshape(f32[1,4,64,1]{3,2,1,0} %Softmax.31), metadata={op_type="Softmax" op_name="Softmax"}
+  %Softmax.33 = f32[1,4,64,64]{3,2,1,0} broadcast(f32[1,4,64]{2,1,0} %Softmax.32), dimensions={0,1,2}, metadata={op_type="Softmax" op_name="Softmax"}
+  %Softmax.34 = f32[1,4,64,64]{3,2,1,0} subtract(f32[1,4,64,64]{3,2,1,0} %mul_9.5, f32[1,4,64,64]{3,2,1,0} %Softmax.33), metadata={op_type="Softmax" op_name="Softmax"}
+  %Softmax.35 = f32[1,4,64,64]{3,2,1,0} exponential(f32[1,4,64,64]{3,2,1,0} %Softmax.34), metadata={op_type="Softmax" op_name="Softmax"}
+  %Softmax.27 = f32[] constant(-0), metadata={op_type="Softmax" op_name="Softmax" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Softmax.36 = f32[1,4,64]{2,1,0} reduce(f32[1,4,64,64]{3,2,1,0} %Softmax.35, f32[] %Softmax.27), dimensions={3}, to_apply=%region_1.8, metadata={op_type="Softmax" op_name="Softmax"}
+  %Softmax.37 = f32[1,4,64,1]{3,2,1,0} reshape(f32[1,4,64]{2,1,0} %Softmax.36), metadata={op_type="Softmax" op_name="Softmax"}
+  %Softmax.38 = f32[1,4,64,1]{3,2,1,0} broadcast(f32[1,4,64,1]{3,2,1,0} %Softmax.37), dimensions={0,1,2,3}, metadata={op_type="Softmax" op_name="Softmax"}
+  %Softmax.39 = f32[1,4,64]{2,1,0} reshape(f32[1,4,64,1]{3,2,1,0} %Softmax.38), metadata={op_type="Softmax" op_name="Softmax"}
+  %Softmax.40 = f32[1,4,64,64]{3,2,1,0} broadcast(f32[1,4,64]{2,1,0} %Softmax.39), dimensions={0,1,2}, metadata={op_type="Softmax" op_name="Softmax"}
+  %Softmax.41 = f32[1,4,64,64]{3,2,1,0} divide(f32[1,4,64,64]{3,2,1,0} %Softmax.35, f32[1,4,64,64]{3,2,1,0} %Softmax.40), metadata={op_type="Softmax" op_name="Softmax"}
+  %MatMul_4.2 = f32[1,4,64,32]{3,2,1,0} dot(f32[1,4,64,64]{3,2,1,0} %Softmax.41, f32[1,4,64,32]{3,1,2,0} %transpose.1), lhs_batch_dims={0,1}, lhs_contracting_dims={3}, rhs_batch_dims={0,1}, rhs_contracting_dims={2}, frontend_attributes={grad_x="false",grad_y="false"}, metadata={op_type="BatchMatMulV2" op_name="MatMul_4" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %MatMul_4.3 = f32[1,4,64,32]{3,2,1,0} transpose(f32[1,4,64,32]{3,2,1,0} %MatMul_4.2), dimensions={0,1,2,3}, metadata={op_type="BatchMatMulV2" op_name="MatMul_4" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %transpose_1.1 = f32[1,64,4,32]{3,1,2,0} transpose(f32[1,4,64,32]{3,2,1,0} %MatMul_4.3), dimensions={0,2,1,3}, metadata={op_type="Transpose" op_name="transpose_1" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Reshape_10.1 = f32[1,64,128]{2,1,0} reshape(f32[1,64,4,32]{3,1,2,0} %transpose_1.1), metadata={op_type="Reshape" op_name="Reshape_10" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %arg12.1 = f32[128,128]{1,0} parameter(12), parameter_replication={false}, metadata={op_name="XLA_Args"}
+  %reshape.34 = f32[128,128]{1,0} reshape(f32[128,128]{1,0} %arg12.1)
+  %MatMul_5.2 = f32[1,64,128]{2,1,0} dot(f32[1,64,128]{2,1,0} %Reshape_10.1, f32[128,128]{1,0} %reshape.34), lhs_contracting_dims={2}, rhs_contracting_dims={0}, frontend_attributes={grad_x="false",grad_y="false"}, metadata={op_type="BatchMatMulV2" op_name="MatMul_5" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %MatMul_5.3 = f32[1,64,128]{2,1,0} transpose(f32[1,64,128]{2,1,0} %MatMul_5.2), dimensions={0,1,2}, metadata={op_type="BatchMatMulV2" op_name="MatMul_5" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %add_8.1 = f32[1,64,128]{2,1,0} add(f32[1,64,128]{2,1,0} %Reshape_8.1, f32[1,64,128]{2,1,0} %MatMul_5.3), metadata={op_type="AddV2" op_name="add_8" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %arg13.1 = f32[128,128]{1,0} parameter(13), parameter_replication={false}, metadata={op_name="XLA_Args"}
+  %reshape.35 = f32[128,128]{1,0} reshape(f32[128,128]{1,0} %arg13.1)
+  %MatMul_6.2 = f32[1,64,128]{2,1,0} dot(f32[1,64,128]{2,1,0} %add_8.1, f32[128,128]{1,0} %reshape.35), lhs_contracting_dims={2}, rhs_contracting_dims={0}, frontend_attributes={grad_x="false",grad_y="false"}, metadata={op_type="BatchMatMulV2" op_name="MatMul_6" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %MatMul_6.3 = f32[1,64,128]{2,1,0} transpose(f32[1,64,128]{2,1,0} %MatMul_6.2), dimensions={0,1,2}, metadata={op_type="BatchMatMulV2" op_name="MatMul_6" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Reshape_11.1 = f32[1,64,4,32]{3,2,1,0} reshape(f32[1,64,128]{2,1,0} %MatMul_6.3), metadata={op_type="Reshape" op_name="Reshape_11" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %transpose_2.1 = f32[1,4,64,32]{3,1,2,0} transpose(f32[1,64,4,32]{3,2,1,0} %Reshape_11.1), dimensions={0,2,1,3}, metadata={op_type="Transpose" op_name="transpose_2" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %arg2.1 = f32[1,8,64]{2,1,0} parameter(2), parameter_replication={false}, metadata={op_name="XLA_Args"}
+  %reshape.24 = f32[1,8,64]{2,1,0} reshape(f32[1,8,64]{2,1,0} %arg2.1)
+  %arg14.1 = f32[64,128]{1,0} parameter(14), parameter_replication={false}, metadata={op_name="XLA_Args"}
+  %reshape.36 = f32[64,128]{1,0} reshape(f32[64,128]{1,0} %arg14.1)
+  %MatMul_7.2 = f32[1,8,128]{2,1,0} dot(f32[1,8,64]{2,1,0} %reshape.24, f32[64,128]{1,0} %reshape.36), lhs_contracting_dims={2}, rhs_contracting_dims={0}, frontend_attributes={grad_x="false",grad_y="false"}, metadata={op_type="BatchMatMulV2" op_name="MatMul_7" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %MatMul_7.3 = f32[1,8,128]{2,1,0} transpose(f32[1,8,128]{2,1,0} %MatMul_7.2), dimensions={0,1,2}, metadata={op_type="BatchMatMulV2" op_name="MatMul_7" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Reshape_12.1 = f32[1,8,4,32]{3,2,1,0} reshape(f32[1,8,128]{2,1,0} %MatMul_7.3), metadata={op_type="Reshape" op_name="Reshape_12" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %transpose_3.1 = f32[1,4,8,32]{3,1,2,0} transpose(f32[1,8,4,32]{3,2,1,0} %Reshape_12.1), dimensions={0,2,1,3}, metadata={op_type="Transpose" op_name="transpose_3" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %MatMul_8.2 = f32[1,4,64,8]{3,2,1,0} dot(f32[1,4,64,32]{3,1,2,0} %transpose_2.1, f32[1,4,8,32]{3,1,2,0} %transpose_3.1), lhs_batch_dims={0,1}, lhs_contracting_dims={3}, rhs_batch_dims={0,1}, rhs_contracting_dims={3}, frontend_attributes={grad_x="false",grad_y="false"}, metadata={op_type="BatchMatMulV2" op_name="MatMul_8" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %MatMul_8.3 = f32[1,4,64,8]{3,2,1,0} transpose(f32[1,4,64,8]{3,2,1,0} %MatMul_8.2), dimensions={0,1,2,3}, metadata={op_type="BatchMatMulV2" op_name="MatMul_8" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %mul_10.3 = f32[] constant(0.176776692), metadata={op_type="Mul" op_name="mul_10" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %mul_10.4 = f32[1,4,64,8]{3,2,1,0} broadcast(f32[] %mul_10.3), dimensions={}, metadata={op_type="Mul" op_name="mul_10" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %mul_10.5 = f32[1,4,64,8]{3,2,1,0} multiply(f32[1,4,64,8]{3,2,1,0} %MatMul_8.3, f32[1,4,64,8]{3,2,1,0} %mul_10.4), metadata={op_type="Mul" op_name="mul_10" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Softmax_1.28 = f32[] constant(-inf), metadata={op_type="Softmax" op_name="Softmax_1" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Softmax_1.29 = f32[1,4,64]{2,1,0} reduce(f32[1,4,64,8]{3,2,1,0} %mul_10.5, f32[] %Softmax_1.28), dimensions={3}, to_apply=%region_0.9, metadata={op_type="Softmax" op_name="Softmax_1"}
+  %Softmax_1.30 = f32[1,4,64,1]{3,2,1,0} reshape(f32[1,4,64]{2,1,0} %Softmax_1.29), metadata={op_type="Softmax" op_name="Softmax_1"}
+  %Softmax_1.31 = f32[1,4,64,1]{3,2,1,0} broadcast(f32[1,4,64,1]{3,2,1,0} %Softmax_1.30), dimensions={0,1,2,3}, metadata={op_type="Softmax" op_name="Softmax_1"}
+  %Softmax_1.32 = f32[1,4,64]{2,1,0} reshape(f32[1,4,64,1]{3,2,1,0} %Softmax_1.31), metadata={op_type="Softmax" op_name="Softmax_1"}
+  %Softmax_1.33 = f32[1,4,64,8]{3,2,1,0} broadcast(f32[1,4,64]{2,1,0} %Softmax_1.32), dimensions={0,1,2}, metadata={op_type="Softmax" op_name="Softmax_1"}
+  %Softmax_1.34 = f32[1,4,64,8]{3,2,1,0} subtract(f32[1,4,64,8]{3,2,1,0} %mul_10.5, f32[1,4,64,8]{3,2,1,0} %Softmax_1.33), metadata={op_type="Softmax" op_name="Softmax_1"}
+  %Softmax_1.35 = f32[1,4,64,8]{3,2,1,0} exponential(f32[1,4,64,8]{3,2,1,0} %Softmax_1.34), metadata={op_type="Softmax" op_name="Softmax_1"}
+  %Softmax_1.27 = f32[] constant(-0), metadata={op_type="Softmax" op_name="Softmax_1" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Softmax_1.36 = f32[1,4,64]{2,1,0} reduce(f32[1,4,64,8]{3,2,1,0} %Softmax_1.35, f32[] %Softmax_1.27), dimensions={3}, to_apply=%region_1.10, metadata={op_type="Softmax" op_name="Softmax_1"}
+  %Softmax_1.37 = f32[1,4,64,1]{3,2,1,0} reshape(f32[1,4,64]{2,1,0} %Softmax_1.36), metadata={op_type="Softmax" op_name="Softmax_1"}
+  %Softmax_1.38 = f32[1,4,64,1]{3,2,1,0} broadcast(f32[1,4,64,1]{3,2,1,0} %Softmax_1.37), dimensions={0,1,2,3}, metadata={op_type="Softmax" op_name="Softmax_1"}
+  %Softmax_1.39 = f32[1,4,64]{2,1,0} reshape(f32[1,4,64,1]{3,2,1,0} %Softmax_1.38), metadata={op_type="Softmax" op_name="Softmax_1"}
+  %Softmax_1.40 = f32[1,4,64,8]{3,2,1,0} broadcast(f32[1,4,64]{2,1,0} %Softmax_1.39), dimensions={0,1,2}, metadata={op_type="Softmax" op_name="Softmax_1"}
+  %Softmax_1.41 = f32[1,4,64,8]{3,2,1,0} divide(f32[1,4,64,8]{3,2,1,0} %Softmax_1.35, f32[1,4,64,8]{3,2,1,0} %Softmax_1.40), metadata={op_type="Softmax" op_name="Softmax_1"}
+  %MatMul_9.2 = f32[1,4,64,32]{3,2,1,0} dot(f32[1,4,64,8]{3,2,1,0} %Softmax_1.41, f32[1,4,8,32]{3,1,2,0} %transpose_3.1), lhs_batch_dims={0,1}, lhs_contracting_dims={3}, rhs_batch_dims={0,1}, rhs_contracting_dims={2}, frontend_attributes={grad_x="false",grad_y="false"}, metadata={op_type="BatchMatMulV2" op_name="MatMul_9" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %MatMul_9.3 = f32[1,4,64,32]{3,2,1,0} transpose(f32[1,4,64,32]{3,2,1,0} %MatMul_9.2), dimensions={0,1,2,3}, metadata={op_type="BatchMatMulV2" op_name="MatMul_9" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %transpose_4.1 = f32[1,64,4,32]{3,1,2,0} transpose(f32[1,4,64,32]{3,2,1,0} %MatMul_9.3), dimensions={0,2,1,3}, metadata={op_type="Transpose" op_name="transpose_4" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Reshape_13.1 = f32[1,64,128]{2,1,0} reshape(f32[1,64,4,32]{3,1,2,0} %transpose_4.1), metadata={op_type="Reshape" op_name="Reshape_13" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %arg15.1 = f32[128,128]{1,0} parameter(15), parameter_replication={false}, metadata={op_name="XLA_Args"}
+  %reshape.37 = f32[128,128]{1,0} reshape(f32[128,128]{1,0} %arg15.1)
+  %MatMul_10.2 = f32[1,64,128]{2,1,0} dot(f32[1,64,128]{2,1,0} %Reshape_13.1, f32[128,128]{1,0} %reshape.37), lhs_contracting_dims={2}, rhs_contracting_dims={0}, frontend_attributes={grad_x="false",grad_y="false"}, metadata={op_type="BatchMatMulV2" op_name="MatMul_10" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %MatMul_10.3 = f32[1,64,128]{2,1,0} transpose(f32[1,64,128]{2,1,0} %MatMul_10.2), dimensions={0,1,2}, metadata={op_type="BatchMatMulV2" op_name="MatMul_10" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %add_9.1 = f32[1,64,128]{2,1,0} add(f32[1,64,128]{2,1,0} %add_8.1, f32[1,64,128]{2,1,0} %MatMul_10.3), metadata={op_type="AddV2" op_name="add_9" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Reshape_14.1 = f32[1,8,8,128]{3,2,1,0} reshape(f32[1,64,128]{2,1,0} %add_9.1), metadata={op_type="Reshape" op_name="Reshape_14" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %concat_1.1 = f32[1,8,8,256]{3,2,1,0} concatenate(f32[1,8,8,128]{3,2,1,0} %Reshape_14.1, f32[1,8,8,128]{3,2,1,0} %add_5.5), dimensions={3}, metadata={op_type="ConcatV2" op_name="concat_1" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %arg18.1 = f32[3,3,256,64]{3,2,1,0} parameter(18), parameter_replication={false}, metadata={op_name="XLA_Args"}
+  %reshape.40 = f32[3,3,256,64]{3,2,1,0} reshape(f32[3,3,256,64]{3,2,1,0} %arg18.1)
+  %Conv2D_2.1 = f32[1,8,8,64]{3,2,1,0} convolution(f32[1,8,8,256]{3,2,1,0} %concat_1.1, f32[3,3,256,64]{3,2,1,0} %reshape.40), window={size=3x3 pad=1_1x1_1}, dim_labels=b01f_01io->b01f, metadata={op_type="Conv2D" op_name="Conv2D_2" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Reshape_15.1 = f32[1,8,8,4,16]{4,3,2,1,0} reshape(f32[1,8,8,64]{3,2,1,0} %Conv2D_2.1), metadata={op_type="Reshape" op_name="Reshape_15" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_6.14 = f32[1,8,8,4,16]{4,3,2,1,0} convert(f32[1,8,8,4,16]{4,3,2,1,0} %Reshape_15.1), metadata={op_type="Mean" op_name="Mean_6" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_6.15 = f32[] constant(0), metadata={op_type="Mean" op_name="Mean_6" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_6.16 = f32[] convert(f32[] %Mean_6.15), metadata={op_type="Mean" op_name="Mean_6" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_6.17 = f32[1,4]{1,0} reduce(f32[1,8,8,4,16]{4,3,2,1,0} %Mean_6.14, f32[] %Mean_6.16), dimensions={1,2,4}, to_apply=%Mean_6-reduction.11, metadata={op_type="Mean" op_name="Mean_6" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_6.18 = s32[] constant(8), metadata={op_type="Mean" op_name="Mean_6" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_6.19 = s32[] constant(8), metadata={op_type="Mean" op_name="Mean_6" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_6.20 = s32[] multiply(s32[] %Mean_6.18, s32[] %Mean_6.19), metadata={op_type="Mean" op_name="Mean_6" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_6.21 = s32[] constant(16), metadata={op_type="Mean" op_name="Mean_6" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_6.22 = s32[] multiply(s32[] %Mean_6.20, s32[] %Mean_6.21), metadata={op_type="Mean" op_name="Mean_6" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_6.23 = f32[] convert(s32[] %Mean_6.22), metadata={op_type="Mean" op_name="Mean_6" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_6.24 = f32[1,4]{1,0} broadcast(f32[] %Mean_6.23), dimensions={}, metadata={op_type="Mean" op_name="Mean_6" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_6.25 = f32[1,4]{1,0} divide(f32[1,4]{1,0} %Mean_6.17, f32[1,4]{1,0} %Mean_6.24), metadata={op_type="Mean" op_name="Mean_6" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_6.26 = f32[1,4]{1,0} convert(f32[1,4]{1,0} %Mean_6.25), metadata={op_type="Mean" op_name="Mean_6" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_6.27 = f32[1,1,1,4,1]{4,3,2,1,0} reshape(f32[1,4]{1,0} %Mean_6.26), metadata={op_type="Mean" op_name="Mean_6" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %sub_7.3 = f32[1,4]{1,0} reshape(f32[1,1,1,4,1]{4,3,2,1,0} %Mean_6.27), metadata={op_type="Sub" op_name="sub_7" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %sub_7.4 = f32[1,8,8,4,16]{4,3,2,1,0} broadcast(f32[1,4]{1,0} %sub_7.3), dimensions={0,3}, metadata={op_type="Sub" op_name="sub_7" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %sub_7.5 = f32[1,8,8,4,16]{4,3,2,1,0} subtract(f32[1,8,8,4,16]{4,3,2,1,0} %Reshape_15.1, f32[1,8,8,4,16]{4,3,2,1,0} %sub_7.4), metadata={op_type="Sub" op_name="sub_7" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %sub_6.3 = f32[1,4]{1,0} reshape(f32[1,1,1,4,1]{4,3,2,1,0} %Mean_6.27), metadata={op_type="Sub" op_name="sub_6" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %sub_6.4 = f32[1,8,8,4,16]{4,3,2,1,0} broadcast(f32[1,4]{1,0} %sub_6.3), dimensions={0,3}, metadata={op_type="Sub" op_name="sub_6" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %sub_6.5 = f32[1,8,8,4,16]{4,3,2,1,0} subtract(f32[1,8,8,4,16]{4,3,2,1,0} %Reshape_15.1, f32[1,8,8,4,16]{4,3,2,1,0} %sub_6.4), metadata={op_type="Sub" op_name="sub_6" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Square_3.1 = f32[1,8,8,4,16]{4,3,2,1,0} multiply(f32[1,8,8,4,16]{4,3,2,1,0} %sub_6.5, f32[1,8,8,4,16]{4,3,2,1,0} %sub_6.5), metadata={op_type="Square" op_name="Square_3" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_7.14 = f32[1,8,8,4,16]{4,3,2,1,0} convert(f32[1,8,8,4,16]{4,3,2,1,0} %Square_3.1), metadata={op_type="Mean" op_name="Mean_7" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_7.15 = f32[] constant(0), metadata={op_type="Mean" op_name="Mean_7" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_7.16 = f32[] convert(f32[] %Mean_7.15), metadata={op_type="Mean" op_name="Mean_7" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_7.17 = f32[1,4]{1,0} reduce(f32[1,8,8,4,16]{4,3,2,1,0} %Mean_7.14, f32[] %Mean_7.16), dimensions={1,2,4}, to_apply=%Mean_7-reduction.12, metadata={op_type="Mean" op_name="Mean_7" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_7.18 = s32[] constant(8), metadata={op_type="Mean" op_name="Mean_7" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_7.19 = s32[] constant(8), metadata={op_type="Mean" op_name="Mean_7" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_7.20 = s32[] multiply(s32[] %Mean_7.18, s32[] %Mean_7.19), metadata={op_type="Mean" op_name="Mean_7" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_7.21 = s32[] constant(16), metadata={op_type="Mean" op_name="Mean_7" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_7.22 = s32[] multiply(s32[] %Mean_7.20, s32[] %Mean_7.21), metadata={op_type="Mean" op_name="Mean_7" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_7.23 = f32[] convert(s32[] %Mean_7.22), metadata={op_type="Mean" op_name="Mean_7" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_7.24 = f32[1,4]{1,0} broadcast(f32[] %Mean_7.23), dimensions={}, metadata={op_type="Mean" op_name="Mean_7" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_7.25 = f32[1,4]{1,0} divide(f32[1,4]{1,0} %Mean_7.17, f32[1,4]{1,0} %Mean_7.24), metadata={op_type="Mean" op_name="Mean_7" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_7.26 = f32[1,4]{1,0} convert(f32[1,4]{1,0} %Mean_7.25), metadata={op_type="Mean" op_name="Mean_7" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Mean_7.27 = f32[1,1,1,4,1]{4,3,2,1,0} reshape(f32[1,4]{1,0} %Mean_7.26), metadata={op_type="Mean" op_name="Mean_7" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %add_10.3 = f32[] constant(1e-05), metadata={op_type="AddV2" op_name="add_10" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %add_10.4 = f32[1,1,1,4,1]{4,3,2,1,0} broadcast(f32[] %add_10.3), dimensions={}, metadata={op_type="AddV2" op_name="add_10" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %add_10.5 = f32[1,1,1,4,1]{4,3,2,1,0} add(f32[1,1,1,4,1]{4,3,2,1,0} %Mean_7.27, f32[1,1,1,4,1]{4,3,2,1,0} %add_10.4), metadata={op_type="AddV2" op_name="add_10" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Rsqrt_5.1 = f32[1,1,1,4,1]{4,3,2,1,0} rsqrt(f32[1,1,1,4,1]{4,3,2,1,0} %add_10.5), metadata={op_type="Rsqrt" op_name="Rsqrt_5"}
+  %mul_11.3 = f32[1,4]{1,0} reshape(f32[1,1,1,4,1]{4,3,2,1,0} %Rsqrt_5.1), metadata={op_type="Mul" op_name="mul_11" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %mul_11.4 = f32[1,8,8,4,16]{4,3,2,1,0} broadcast(f32[1,4]{1,0} %mul_11.3), dimensions={0,3}, metadata={op_type="Mul" op_name="mul_11" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %mul_11.5 = f32[1,8,8,4,16]{4,3,2,1,0} multiply(f32[1,8,8,4,16]{4,3,2,1,0} %sub_7.5, f32[1,8,8,4,16]{4,3,2,1,0} %mul_11.4), metadata={op_type="Mul" op_name="mul_11" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Reshape_16.1 = f32[1,8,8,64]{3,2,1,0} reshape(f32[1,8,8,4,16]{4,3,2,1,0} %mul_11.5), metadata={op_type="Reshape" op_name="Reshape_16" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %arg19.1 = f32[64]{0} parameter(19), parameter_replication={false}, metadata={op_name="XLA_Args"}
+  %reshape.41 = f32[64]{0} reshape(f32[64]{0} %arg19.1)
+  %mul_12.2 = f32[1,8,8,64]{3,2,1,0} broadcast(f32[64]{0} %reshape.41), dimensions={3}, metadata={op_type="Mul" op_name="mul_12" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %mul_12.3 = f32[1,8,8,64]{3,2,1,0} multiply(f32[1,8,8,64]{3,2,1,0} %Reshape_16.1, f32[1,8,8,64]{3,2,1,0} %mul_12.2), metadata={op_type="Mul" op_name="mul_12" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %arg20.1 = f32[64]{0} parameter(20), parameter_replication={false}, metadata={op_name="XLA_Args"}
+  %reshape.42 = f32[64]{0} reshape(f32[64]{0} %arg20.1)
+  %add_11.2 = f32[1,8,8,64]{3,2,1,0} broadcast(f32[64]{0} %reshape.42), dimensions={3}, metadata={op_type="AddV2" op_name="add_11" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %add_11.3 = f32[1,8,8,64]{3,2,1,0} add(f32[1,8,8,64]{3,2,1,0} %mul_12.3, f32[1,8,8,64]{3,2,1,0} %add_11.2), metadata={op_type="AddV2" op_name="add_11" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %Sigmoid_3.1 = f32[1,8,8,64]{3,2,1,0} logistic(f32[1,8,8,64]{3,2,1,0} %add_11.3), metadata={op_type="Sigmoid" op_name="Sigmoid_3"}
+  %mul_13.1 = f32[1,8,8,64]{3,2,1,0} multiply(f32[1,8,8,64]{3,2,1,0} %add_11.3, f32[1,8,8,64]{3,2,1,0} %Sigmoid_3.1), metadata={op_type="Mul" op_name="mul_13" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %arg21.1 = f32[3,3,64,4]{3,2,1,0} parameter(21), parameter_replication={false}, metadata={op_name="XLA_Args"}
+  %reshape.43 = f32[3,3,64,4]{3,2,1,0} reshape(f32[3,3,64,4]{3,2,1,0} %arg21.1)
+  %Conv2D_3.1 = f32[1,8,8,4]{3,2,1,0} convolution(f32[1,8,8,64]{3,2,1,0} %mul_13.1, f32[3,3,64,4]{3,2,1,0} %reshape.43), window={size=3x3 pad=1_1x1_1}, dim_labels=b01f_01io->b01f, metadata={op_type="Conv2D" op_name="Conv2D_3" source_file="<repo-root>/src/cuda-spirv/xla_hlo/.venv-tf/lib/python3.12/site-packages/tensorflow/python/framework/ops.py" source_line=1221}
+  %XLA_Retvals.3 = f32[1,8,8,4]{3,2,1,0} reshape(f32[1,8,8,4]{3,2,1,0} %Conv2D_3.1), metadata={op_name="XLA_Retvals"}
+  %XLA_Retvals.4 = (f32[1,8,8,4]{3,2,1,0}) tuple(f32[1,8,8,4]{3,2,1,0} %XLA_Retvals.3), metadata={op_name="XLA_Retvals"}
+  ROOT %XLA_Retvals.5 = f32[1,8,8,4]{3,2,1,0} get-tuple-element((f32[1,8,8,4]{3,2,1,0}) %XLA_Retvals.4), index=0, metadata={op_name="XLA_Retvals"}
+}
+

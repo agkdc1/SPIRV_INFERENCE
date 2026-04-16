@@ -1,0 +1,59 @@
+{
+  "model": "whisper_tiny",
+  "device": "any",
+  "encoder": {
+    "status": "precomputed",
+    "path": "xla_hlo/out/whisper_encoder_spirv_local.raw.f32"
+  },
+  "status": "pass",
+  "tokens": [
+    50258,
+    50259,
+    50360,
+    50364,
+    542,
+    8710,
+    60,
+    50614
+  ],
+  "transcription": " cont ven]",
+  "decode_steps": [
+    {
+      "step": 0,
+      "pos": 3,
+      "token": 542,
+      "elapsed_s": 23.822,
+      "dispatch_count": 354
+    },
+    {
+      "step": 1,
+      "pos": 4,
+      "token": 8710,
+      "elapsed_s": 21.433,
+      "dispatch_count": 354
+    },
+    {
+      "step": 2,
+      "pos": 5,
+      "token": 60,
+      "elapsed_s": 21.383,
+      "dispatch_count": 354
+    },
+    {
+      "step": 3,
+      "pos": 6,
+      "token": 50614,
+      "elapsed_s": 23.91,
+      "dispatch_count": 354
+    },
+    {
+      "step": 4,
+      "pos": 7,
+      "token": 50257,
+      "elapsed_s": 26.731,
+      "dispatch_count": 354
+    }
+  ],
+  "total_steps": 5,
+  "total_elapsed_s": 119.701
+}
